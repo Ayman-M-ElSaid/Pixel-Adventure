@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cbefqg6geix3s"]
+
+[ext_resource type="Script" uid="uid://2xvgdeigxbtv" path="res://scripts/hazard.gd" id="1_rxmjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ri06"]
+size = Vector2(32, 32)
+
+[node name="Hazard" type="Area2D" unique_id=669338303]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_rxmjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=999896328]
+shape = SubResource("RectangleShape2D_2ri06")
+
+[node name="Timer" type="Timer" parent="." unique_id=713077323]
+wait_time = 0.65
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
