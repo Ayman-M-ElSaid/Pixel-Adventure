@@ -1,34 +1,34 @@
 [gd_scene format=3 uid="uid://c2c1xg1ce411k"]
 
-[ext_resource type="Script" uid="uid://cac0gnpmy0cir" path="res://scripts/collectable.gd" id="1_ti8a4"]
-[ext_resource type="Texture2D" uid="uid://bb7kl5rcvof8q" path="res://assets/Items/Fruits/Collected.png" id="2_dnya4"]
-[ext_resource type="AudioStream" uid="uid://d15a7paxhg6mj" path="res://assets/Sounds/collect.mp3" id="2_llfh3"]
+[ext_resource type="Script" uid="uid://cac0gnpmy0cir" path="res://scripts/collectable.gd" id="1_keljx"]
+[ext_resource type="Texture2D" uid="uid://bb7kl5rcvof8q" path="res://assets/Items/Fruits/Collected.png" id="2_qx4vw"]
+[ext_resource type="AudioStream" uid="uid://d15a7paxhg6mj" path="res://assets/Sounds/collect.mp3" id="3_8ko5o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i8gcc"]
-atlas = ExtResource("2_dnya4")
+atlas = ExtResource("2_qx4vw")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ftjwp"]
-atlas = ExtResource("2_dnya4")
+atlas = ExtResource("2_qx4vw")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cy7d5"]
-atlas = ExtResource("2_dnya4")
+atlas = ExtResource("2_qx4vw")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7jhkb"]
-atlas = ExtResource("2_dnya4")
+atlas = ExtResource("2_qx4vw")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ejfto"]
-atlas = ExtResource("2_dnya4")
+atlas = ExtResource("2_qx4vw")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cooh5"]
-atlas = ExtResource("2_dnya4")
+atlas = ExtResource("2_qx4vw")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_2ri06"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_qt8ps"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -60,22 +60,19 @@ radius = 6.0
 [node name="Collectable" type="Area2D" unique_id=310779860]
 collision_layer = 8
 collision_mask = 2
-script = ExtResource("1_ti8a4")
+script = ExtResource("1_keljx")
 
-[node name="CollectEffect" type="AnimatedSprite2D" parent="." unique_id=1143754286]
-visible = false
-sprite_frames = SubResource("SpriteFrames_2ri06")
+[node name="CollectEffect" type="AnimatedSprite2D" parent="." unique_id=2085061579]
+sprite_frames = SubResource("SpriteFrames_qt8ps")
 animation = &"collect"
-frame = 2
-frame_progress = 0.36148706
-
-[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=2085061579]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=875769541]
 shape = SubResource("CircleShape2D_yr2er")
 
 [node name="CollectSound" type="AudioStreamPlayer2D" parent="." unique_id=1400829156]
-stream = ExtResource("2_llfh3")
-bus = &"SFX"
+stream = ExtResource("3_8ko5o")
+volume_db = -12.0
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1603390307]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

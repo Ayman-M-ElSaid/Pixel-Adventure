@@ -1,38 +1,38 @@
 [gd_scene format=3 uid="uid://dnwldnf45llqh"]
 
-[ext_resource type="Texture2D" uid="uid://fr6dn5d2aonq" path="res://assets/Traps/Saw/On (38x38).png" id="1_k45r4"]
-[ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/hazard.tscn" id="2_kprxg"]
+[ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/Hazards/hazard.tscn" id="1_wfb2r"]
+[ext_resource type="Texture2D" uid="uid://fr6dn5d2aonq" path="res://assets/Traps/Saw/On (38x38).png" id="2_hkj6p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kprxg"]
-atlas = ExtResource("1_k45r4")
+atlas = ExtResource("2_hkj6p")
 region = Rect2(0, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_846d5"]
-atlas = ExtResource("1_k45r4")
+atlas = ExtResource("2_hkj6p")
 region = Rect2(38, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_161w5"]
-atlas = ExtResource("1_k45r4")
+atlas = ExtResource("2_hkj6p")
 region = Rect2(76, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxxip"]
-atlas = ExtResource("1_k45r4")
+atlas = ExtResource("2_hkj6p")
 region = Rect2(114, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iw68n"]
-atlas = ExtResource("1_k45r4")
+atlas = ExtResource("2_hkj6p")
 region = Rect2(152, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_878ni"]
-atlas = ExtResource("1_k45r4")
+atlas = ExtResource("2_hkj6p")
 region = Rect2(190, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hi3xb"]
-atlas = ExtResource("1_k45r4")
+atlas = ExtResource("2_hkj6p")
 region = Rect2(228, 0, 38, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_578c5"]
-atlas = ExtResource("1_k45r4")
+atlas = ExtResource("2_hkj6p")
 region = Rect2(266, 0, 38, 38)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2ri06"]
@@ -68,9 +68,9 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rxmjj"]
-radius = 17.0
+radius = 16.0
 
-[node name="Saw" unique_id=669338303 instance=ExtResource("2_kprxg")]
+[node name="Saw" unique_id=669338303 instance=ExtResource("1_wfb2r")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0" unique_id=61707305]
 sprite_frames = SubResource("SpriteFrames_2ri06")
