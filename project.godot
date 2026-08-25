@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pixel Adventure"
-run/main_scene="uid://cga4kdj75swb3"
+run/main_scene="uid://dweihdq4yrlls"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="uid://3mg4n1x7iaq5"
 
@@ -22,12 +22,18 @@ buses/default_bus_layout=""
 [autoload]
 
 Music="*uid://dbw6kf33hlqne"
+SaveManager="*uid://01iq5oqglysw"
+Transition="*uid://dydfr2x5w454"
 
 [display]
 
 window/size/viewport_height=640
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom="uid://c758rc8sttho6"
 
 [input]
 

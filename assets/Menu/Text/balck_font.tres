@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://c758rc8sttho6"]
+
+[ext_resource type="FontFile" uid="uid://dgypmietdh25c" path="res://assets/Menu/Text/Text (Black) (8x10).png" id="1_ifmeh"]
+
+[resource]
+default_font = ExtResource("1_ifmeh")
+default_font_size = 20

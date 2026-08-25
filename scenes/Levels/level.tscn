@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drgf0f6ypprio"]
 
-[ext_resource type="PackedScene" uid="uid://c6qscfb2rmeyl" path="res://scenes/Entities/level_manager.tscn" id="1_oi3di"]
+[ext_resource type="PackedScene" uid="uid://c6qscfb2rmeyl" path="res://scenes/States/level_manager.tscn" id="1_oi3di"]
 [ext_resource type="PackedScene" uid="uid://dflqpvcy1dew1" path="res://scenes/Entities/background.tscn" id="2_0b4ue"]
 [ext_resource type="Texture2D" uid="uid://ci37utmjka5gm" path="res://assets/Terrain/Terrain (16x16).png" id="3_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://dilwwiny82ctp" path="res://scenes/Entities/player.tscn" id="3_f2txt"]
@@ -323,15 +323,12 @@ unique_name_in_owner = true
 
 [node name="TileMap" type="TileMapLayer" parent="." unique_id=368368994]
 unique_name_in_owner = true
-position = Vector2(0, 2)
 tile_set = SubResource("TileSet_rka8t")
 
 [node name="Player" parent="." unique_id=829502222 instance=ExtResource("3_f2txt")]
 position = Vector2(-2, 1)
 
 [node name="Camera" type="Camera2D" parent="Player" unique_id=358715529]
-unique_name_in_owner = true
-position = Vector2(91, -121)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 script = ExtResource("5_fsqur")

@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var collision = $CollisionShape2D
 @onready var hit_sound = $HitSound
 @onready var jump_sound = $JumpSound
-@onready var camera = %Camera
+@onready var camera = $Camera
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -300.0
@@ -20,7 +20,7 @@ var last_wall_jump = 0
 var is_dead := false
 
 
-func _handle_animation():
+func _handle_animation() -> void:
 	if is_on_floor():
 		if direction == 0:
 			sprite.play("idle")
@@ -47,7 +47,7 @@ func _handle_animation():
 		sprite.flip_h = true
 
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	direction = Input.get_axis("move_left", "move_right")
 	is_wall_gliding = (
 		is_on_wall_only() and direction * get_wall_normal().x < 0 and velocity.y >= 0
@@ -85,7 +85,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func die():
+func die() -> void:
 	if is_dead:
 		return
 	camera.shake(5)

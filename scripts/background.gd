@@ -2,6 +2,8 @@ extends Sprite2D
 
 @onready var level_manager = %LevelManager
 
+@export var background_color: Texture
+
 const PATH = "res://assets/Background/"
 const BACKGROUNDS = [
 	preload(PATH + "Blue.png"),
@@ -12,12 +14,14 @@ const BACKGROUNDS = [
 	preload(PATH + "Purple.png"),
 	preload(PATH + "Yellow.png"),
 ]
-const SCROLL_SPEED = 30
+const SCROLL_SPEED = -30
 
 
 func _ready() -> void:
-	seed(1)
-	texture = BACKGROUNDS[randi_range(0, BACKGROUNDS.size() - 1)]
+	if not background_color:
+		texture = BACKGROUNDS[randi_range(0, BACKGROUNDS.size() - 1)]
+	else:
+		texture = background_color
 	texture_repeat = CanvasItem.TEXTURE_REPEAT_ENABLED
 	region_enabled = true
 	centered = false

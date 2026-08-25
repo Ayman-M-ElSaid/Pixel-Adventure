@@ -28,7 +28,7 @@ func _ready() -> void:
 	collect_effect.hide()
 
 
-func _on_body_entered(_body):
+func _on_body_entered(_body) -> void:
 	collected.emit()
 	collision.set_deferred("disabled", true)
 	animated_sprite.hide()

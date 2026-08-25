@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bxktmstu21l7o" path="res://assets/Main Characters/Virtual Guy/Run (32x32).png" id="7_aolts"]
 [ext_resource type="Texture2D" uid="uid://bqdswgecfiw0e" path="res://assets/Main Characters/Virtual Guy/Wall Jump (32x32).png" id="8_m5dj7"]
 [ext_resource type="AudioStream" uid="uid://cdxfb8rw2p7ov" path="res://assets/Sounds/hit.wav" id="9_rvc5h"]
-[ext_resource type="AudioStream" uid="uid://dhpcvbvlxkbw2" path="res://assets/Sounds/jump.wav" id="10_bbr4a"]
+[ext_resource type="AudioStream" uid="uid://d3s30qaso72yk" path="res://assets/Sounds/jump.wav" id="10_bbr4a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
 atlas = ExtResource("2_bbr4a")
@@ -360,7 +360,7 @@ script = ExtResource("1_3wtrq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=510084763]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_2ri06")
-animation = &"wall_glide"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=839537483]

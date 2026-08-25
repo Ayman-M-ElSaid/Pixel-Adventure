@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dydfr2x5w454"]
+
+[ext_resource type="Script" uid="uid://bf48as3r0ar1a" path="res://scripts/transition.gd" id="1_yfraf"]
+[ext_resource type="Texture2D" uid="uid://8poajaal2vgn" path="res://assets/Other/Transition.png" id="2_ygart"]
+
+[node name="Transition" type="CanvasLayer" unique_id=1504321782]
+layer = 5
+script = ExtResource("1_yfraf")
+tile_texture = ExtResource("2_ygart")
