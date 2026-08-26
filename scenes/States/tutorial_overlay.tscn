@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bvxqc1xg8drjp"]
+
+[ext_resource type="Script" uid="uid://b0sj0jwb8puvb" path="res://scripts/tutorial_overlay.gd" id="1_u4lmm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0eap8"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tr348"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="TutorialOverlay" type="CanvasLayer" unique_id=1412632318]
+layer = 10
+script = ExtResource("1_u4lmm")
+
+[node name="DimRect" type="ColorRect" parent="." unique_id=1940999056]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.011764706, 0.7019608)
+
+[node name="Highlight" type="Panel" parent="." unique_id=660737138]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0eap8")
+
+[node name="DialogBox" type="PanelContainer" parent="." unique_id=749119704]
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -107.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_tr348")
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogBox" unique_id=650813731]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="DialogLabel" type="Label" parent="DialogBox/MarginContainer" unique_id=276632078]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="gui_input" from="DimRect" to="." method="_on_dim_rect_gui_input"]

@@ -326,6 +326,7 @@ unique_name_in_owner = true
 tile_set = SubResource("TileSet_rka8t")
 
 [node name="Player" parent="." unique_id=829502222 instance=ExtResource("3_f2txt")]
+unique_name_in_owner = true
 position = Vector2(-2, 1)
 
 [node name="Camera" type="Camera2D" parent="Player" unique_id=358715529]

@@ -3,6 +3,7 @@ extends Node
 @export var level_id: int
 @onready var tilemap = %TileMap
 @onready var collectables = %Collectables
+@onready var player = %Player
 var _remaining_collectables
 
 
@@ -18,7 +19,8 @@ func _ready() -> void:
 	_remaining_collectables = collectables.get_child_count()
 	for item in collectables.get_children():
 		item.collected.connect(_on_item_collected)
-	Transition.play_wipe_out()
+	if not PlayerManager.is_respawning:
+		Transition.play_wipe_out()
 
 
 func _on_item_collected() -> void:
@@ -28,9 +30,13 @@ func _on_item_collected() -> void:
 
 
 func _complete_level() -> void:
+	await player.disappear()
 	Transition.wipe_in_finished.connect(
 		func():
-			get_tree().change_scene_to_file("res://scenes/Levels/level_%02d.tscn" % (level_id + 1)),
+			get_tree().change_scene_to_file("res://scenes/Levels/level_%02d.tscn" % (level_id + 1))
+			PlayerManager.is_respawning = false,
 		CONNECT_ONE_SHOT,
 	)
 	Transition.play_wipe_in()
+	SaveManager.data["highest_unlocked_level"] = (level_id + 1)
+	SaveManager.save_game()

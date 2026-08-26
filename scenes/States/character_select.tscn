@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dhixjjyi75fx0"]
+
+[ext_resource type="Script" uid="uid://c664iqumo8by4" path="res://scripts/character_select.gd" id="1_0mdr8"]
+[ext_resource type="Texture2D" uid="uid://by8qlebq8yquf" path="res://assets/Background/Blue.png" id="2_bsq7u"]
+[ext_resource type="AudioStream" uid="uid://bt35pp2bugmvm" path="res://assets/Sounds/error.wav" id="4_3tmdh"]
+[ext_resource type="Texture2D" uid="uid://drlt0bsfsfp0" path="res://assets/Menu/Buttons/Play.png" id="4_bsq7u"]
+
+[node name="CharacterSelect" type="Node2D" unique_id=2004734571]
+script = ExtResource("1_0mdr8")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1570047648]
+texture_repeat = 2
+texture = ExtResource("2_bsq7u")
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 320)
+
+[node name="Camera" type="Camera2D" parent="." unique_id=635782614]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[node name="Label" type="Label" parent="." unique_id=1864193879]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -145.0
+offset_right = 180.0
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "PIXEL ADVENTURE"
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1924652122]
+position = Vector2(0, -16)
+scale = Vector2(3, 3)
+animation = &"idle"
+autoplay = "idle"
+
+[node name="NextButton" type="TextureButton" parent="." unique_id=320966070]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -20.0
+offset_right = 120.0
+offset_bottom = 20.0
+grow_vertical = 2
+texture_normal = ExtResource("4_bsq7u")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BackButton" type="TextureButton" parent="." unique_id=1890492733]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -20.0
+offset_right = -80.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("4_bsq7u")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="ErrorSound" type="AudioStreamPlayer2D" parent="." unique_id=1078188871]
+stream = ExtResource("4_3tmdh")
+volume_db = -20.0
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

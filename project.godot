@@ -24,6 +24,7 @@ buses/default_bus_layout=""
 Music="*uid://dbw6kf33hlqne"
 SaveManager="*uid://01iq5oqglysw"
 Transition="*uid://dydfr2x5w454"
+PlayerManager="*uid://ocof5ajdbvph"
 
 [display]
 

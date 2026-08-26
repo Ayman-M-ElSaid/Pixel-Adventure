@@ -20,31 +20,16 @@ var last_wall_jump = 0
 var is_dead := false
 
 
-func _handle_animation() -> void:
-	if is_on_floor():
-		if direction == 0:
-			sprite.play("idle")
-		else:
-			sprite.play("run")
-	elif is_wall_gliding:
-		sprite.play("wall_glide")
-	else:
-		if velocity.y >= 0:
-			sprite.play("jump")
-		elif jumps_available == 0:
-			sprite.play("double_jump")
-		else:
-			sprite.play("fall")
-
-	if is_wall_gliding:
-		sprite.position.x = sign(direction) * 4
-	else:
-		sprite.position.x = 0
-
-	if direction > 0:
-		sprite.flip_h = false
-	elif direction < 0:
-		sprite.flip_h = true
+func _ready() -> void:
+	sprite.sprite_frames = Characters.CHARACTERS[SaveManager.data["character"]]
+	set_physics_process(false)
+	visible = false
+	if not PlayerManager.is_respawning:
+		await Transition.wipe_out_finished
+	visible = true
+	sprite.play("appear")
+	await sprite.animation_finished
+	set_physics_process(true)
 
 
 func _physics_process(delta: float) -> void:
@@ -85,11 +70,47 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
+func _handle_animation() -> void:
+	if is_on_floor():
+		if direction == 0:
+			sprite.play("idle")
+		else:
+			sprite.play("run")
+	elif is_wall_gliding:
+		sprite.play("wall_glide")
+	else:
+		if velocity.y >= 0:
+			sprite.play("jump")
+		elif jumps_available == 0:
+			sprite.play("double_jump")
+		else:
+			sprite.play("fall")
+
+	if is_wall_gliding:
+		sprite.position.x = sign(direction) * 4
+	else:
+		sprite.position.x = 0
+
+	if direction > 0:
+		sprite.flip_h = false
+	elif direction < 0:
+		sprite.flip_h = true
+
+
 func die() -> void:
 	if is_dead:
 		return
+	PlayerManager.is_respawning = true
 	camera.shake(5)
 	is_dead = true
 	hit_sound.play()
 	sprite.play("hit")
 	collision.queue_free()
+	SaveManager.data["death_count"] += 1
+	SaveManager.save_game()
+
+
+func disappear() -> void:
+	set_physics_process(false)
+	sprite.play("disappear")
+	await sprite.animation_finished

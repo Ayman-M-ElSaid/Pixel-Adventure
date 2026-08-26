@@ -3,7 +3,8 @@ extends CanvasLayer
 @export var tile_texture: Texture2D
 @export var tile_size: int = 44
 @export var stagger: float = 0.035
-@export var tile_duration: float = 0.15
+@export var tile_duration: float = 0.1
+@export var fill_scale := 2
 
 signal wipe_in_finished
 signal wipe_out_finished
@@ -34,9 +35,6 @@ func _build_grid() -> void:
 			add_child(tile)
 			_tiles.append(tile)
 			_delays.append((cols - 1 - col) * stagger)
-
-
-@export var fill_scale := 2
 
 
 func play_wipe_in() -> void:

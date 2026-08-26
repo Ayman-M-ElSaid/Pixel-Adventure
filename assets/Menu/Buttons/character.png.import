@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck5pohf0o7ha6"
-path="res://.godot/imported/Text (Black) (8x10).png-c1e6254e9f373c6361854406168c335b.ctex"
+uid="uid://c4r2l3qpp54g4"
+path="res://.godot/imported/character.png-06e7b43b623e1c03da480b81e2e3ee23.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sounds/Text (Black) (8x10).png"
-dest_files=["res://.godot/imported/Text (Black) (8x10).png-c1e6254e9f373c6361854406168c335b.ctex"]
+source_file="res://assets/Menu/Buttons/character.png"
+dest_files=["res://.godot/imported/character.png-06e7b43b623e1c03da480b81e2e3ee23.ctex"]
 
 [params]
 
