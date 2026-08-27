@@ -4,16 +4,25 @@ signal collected
 
 enum Fruit {
 	APPLE,
-	BANANA,
-	CHERRY,
+	BANANAS,
+	CHERRIES,
 	KIWI,
 	MELON,
 	ORANGE,
 	PINEAPPLE,
 	STRAWBERRY,
+	RANDOM,
 }
-@export var fruit_name: Fruit
-@export var sprite_frames: SpriteFrames
+const FRAMES:Dictionary={
+	Fruit.APPLE:preload("res://assets/Items/Fruits/Apple.tres"),
+	Fruit.BANANAS:preload("res://assets/Items/Fruits/Bananas.tres"),
+	Fruit.CHERRIES:preload("res://assets/Items/Fruits/Cherries.tres"),
+	Fruit.KIWI:preload("res://assets/Items/Fruits/Kiwi.tres"),
+	Fruit.MELON:preload("res://assets/Items/Fruits/Melon.tres"),
+	Fruit.ORANGE:preload("res://assets/Items/Fruits/Orange.tres"),
+	Fruit.PINEAPPLE:preload("res://assets/Items/Fruits/Pineapple.tres"),
+	Fruit.STRAWBERRY:preload("res://assets/Items/Fruits/Strawberry.tres")}
+@export var fruit_name: Fruit=Fruit.RANDOM
 
 @onready var collision = $CollisionShape2D
 @onready var animated_sprite = $AnimatedSprite
@@ -22,8 +31,10 @@ enum Fruit {
 
 
 func _ready() -> void:
-	if sprite_frames:
-		animated_sprite.sprite_frames = sprite_frames
+	if fruit_name!=Fruit.RANDOM:
+		animated_sprite.sprite_frames = FRAMES[fruit_name]
+	else:
+		animated_sprite.sprite_frames = FRAMES[randi()%(FRAMES.size()-1)]
 	animated_sprite.play("fruit")
 	collect_effect.hide()
 
