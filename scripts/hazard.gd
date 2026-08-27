@@ -1,4 +1,5 @@
 extends Area2D
+class_name Hazard
 
 @onready var timer = $Timer
 

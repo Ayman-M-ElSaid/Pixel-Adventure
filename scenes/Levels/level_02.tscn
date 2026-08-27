@@ -1,0 +1,75 @@
+[gd_scene format=4 uid="uid://cjievdmtuyvix"]
+
+[ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_37a60"]
+[ext_resource type="PackedScene" uid="uid://dqk88coqenhgw" path="res://scenes/Entities/Hazards/spikes.tscn" id="2_ppjca"]
+[ext_resource type="Texture2D" uid="uid://bbo3og38kcn02" path="res://assets/Background/Green.png" id="2_xsllw"]
+[ext_resource type="PackedScene" uid="uid://c2c1xg1ce411k" path="res://scenes/Entities/collectable.tscn" id="4_vg82q"]
+
+[node name="Level02" unique_id=1923209002 instance=ExtResource("1_37a60")]
+
+[node name="Background" parent="." index="1" unique_id=1374281801]
+background_color = ExtResource("2_xsllw")
+
+[node name="Spikes" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=669338303 instance=ExtResource("2_ppjca")]
+position = Vector2(-160, 136)
+
+[node name="Spikes2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="1" unique_id=1367431294 instance=ExtResource("2_ppjca")]
+position = Vector2(-128, 136)
+
+[node name="Spikes3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="2" unique_id=446507451 instance=ExtResource("2_ppjca")]
+position = Vector2(-96, 136)
+
+[node name="Spikes4" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="3" unique_id=1147715516 instance=ExtResource("2_ppjca")]
+position = Vector2(-64, 136)
+
+[node name="Spikes5" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="4" unique_id=583323586 instance=ExtResource("2_ppjca")]
+position = Vector2(-32, 136)
+
+[node name="Spikes6" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="5" unique_id=276815040 instance=ExtResource("2_ppjca")]
+position = Vector2(0, 136)
+
+[node name="Spikes7" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="6" unique_id=887608879 instance=ExtResource("2_ppjca")]
+position = Vector2(32, 136)
+
+[node name="Spikes8" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="7" unique_id=1680857294 instance=ExtResource("2_ppjca")]
+position = Vector2(64, 136)
+
+[node name="Spikes9" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="8" unique_id=1599032687 instance=ExtResource("2_ppjca")]
+position = Vector2(96, 136)
+
+[node name="Spikes10" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="9" unique_id=1160203476 instance=ExtResource("2_ppjca")]
+position = Vector2(128, 136)
+
+[node name="Spikes11" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="10" unique_id=561888224 instance=ExtResource("2_ppjca")]
+position = Vector2(160, 136)
+
+[node name="Spikes12" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="11" unique_id=1025094674 instance=ExtResource("2_ppjca")]
+position = Vector2(192, 136)
+
+[node name="Spikes13" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="12" unique_id=606196014 instance=ExtResource("2_ppjca")]
+position = Vector2(224, 136)
+
+[node name="Spikes14" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="13" unique_id=930568544 instance=ExtResource("2_ppjca")]
+position = Vector2(256, 136)
+
+[node name="Spikes15" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="14" unique_id=2029166035 instance=ExtResource("2_ppjca")]
+position = Vector2(-256, 88)
+
+[node name="Collectable" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="0" unique_id=310779860 instance=ExtResource("4_vg82q")]
+position = Vector2(-257, 61)
+fruit_name = 4
+
+[node name="Collectable2" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="1" unique_id=1014409299 instance=ExtResource("4_vg82q")]
+position = Vector2(-120, -33)
+
+[node name="Collectable3" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="2" unique_id=216005166 instance=ExtResource("4_vg82q")]
+position = Vector2(-40, -64)
+
+[node name="Collectable4" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="3" unique_id=1359602387 instance=ExtResource("4_vg82q")]
+position = Vector2(42, -97)
+
+[node name="TileMap" parent="." index="4" unique_id=368368994]
+tile_map_data = PackedByteArray("AADu//b/AAADAAQAAADu//f/AAACAAUAAADu//j/AAACAAUAAADu//n/AAACAAUAAADu//r/AAACAAUAAADu//v/AAACAAUAAADu//z/AAACAAUAAADu//3/AAACAAUAAADu//7/AAACAAUAAADu////AAACAAUAAADu/wAAAAACAAUAAADu/wEAAAACAAUAAADu/wIAAAACAAUAAADu/wMAAAACAAUAAADu/wQAAAACAAUAAADu/wUAAAADAAUAAADu/wYAAAAGAAAAAADu/wcAAAAGAAEAAADu/wgAAAAGAAEAAADv/wYAAAAHAAAAAADv/wcAAAAHAAEAAADv/wgAAAAHAAEAAADw/wYAAAAHAAAAAADw/wcAAAAHAAEAAADw/wgAAAAHAAEAAADx/wEAAAAGAAAAAADx/wIAAAAGAAEAAADx/wMAAAAGAAEAAADx/wQAAAAGAAEAAADx/wUAAAAGAAEAAADx/wYAAAAKAAEAAADx/wcAAAAJAAEAAADx/wgAAAAHAAEAAADy/wEAAAAHAAAAAADy/wIAAAAHAAEAAADy/wMAAAAHAAEAAADy/wQAAAAHAAEAAADy/wUAAAAHAAEAAADy/wYAAAAHAAEAAADy/wcAAAAHAAAAAADy/wgAAAAHAAEAAADz/wEAAAAHAAAAAADz/wIAAAAHAAEAAADz/wMAAAAHAAEAAADz/wQAAAAHAAEAAADz/wUAAAAHAAEAAADz/wYAAAAHAAEAAADz/wcAAAAIAAAAAADz/wgAAAAIAAEAAAD0/wEAAAAIAAAAAAD0/wIAAAAIAAEAAAD0/wMAAAAIAAEAAAD0/wQAAAAIAAEAAAD0/wUAAAAIAAEAAAD0/wYAAAAIAAEAAAD0/wcAAAAIAAEAAAD0/wgAAAAIAAEAAAARAPb/AAADAAUAADARAPf/AAAAAAUAAAARAPj/AAAAAAUAAAARAPn/AAAAAAUAAAARAPr/AAAAAAUAAAARAPv/AAAAAAUAAAARAPz/AAAAAAUAAAARAP3/AAAAAAUAAAARAP7/AAAAAAUAAAARAP//AAAAAAUAAAARAAAAAAAAAAUAAAARAAEAAAAAAAUAAAARAAIAAAAAAAUAAAARAAMAAAAAAAUAAAARAAQAAAAAAAUAAAARAAUAAAAAAAUAAAARAAYAAAAAAAUAAAARAAcAAAAAAAUAAAARAAgAAAAAAAUAAADu/wkAAAAGAAIAAADv//b/AAABAAYAAADv/wkAAAAHAAIAAADw//b/AAABAAYAAADw/wkAAAAIAAIAAADx//b/AAABAAYAAADx/wkAAAADAAQAACDy//b/AAABAAYAAADy/wkAAAABAAQAAADz//b/AAABAAYAAADz/wkAAAABAAQAAAD0//b/AAABAAYAAAD0/wkAAAABAAQAAAD1//b/AAABAAYAAAD1/wkAAAABAAQAAAD2//b/AAABAAYAAAD2/wkAAAABAAQAAAD3//b/AAABAAYAAAD3////AAARAAEAAAD3/wkAAAABAAQAAAD4//b/AAABAAYAAAD4////AAASAAEAAAD4/wkAAAABAAQAAAD5//b/AAABAAYAAAD5////AAATAAEAAAD5/wkAAAABAAQAAAD6//b/AAABAAYAAAD6/wkAAAABAAQAAAD7//b/AAABAAYAAAD7/wkAAAABAAQAAAD8//b/AAABAAYAAAD8//3/AAARAAEAAAD8/wkAAAABAAQAAAD9//b/AAABAAYAAAD9//3/AAASAAEAAAD9/wkAAAABAAQAAAD+//b/AAABAAYAAAD+//3/AAATAAEAAAD+/wkAAAABAAQAAAD///b/AAABAAYAAAD//wkAAAABAAQAAAAAAPb/AAABAAYAAAAAAAkAAAABAAQAAAABAPb/AAABAAYAAAABAPv/AAARAAEAAAABAAkAAAABAAQAAAACAPb/AAABAAYAAAACAPv/AAASAAEAAAACAAkAAAABAAQAAAADAPb/AAABAAYAAAADAAkAAAABAAQAAAAEAPb/AAABAAYAAAAEAAkAAAABAAQAAAAFAPb/AAABAAYAAAAFAAkAAAABAAQAAAAGAPb/AAABAAYAAAAGAAkAAAABAAQAAAAHAPb/AAABAAYAAAAHAAkAAAABAAQAAAAIAPb/AAABAAYAAAAIAAkAAAABAAQAAAAJAPb/AAABAAYAAAAJAAkAAAABAAQAAAAKAPb/AAABAAYAAAAKAAkAAAABAAQAAAALAPb/AAABAAYAAAALAAkAAAABAAQAAAAMAPb/AAABAAYAAAAMAAkAAAABAAQAAAANAPb/AAABAAYAAAANAAkAAAABAAQAAAAOAPb/AAABAAYAAAAOAAkAAAABAAQAAAAPAPb/AAABAAYAAAAPAAkAAAABAAQAAAAQAPb/AAABAAYAAAAQAAkAAAABAAQAAAARAAkAAAADAAQAADAEAPr/AAAGAAAAAAAEAPv/AAAGAAEAAAAEAPz/AAAGAAIAAAAFAPr/AAAHAAAAAAAFAPv/AAAHAAEAAAAFAPz/AAAHAAIAAAAGAPr/AAAHAAAAAAAGAPv/AAAHAAEAAAAGAPz/AAAHAAIAAAADAPv/AAASAAEAAAAHAPr/AAAHAAAAAAAHAPv/AAAHAAEAAAAHAPz/AAAHAAIAAAAIAPr/AAAHAAAAAAAIAPv/AAAHAAEAAAAIAPz/AAAHAAIAAAAJAPr/AAAHAAAAAAAJAPv/AAAHAAEAAAAJAPz/AAAHAAIAAAAKAPr/AAAHAAAAAAAKAPv/AAAHAAEAAAAKAPz/AAAHAAIAAAALAPr/AAAIAAAAAAALAPv/AAAIAAEAAAALAPz/AAAIAAIAAAA=")
+
+[node name="Player" parent="." index="5" unique_id=829502222]
+position = Vector2(-205, 7)

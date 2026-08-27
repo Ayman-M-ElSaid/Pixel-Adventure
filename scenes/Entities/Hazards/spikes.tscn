@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dqk88coqenhgw"]
+
+[ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/Entities/Hazards/hazard.tscn" id="1_y1qxh"]
+[ext_resource type="Texture2D" uid="uid://bgkct1jkfryh2" path="res://assets/Traps/Spikes/Idle.png" id="2_cohtf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppjca"]
+size = Vector2(32, 12)
+
+[node name="Hazard" unique_id=669338303 instance=ExtResource("1_y1qxh")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=999896328]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_ppjca")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="2" unique_id=726519891]
+texture_repeat = 2
+texture = ExtResource("2_cohtf")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 16)
