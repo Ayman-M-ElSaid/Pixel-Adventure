@@ -1,0 +1,264 @@
+[gd_scene format=4 uid="uid://b6ifmx6ryc6ak"]
+
+[ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_qsyax"]
+[ext_resource type="Texture2D" uid="uid://ce21d0osj86j2" path="res://assets/Background/Brown.png" id="2_3sxin"]
+[ext_resource type="PackedScene" uid="uid://dqk88coqenhgw" path="res://scenes/Entities/Hazards/spikes.tscn" id="2_a0s4k"]
+[ext_resource type="PackedScene" uid="uid://c0l4i3luvh77p" path="res://scenes/Entities/Hazards/spiked_ball.tscn" id="3_5h7xu"]
+[ext_resource type="PackedScene" uid="uid://clp5ch6rw3jd0" path="res://scenes/Entities/moving_platform.tscn" id="4_5h7xu"]
+[ext_resource type="PackedScene" uid="uid://c2c1xg1ce411k" path="res://scenes/Entities/collectable.tscn" id="5_6dyyn"]
+
+[sub_resource type="Animation" id="Animation_a0s4k"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.87266463, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_5h7xu"]
+resource_name = "swing"
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-1.0471976, 0, 0.32, 0, 0, 1.0471976, 0, -0.349, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3sxin"]
+_data = {
+&"RESET": SubResource("Animation_a0s4k"),
+&"swing": SubResource("Animation_5h7xu")
+}
+
+[sub_resource type="Animation" id="Animation_3sxin"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.0471976, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_6dyyn"]
+resource_name = "swing"
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(1.0471976, 0, 0, 0, 0, -1.0471976, 0, 0.349, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6g82h"]
+_data = {
+&"RESET": SubResource("Animation_3sxin"),
+&"swing": SubResource("Animation_6dyyn")
+}
+
+[sub_resource type="Animation" id="Animation_6g82h"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.3962634, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_kbc7q"]
+resource_name = "swing"
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-1.3962634, -0.25, 0, 0.25, 0, 1.3962634, -0.16666667, -0.46542114, 0, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_17f6t"]
+_data = {
+&"RESET": SubResource("Animation_6g82h"),
+&"swing": SubResource("Animation_kbc7q")
+}
+
+[node name="Level05" unique_id=1923209002 instance=ExtResource("1_qsyax")]
+
+[node name="LevelManager" parent="." index="0" unique_id=360763231]
+level_id = 5
+
+[node name="Background" parent="." index="1" unique_id=1374281801]
+background_color = ExtResource("2_3sxin")
+
+[node name="Spikes" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=669338303 instance=ExtResource("2_a0s4k")]
+position = Vector2(-80, 137)
+
+[node name="Spikes10" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="1" unique_id=1962543803 instance=ExtResource("2_a0s4k")]
+position = Vector2(-256, -232)
+rotation = 3.1415927
+
+[node name="Spikes11" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="2" unique_id=150901540 instance=ExtResource("2_a0s4k")]
+position = Vector2(-224, -232)
+rotation = 3.1415927
+
+[node name="Spikes12" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="3" unique_id=679439974 instance=ExtResource("2_a0s4k")]
+position = Vector2(-17, -232)
+rotation = 3.1415927
+
+[node name="Spikes13" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="4" unique_id=1153632010 instance=ExtResource("2_a0s4k")]
+position = Vector2(15, -232)
+rotation = 3.1415927
+
+[node name="Spikes14" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="5" unique_id=2072704871 instance=ExtResource("2_a0s4k")]
+position = Vector2(47, -232)
+rotation = 3.1415927
+
+[node name="Spikes15" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="6" unique_id=1338944231 instance=ExtResource("2_a0s4k")]
+position = Vector2(63, -232)
+rotation = 3.1415927
+
+[node name="Spikes2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="7" unique_id=377909844 instance=ExtResource("2_a0s4k")]
+position = Vector2(-48, 137)
+
+[node name="Spikes3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="8" unique_id=719229006 instance=ExtResource("2_a0s4k")]
+position = Vector2(-16, 137)
+
+[node name="Spikes4" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="9" unique_id=1007421565 instance=ExtResource("2_a0s4k")]
+position = Vector2(16, 137)
+
+[node name="Spikes5" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="10" unique_id=1129708943 instance=ExtResource("2_a0s4k")]
+position = Vector2(48, 137)
+
+[node name="Spikes6" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="11" unique_id=7450595 instance=ExtResource("2_a0s4k")]
+position = Vector2(80, 137)
+
+[node name="Spikes7" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="12" unique_id=313690869 instance=ExtResource("2_a0s4k")]
+position = Vector2(112, 137)
+
+[node name="Spikes8" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="13" unique_id=473927675 instance=ExtResource("2_a0s4k")]
+position = Vector2(144, 137)
+
+[node name="Spikes9" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="14" unique_id=654383399 instance=ExtResource("2_a0s4k")]
+position = Vector2(160, 137)
+
+[node name="SpikedBall" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="15" unique_id=584708736 instance=ExtResource("3_5h7xu")]
+position = Vector2(-56, 24)
+rotation = -0.87266463
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hazards/SpikedBall" index="2" unique_id=1202726927]
+libraries/ = SubResource("AnimationLibrary_3sxin")
+autoplay = &"swing"
+
+[node name="SpikedBall2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="16" unique_id=1984702965 instance=ExtResource("3_5h7xu")]
+position = Vector2(103, 24)
+rotation = 1.0471976
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hazards/SpikedBall2" index="2" unique_id=1053739150]
+libraries/ = SubResource("AnimationLibrary_6g82h")
+autoplay = &"swing"
+
+[node name="SpikedBall3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="17" unique_id=1826134547 instance=ExtResource("3_5h7xu")]
+position = Vector2(23, -199.00002)
+rotation = 1.3962634
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Hazards/SpikedBall3" index="2" unique_id=525605255]
+libraries/ = SubResource("AnimationLibrary_17f6t")
+autoplay = &"swing"
+
+[node name="Collectable" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="0" unique_id=310779860 instance=ExtResource("5_6dyyn")]
+position = Vector2(-176, -207)
+fruit_name = 3
+
+[node name="Collectable2" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="1" unique_id=2004091014 instance=ExtResource("5_6dyyn")]
+position = Vector2(-57, -3)
+
+[node name="Collectable3" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="2" unique_id=1361501669 instance=ExtResource("5_6dyyn")]
+position = Vector2(104, -3)
+
+[node name="Collectable4" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="3" unique_id=105925725 instance=ExtResource("5_6dyyn")]
+position = Vector2(23, 56)
+
+[node name="Collectable5" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="4" unique_id=601497053 instance=ExtResource("5_6dyyn")]
+position = Vector2(0, 83)
+
+[node name="Collectable6" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="5" unique_id=1410088406 instance=ExtResource("5_6dyyn")]
+position = Vector2(49, 83)
+
+[node name="Collectable7" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="6" unique_id=1321385174 instance=ExtResource("5_6dyyn")]
+position = Vector2(-110, -179)
+fruit_name = 2
+
+[node name="Collectable8" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="7" unique_id=1593205943 instance=ExtResource("5_6dyyn")]
+position = Vector2(-85, -179)
+fruit_name = 2
+
+[node name="Collectable9" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="8" unique_id=97572458 instance=ExtResource("5_6dyyn")]
+position = Vector2(-60, -179)
+fruit_name = 2
+
+[node name="Collectable10" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="9" unique_id=1989060594 instance=ExtResource("5_6dyyn")]
+position = Vector2(-110, -152)
+fruit_name = 2
+
+[node name="Collectable11" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="10" unique_id=1042534187 instance=ExtResource("5_6dyyn")]
+position = Vector2(-85, -152)
+fruit_name = 2
+
+[node name="Collectable12" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="11" unique_id=1823439247 instance=ExtResource("5_6dyyn")]
+position = Vector2(-60, -152)
+fruit_name = 2
+
+[node name="Collectable13" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="12" unique_id=333046378 instance=ExtResource("5_6dyyn")]
+position = Vector2(127, -143)
+
+[node name="Collectable14" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="13" unique_id=1174266036 instance=ExtResource("5_6dyyn")]
+position = Vector2(96, -143)
+
+[node name="Collectable15" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="14" unique_id=1238020153 instance=ExtResource("5_6dyyn")]
+position = Vector2(111, -166)
+
+[node name="TileMap" parent="." index="4" unique_id=368368994]
+tile_map_data = PackedByteArray("AADu//f/AAACAAUAAADu//j/AAACAAUAAADu//n/AAACAAUAAADu//r/AAACAAUAAADu//v/AAACAAUAAADu//z/AAACAAUAAADu//3/AAACAAUAAADu//7/AAACAAUAAADu////AAACAAUAAADu/wAAAAACAAUAAADu/wEAAAACAAUAAADu/wIAAAACAAUAAADu/wMAAAACAAUAAADu/wQAAAACAAUAAADu/wUAAAADAAUAAADu/wYAAAAGAAQAAADu/wcAAAAGAAUAAADu/wgAAAAGAAUAAADu/wkAAAAGAAYAAADv/wYAAAAHAAQAAADv/wcAAAAHAAUAAADv/wgAAAAHAAUAAADv/wkAAAAHAAYAAADw/wYAAAAHAAQAAADw/wcAAAAHAAUAAADw/wgAAAAHAAUAAADw/wkAAAAMAAkAAADx/wcAAAAHAAUAAADx/wgAAAANAAkAAADx/wkAAAANAAoAAADy/wcAAAAHAAUAAADy/wgAAAAOAAkAAADy/wkAAAAOAAoAAADz/wcAAAAHAAUAAADz/wgAAAAHAAUAAADz/wkAAAABAAQAAAD0/wcAAAAJAAUAAAD0/wgAAAAHAAUAAAD0/wkAAAABAAQAAAD1/wkAAAABAAQAAAD2/wkAAAABAAQAAAD3/wkAAAABAAQAAAD4/wkAAAABAAQAAAD5/wkAAAABAAQAAAD6/wkAAAABAAQAAAD7/wkAAAABAAQAAAD8/wkAAAABAAQAAAD9/wkAAAABAAQAAAD+/wkAAAABAAQAAAD//wkAAAABAAQAAAAAAAkAAAABAAQAAAABAAkAAAABAAQAAAACAAkAAAABAAQAAAADAAkAAAABAAQAAAAEAAkAAAABAAQAAAAFAAkAAAABAAQAAAAGAAkAAAABAAQAAAAHAAkAAAABAAQAAAAIAAkAAAABAAQAAAAJAAkAAAABAAQAAAAKAAkAAAABAAQAAAALAAkAAAADAAUAABARAPf/AAAAAAUAAAARAPj/AAAAAAUAAAARAPn/AAAAAAUAAAARAPr/AAAAAAUAAAARAPv/AAAAAAUAAAARAPz/AAAAAAUAAAARAP3/AAAAAAUAAAARAP7/AAAAAAUAAAARAP//AAAAAAUAAAARAAAAAAAAAAUAAAARAAEAAAAAAAUAAAARAAIAAAAAAAUAAAARAAMAAAAAAAUAAAARAAQAAAAAAAUAAAARAAUAAAAAAAUAAAARAAYAAAAAAAUAAAALAAgAAAAAAAQAAAAMAAgAAAABAAQAAAANAAgAAAABAAQAAAAOAAgAAAABAAQAAAAPAAgAAAABAAQAAAAQAAgAAAABAAQAAAARAAcAAAAAAAUAAAARAAgAAAAEAAUAAAAMAAkAAAABAAEAAAANAAkAAAABAAEAAAAOAAkAAAABAAEAAAAPAAkAAAABAAEAAAAQAAkAAAABAAEAAAARAAkAAAABAAEAAAD1/wcAAAAHAAQAAAD1/wgAAAAHAAUAAAD2/wcAAAAHAAQAAAD2/wgAAAAJAAUAAAD3/wgAAAAHAAQAAAD4/wgAAAAHAAQAAAD5/wgAAAAIAAQAAAD3/wcAAAAIAAQAAADy/wEAAAAGAAQAAADy/wIAAAAGAAUAAADy/wMAAAAGAAUAAADy/wQAAAAGAAUAAADy/wUAAAAGAAUAAADy/wYAAAAHAAQAAADz/wEAAAAHAAQAAADz/wIAAAAHAAUAAADz/wMAAAAJAAQAAADz/wQAAAAJAAUAAADz/wUAAAAHAAUAAADz/wYAAAAKAAUAAAD0/wEAAAAHAAQAAAD0/wIAAAAHAAUAAAD0/wMAAAAKAAQAAAD0/wQAAAAKAAUAAAD0/wUAAAAHAAUAAAD0/wYAAAAHAAUAAAD1/wEAAAAIAAQAAAD1/wIAAAAIAAUAAAD1/wMAAAAIAAUAAAD1/wQAAAAIAAUAAAD1/wUAAAAIAAUAAAD1/wYAAAAIAAUAAADx/wYAAAAHAAQAAAAAAAYAAAANAAgAAAABAAYAAAANAAgAAAACAAYAAAANAAgAAAADAAYAAAAOAAgAAAD//wYAAAAMAAgAAAD8/wEAAAAMAAkAAAAGAAEAAAAMAAkAAAAMAAcAAAAMAAkAAAALAAUAAAAPAAgAAAALAAYAAAAPAAkAAAALAAcAAAAPAAoAAADu//D/AAADAAQAAADv//D/AAABAAYAAADw//D/AAABAAYAAADx//D/AAABAAYAAADy//D/AAABAAYAAADz//D/AAABAAYAAAD0//D/AAABAAYAAAD1//D/AAABAAYAAAD2//D/AAABAAYAAAD3//D/AAABAAYAAAD4//D/AAABAAYAAAD5//D/AAABAAYAAAD6//D/AAABAAYAAAD7//D/AAABAAYAAAD8//D/AAABAAYAAAD9//D/AAABAAYAAAD+//D/AAABAAYAAAD///D/AAABAAYAAAAAAPD/AAABAAYAAAABAPD/AAABAAYAAAACAPD/AAABAAYAAAADAPD/AAABAAYAAAAEAPD/AAABAAYAAAAFAPD/AAABAAYAAAAGAPD/AAABAAYAAAAHAPD/AAABAAYAAAAIAPD/AAABAAYAAAAJAPD/AAABAAYAAAAKAPD/AAABAAYAAAALAPD/AAABAAYAAAAMAPD/AAABAAYAAAANAPD/AAABAAYAAAAOAPD/AAABAAYAAAAPAPD/AAABAAYAAAAQAPD/AAABAAYAAAARAPD/AAADAAUAADDu//H/AAACAAUAAADu//L/AAACAAUAAADu//P/AAACAAUAAADu//T/AAACAAUAAADu//X/AAACAAUAAADu//b/AAACAAUAAAARAPH/AAAAAAUAAAARAPL/AAAAAAUAAAARAPP/AAAAAAUAAAARAPT/AAAAAAUAAAARAPX/AAAAAAUAAAARAPb/AAAAAAUAAAAOAPH/AAAMAAgAAAAPAPH/AAANAAgAAAAQAPH/AAAOAAgAAAAQAPL/AAAOAAkAAAAPAPL/AAANAAkAAADz//f/AAAGAAUAAADz//j/AAAGAAUAAADz//n/AAAGAAUAAADz//r/AAAGAAYAAAD0//f/AAAJAAUAAAD0//j/AAAHAAUAAAD0//n/AAAHAAUAAAD0//r/AAAHAAYAAAD1//f/AAAKAAUAAAD1//j/AAAHAAUAAAD1//n/AAAHAAUAAAD1//r/AAAHAAYAAAD2//f/AAAIAAUAAAD2//j/AAAJAAUAAAD2//n/AAAHAAUAAAD2//r/AAAHAAYAAAD3//n/AAAHAAUAAAD3//r/AAAHAAYAAAD4//r/AAAHAAYAAAD5//r/AAAHAAYAAAD6//r/AAAHAAYAAAD7//r/AAAHAAYAAAD8//r/AAAHAAYAAAD9//r/AAAIAAYAAAAFAPr/AAAGAAYAAAAGAPr/AAAHAAYAAAAHAPr/AAAHAAYAAAAIAPr/AAAHAAYAAAAJAPn/AAAHAAQAAAAJAPr/AAAHAAYAAAAKAPn/AAAKAAUAAAAKAPr/AAAHAAYAAAALAPj/AAAHAAUAAAALAPn/AAAHAAUAAAALAPr/AAAHAAYAAAAMAPj/AAAIAAUAAAAMAPn/AAAIAAUAAAAMAPr/AAAIAAYAAADz//b/AAAGAAUAAAD0//b/AAAJAAQAAAD1//b/AAAKAAQAAAD2//b/AAAIAAUAAAD3//f/AAAMAAEAAAD3//j/AAAHAAQAAAD4//j/AAAHAAQAAAD4//n/AAAHAAUAAAD5//j/AAAHAAQAAAD5//n/AAAHAAUAAAD6//j/AAAHAAQAAAD6//n/AAAHAAUAAAD7//j/AAAHAAQAAAD7//n/AAAHAAUAAAD8//j/AAAHAAQAAAD8//n/AAAHAAUAAAD9//j/AAAIAAQAAAD9//n/AAAIAAUAAAAFAPj/AAAGAAQAAAAFAPn/AAAGAAUAAAAGAPj/AAAHAAQAAAAGAPn/AAAHAAUAAAAHAPj/AAAHAAQAAAAHAPn/AAAJAAUAAAAIAPj/AAAHAAQAAAAIAPn/AAAHAAQAAAAJAPf/AAANAAEAAAAJAPj/AAANAAIAAAAKAPf/AAAOAAEAAAAKAPj/AAAOAAIAAAALAPb/AAAHAAQAAAALAPf/AAAHAAUAAAAMAPb/AAAIAAQAAAAMAPf/AAAIAAUAAADz//T/AAAGAAQAAAD0//T/AAAHAAQAAAD1//T/AAAHAAQAAAD2//T/AAAIAAQAAADz//X/AAAGAAUAAAD2//X/AAAIAAUAAAD1//X/AAAHAAUAAAD0//X/AAAHAAUAAAAKAPb/AAAGAAQAAAAPAPP/AAANAAoAAAAQAPP/AAAOAAoAAAANAPH/AAAMAAkAAAAOAPL/AAAMAAkAAAABAPP/AAAMAAkAAAA=")
+
+[node name="MovingPlatform" parent="." index="5" unique_id=559256925 instance=ExtResource("4_5h7xu")]
+position = Vector2(249, 107)
+offset = Vector2(0, -230)
+duration = 4.0
+
+[node name="MovingPlatform2" parent="." index="6" unique_id=1741485196 instance=ExtResource("4_5h7xu")]
+position = Vector2(-247, 73)
+offset = Vector2(0, -280)
+duration = 3.0
+
+[node name="Player" parent="." index="7" unique_id=829502222]
+position = Vector2(-248, 17)

@@ -1,7 +1,7 @@
 extends Area2D
 class_name Collectable
-signal collected
 
+signal collected
 enum Fruit {
 	APPLE,
 	BANANAS,
@@ -34,7 +34,9 @@ func _ready() -> void:
 	if fruit_name!=Fruit.RANDOM:
 		animated_sprite.sprite_frames = FRAMES[fruit_name]
 	else:
-		animated_sprite.sprite_frames = FRAMES[randi()%(FRAMES.size()-1)]
+		var weights = PackedFloat32Array([2.5, 2.5, 2.5, 1, 2.5, 2.5, 2.5, 2.5,0])
+		var fruit: Fruit = Fruit.values()[RandomNumberGenerator.new().rand_weighted(weights)]
+		animated_sprite.sprite_frames = FRAMES[fruit]
 	animated_sprite.play("fruit")
 	collect_effect.hide()
 

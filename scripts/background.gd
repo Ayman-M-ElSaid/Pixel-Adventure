@@ -2,7 +2,7 @@ extends Sprite2D
 
 @onready var level_manager = %LevelManager
 
-@export var background_color: Texture
+@export var background_color: Texture2D
 
 const PATH = "res://assets/Background/"
 const BACKGROUNDS = [

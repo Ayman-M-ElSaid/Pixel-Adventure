@@ -108,9 +108,10 @@ func die() -> void:
 	collision.queue_free()
 	SaveManager.data["death_count"] += 1
 	SaveManager.save_game()
-
+	
 
 func disappear() -> void:
+	collision.queue_free()
 	set_physics_process(false)
 	sprite.play("disappear")
 	await sprite.animation_finished
