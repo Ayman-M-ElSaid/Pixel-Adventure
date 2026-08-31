@@ -30,7 +30,7 @@ func _unhandled_input(event: InputEvent):
 			$ErrorSound.play()
 	elif event.is_action_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
-		
+
 	_change_character()
 	_update_buttons()
 

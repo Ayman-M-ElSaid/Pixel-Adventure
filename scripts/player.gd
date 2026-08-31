@@ -97,6 +97,11 @@ func _handle_animation() -> void:
 		sprite.flip_h = true
 
 
+func bounce(bounce_force: float) -> void:
+	velocity.y = -bounce_force
+	jump_sound.play()
+
+
 func die() -> void:
 	if is_dead:
 		return
@@ -108,7 +113,7 @@ func die() -> void:
 	collision.queue_free()
 	SaveManager.data["death_count"] += 1
 	SaveManager.save_game()
-	
+
 
 func disappear() -> void:
 	collision.queue_free()
