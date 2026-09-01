@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://ci37utmjka5gm" path="res://assets/Terrain/Terrain (16x16).png" id="3_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://dilwwiny82ctp" path="res://scenes/Entities/player.tscn" id="3_f2txt"]
 [ext_resource type="Script" uid="uid://8m3laetht8c6" path="res://scripts/camera.gd" id="5_fsqur"]
+[ext_resource type="Texture2D" uid="uid://c1s4sj7wrsrcn" path="res://assets/Menu/Buttons/Restart.png" id="6_a4mo8"]
+[ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/button.gd" id="7_87hxj"]
+[ext_resource type="Texture2D" uid="uid://wfkirb0oxniy" path="res://assets/Menu/Buttons/Levels.png" id="7_fi66n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2txt"]
 texture = ExtResource("3_0b4ue")
@@ -333,3 +336,33 @@ position = Vector2(-2, 1)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 script = ExtResource("5_fsqur")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=339730598]
+
+[node name="RestartButton" type="TextureButton" parent="CanvasLayer" unique_id=756441034]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_top = 1.0
+offset_bottom = 49.0
+grow_horizontal = 0
+texture_normal = ExtResource("6_a4mo8")
+stretch_mode = 5
+script = ExtResource("7_87hxj")
+
+[node name="LevelsButton" type="TextureButton" parent="CanvasLayer" unique_id=1708537852]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -94.0
+offset_top = 1.0
+offset_right = -44.0
+offset_bottom = 49.0
+grow_horizontal = 0
+texture_normal = ExtResource("7_fi66n")
+stretch_mode = 5
+script = ExtResource("7_87hxj")
+
+[connection signal="pressed" from="CanvasLayer/RestartButton" to="LevelManager" method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/LevelsButton" to="LevelManager" method="_on_levels_button_pressed"]

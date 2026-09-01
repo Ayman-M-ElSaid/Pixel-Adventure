@@ -38,5 +38,34 @@ func _complete_level() -> void:
 		CONNECT_ONE_SHOT,
 	)
 	Transition.play_wipe_in()
-	SaveManager.data["highest_unlocked_level"] = (level_id + 1)
+	SaveManager.data["highest_unlocked_level"] = max(
+		(level_id + 1),
+		SaveManager.data["highest_unlocked_level"],
+	)
 	SaveManager.save_game()
+
+func _unhandled_input(event: InputEvent):
+	if event.is_action_pressed("retry"):
+		_restart_leve()
+		
+func _on_restart_button_pressed():
+	_restart_leve()
+
+
+func _restart_leve()->void:
+	player.die()
+	get_tree().reload_current_scene()
+	
+	
+func _on_levels_button_pressed():
+	Transition.wipe_in_finished.connect(
+		func():
+			get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
+			PlayerManager.is_respawning = false
+			Transition.play_wipe_out(),
+		CONNECT_ONE_SHOT,
+	)
+	Transition.play_wipe_in()
+	
+
+	

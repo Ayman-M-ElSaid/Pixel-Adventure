@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://f63vgnnp511i" path="res://assets/Menu/Buttons/Leaderboard.png" id="1_jk2u3"]
 [ext_resource type="Texture2D" uid="uid://by8qlebq8yquf" path="res://assets/Background/Blue.png" id="2_ivjmv"]
 [ext_resource type="Texture2D" uid="uid://c4r2l3qpp54g4" path="res://assets/Menu/Buttons/character.png" id="4_o65u6"]
+[ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/button.gd" id="4_tr348"]
 [ext_resource type="PackedScene" uid="uid://bvxqc1xg8drjp" path="res://scenes/States/tutorial_overlay.tscn" id="5_0eap8"]
 
 [node name="LevelSelect" type="Node2D" unique_id=2004734571]
@@ -51,6 +52,7 @@ grow_vertical = 2
 texture_normal = ExtResource("1_jk2u3")
 ignore_texture_size = true
 stretch_mode = 5
+script = ExtResource("4_tr348")
 metadata/_edit_use_anchors_ = true
 
 [node name="CharacterSelectButton" type="TextureButton" parent="." unique_id=796615633]
@@ -69,6 +71,7 @@ grow_vertical = 2
 texture_normal = ExtResource("4_o65u6")
 ignore_texture_size = true
 stretch_mode = 5
+script = ExtResource("4_tr348")
 metadata/_edit_use_anchors_ = true
 
 [node name="TutorialOverlay" parent="." unique_id=1412632318 instance=ExtResource("5_0eap8")]
