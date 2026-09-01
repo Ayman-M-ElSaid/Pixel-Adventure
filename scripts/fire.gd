@@ -14,7 +14,7 @@ var is_on := false
 func _set_state() -> void:
 	hazard.monitoring = is_on
 	animated_sprite.play("on" if is_on else "off")
-	timer.wait_time = on_duration if is_on else off_duration
+	timer.start(on_duration if is_on else off_duration)
 
 
 func _ready() -> void:

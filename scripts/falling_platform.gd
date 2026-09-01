@@ -28,6 +28,18 @@ func _shake() -> void:
 	_tween = create_tween().set_loops(2)
 	_tween.tween_property(self, "position:x", position.x + 3, 0.05)
 	_tween.tween_property(self, "position:x", position.x - 3, 0.05)
+	var base_x = position.x
+	var base_y = position.y
+	_tween = create_tween()
+	_tween.set_parallel(true)
+	_tween.tween_method(_apply_shake_x.bind(base_x), 0.0, 0.1, 0.1)
+	_tween.tween_property(self, "position:y", base_y + 3, .1) \
+			.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+
+
+func _apply_shake_x(t: float, base_x: float) -> void:
+	var decay := exp(-8 * t)
+	position.x = base_x + 4 * decay * sin(t * 4 * TAU)
 
 
 func _on_timer_timeout():
@@ -35,6 +47,5 @@ func _on_timer_timeout():
 	if _tween:
 		_tween.kill()
 	_tween = create_tween()
-	_tween.set_ease(Tween.EASE_IN)
-	_tween.tween_property(self, "position:y", 320, .5)
-	_tween.tween_callback(queue_free)
+	_tween.tween_property(self, "position:y", 320, 0.5) \
+			.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
