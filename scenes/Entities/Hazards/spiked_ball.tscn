@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0l4i3luvh77p"]
 
-[ext_resource type="Script" uid="uid://0e70p8btxjq5" path="res://scripts/spiked_ball.gd" id="1_x7r0w"]
+[ext_resource type="Script" uid="uid://0e70p8btxjq5" path="res://scripts/Entities/Hazards/spiked_ball.gd" id="1_x7r0w"]
 [ext_resource type="Texture2D" uid="uid://dmauaraduilw4" path="res://assets/Traps/Spiked Ball/Chain.png" id="1_xhhmy"]
 [ext_resource type="Texture2D" uid="uid://ds0bm21u8v0ek" path="res://assets/Traps/Spiked Ball/Spiked Ball.png" id="2_x7r0w"]
 [ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/Entities/Hazards/hazard.tscn" id="3_51mmw"]

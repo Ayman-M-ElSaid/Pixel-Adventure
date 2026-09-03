@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqk88coqenhgw"]
 
 [ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/Entities/Hazards/hazard.tscn" id="1_y1qxh"]
-[ext_resource type="Script" uid="uid://d33c76hfs1nt8" path="res://scripts/spikes.gd" id="2_3rmff"]
+[ext_resource type="Script" uid="uid://d33c76hfs1nt8" path="res://scripts/Entities/Hazards/spikes.gd" id="2_3rmff"]
 [ext_resource type="Texture2D" uid="uid://bgkct1jkfryh2" path="res://assets/Traps/Spikes/Idle.png" id="2_cohtf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppjca"]

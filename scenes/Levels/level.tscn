@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dflqpvcy1dew1" path="res://scenes/Entities/background.tscn" id="2_0b4ue"]
 [ext_resource type="Texture2D" uid="uid://ci37utmjka5gm" path="res://assets/Terrain/Terrain (16x16).png" id="3_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://dilwwiny82ctp" path="res://scenes/Entities/player.tscn" id="3_f2txt"]
-[ext_resource type="Script" uid="uid://8m3laetht8c6" path="res://scripts/camera.gd" id="5_fsqur"]
+[ext_resource type="Script" uid="uid://8m3laetht8c6" path="res://scripts/Entities/camera.gd" id="5_fsqur"]
 [ext_resource type="Texture2D" uid="uid://c1s4sj7wrsrcn" path="res://assets/Menu/Buttons/Restart.png" id="6_a4mo8"]
-[ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/button.gd" id="7_87hxj"]
+[ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/UI/button.gd" id="7_87hxj"]
 [ext_resource type="Texture2D" uid="uid://wfkirb0oxniy" path="res://assets/Menu/Buttons/Levels.png" id="7_fi66n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2txt"]

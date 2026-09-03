@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clp5ch6rw3jd0"]
 
-[ext_resource type="Script" uid="uid://codhl6vrrxnvk" path="res://scripts/moving_platform.gd" id="1_c11to"]
+[ext_resource type="Script" uid="uid://codhl6vrrxnvk" path="res://scripts/Entities/Traps/moving_platform.gd" id="1_c11to"]
 [ext_resource type="Texture2D" uid="uid://b4uo4235la23u" path="res://assets/Traps/Platforms/Brown On (32x8).png" id="2_ctlp7"]
 [ext_resource type="Texture2D" uid="uid://627q8pyg6ygu" path="res://assets/Traps/Platforms/Grey On (32x8).png" id="3_kwjky"]
 [ext_resource type="Texture2D" uid="uid://dpn3xwt0ms4r2" path="res://assets/Traps/Platforms/Brown Off.png" id="4_ctlp7"]

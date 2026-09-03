@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b8i4fbnvyvs4d"]
 
-[ext_resource type="Script" uid="uid://c76pmqf54rnb0" path="res://scripts/fire.gd" id="1_dabsk"]
+[ext_resource type="Script" uid="uid://c76pmqf54rnb0" path="res://scripts/Entities/Hazards/fire.gd" id="1_dabsk"]
 [ext_resource type="Texture2D" uid="uid://dtjahhqb8hmwr" path="res://assets/Traps/Fire/Off.png" id="1_qx2w3"]
 [ext_resource type="Texture2D" uid="uid://cv2mepsjfolkl" path="res://assets/Traps/Fire/On (16x32).png" id="2_dabsk"]
-[ext_resource type="Script" uid="uid://2xvgdeigxbtv" path="res://scripts/hazard.gd" id="3_o7liq"]
+[ext_resource type="Script" uid="uid://2xvgdeigxbtv" path="res://scripts/Entities/Hazards/hazard.gd" id="3_o7liq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ri06"]
 size = Vector2(15, 16)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dflqpvcy1dew1"]
 
-[ext_resource type="Script" uid="uid://croptngcbpuxk" path="res://scripts/background.gd" id="1_oabld"]
+[ext_resource type="Script" uid="uid://croptngcbpuxk" path="res://scripts/Entities/background.gd" id="1_oabld"]
 
 [node name="Background" type="Sprite2D" unique_id=1374281801]
 script = ExtResource("1_oabld")

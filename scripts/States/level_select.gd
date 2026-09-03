@@ -26,7 +26,7 @@ func _ready() -> void:
 				button.disabled = true
 				button.modulate = Color(0.3, 0.3, 0.3, 0.5)
 			else:
-				button.set_script(preload("res://scripts/button.gd"))
+				button.set_script(preload("res://scripts/UI/button.gd"))
 			button.pressed.connect(_on_level_pressed.bind(level_id))
 			add_child(button)
 			level_buttons.append(button)

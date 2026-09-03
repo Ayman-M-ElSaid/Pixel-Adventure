@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhixjjyi75fx0"]
 
-[ext_resource type="Script" uid="uid://c664iqumo8by4" path="res://scripts/character_select.gd" id="1_0mdr8"]
+[ext_resource type="Script" uid="uid://c664iqumo8by4" path="res://scripts/States/character_select.gd" id="1_0mdr8"]
 [ext_resource type="Texture2D" uid="uid://by8qlebq8yquf" path="res://assets/Background/Blue.png" id="2_bsq7u"]
 [ext_resource type="SpriteFrames" uid="uid://nonqoy8jchrb" path="res://assets/Main Characters/virtual_guy.tres" id="3_3tmdh"]
 [ext_resource type="AudioStream" uid="uid://bt35pp2bugmvm" path="res://assets/Sounds/error.wav" id="4_3tmdh"]

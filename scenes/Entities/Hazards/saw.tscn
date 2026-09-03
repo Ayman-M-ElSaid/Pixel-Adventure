@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dnwldnf45llqh"]
 
 [ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/Entities/Hazards/hazard.tscn" id="1_wfb2r"]
-[ext_resource type="Script" uid="uid://tfifcavrhnfn" path="res://scripts/saw.gd" id="2_dlf2u"]
+[ext_resource type="Script" uid="uid://tfifcavrhnfn" path="res://scripts/Entities/Hazards/saw.gd" id="2_dlf2u"]
 [ext_resource type="Texture2D" uid="uid://fr6dn5d2aonq" path="res://assets/Traps/Saw/On (38x38).png" id="2_hkj6p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rxmjj"]

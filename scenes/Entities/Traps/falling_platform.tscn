@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://di8rm2v6y3bii"]
 
-[ext_resource type="Script" uid="uid://qbsnqib02ygv" path="res://scripts/falling_platform.gd" id="1_2khds"]
+[ext_resource type="Script" uid="uid://qbsnqib02ygv" path="res://scripts/Entities/Traps/falling_platform.gd" id="1_2khds"]
 [ext_resource type="Texture2D" uid="uid://cimj5oa5ji40q" path="res://assets/Traps/Falling Platforms/Off.png" id="2_6nlfy"]
 [ext_resource type="Texture2D" uid="uid://bh1imqpu4l7kg" path="res://assets/Traps/Falling Platforms/On (32x10).png" id="3_c5k8t"]
 [ext_resource type="Texture2D" uid="uid://bdvht4824vkm" path="res://assets/Other/Dust Particle.png" id="4_c5k8t"]
@@ -60,6 +60,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 size = Vector2(32, 10)
 
 [node name="FallingPlatform" type="AnimatableBody2D" unique_id=171401591]
+collision_mask = 2
 script = ExtResource("1_2khds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=481608663]
@@ -87,13 +88,12 @@ scale_amount_max = 0.5
 color_ramp = SubResource("Gradient_8r07f")
 
 [node name="Timer" type="Timer" parent="." unique_id=1020315083]
-wait_time = 0.8
 
 [node name="TriggerZone" type="Area2D" parent="." unique_id=1654660136]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerZone" unique_id=697859427]
-position = Vector2(0, -10)
+position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_2ri06")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

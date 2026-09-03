@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bvxqc1xg8drjp"]
 
-[ext_resource type="Script" uid="uid://b0sj0jwb8puvb" path="res://scripts/tutorial_overlay.gd" id="1_u4lmm"]
+[ext_resource type="Script" uid="uid://b0sj0jwb8puvb" path="res://scripts/UI/tutorial_overlay.gd" id="1_u4lmm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0eap8"]
 bg_color = Color(1, 1, 1, 0)

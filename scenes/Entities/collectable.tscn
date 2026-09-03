@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2c1xg1ce411k"]
 
-[ext_resource type="Script" uid="uid://cac0gnpmy0cir" path="res://scripts/collectable.gd" id="1_keljx"]
+[ext_resource type="Script" uid="uid://cac0gnpmy0cir" path="res://scripts/Entities/collectable.gd" id="1_keljx"]
 [ext_resource type="Texture2D" uid="uid://bb7kl5rcvof8q" path="res://assets/Items/Fruits/Collected.png" id="2_qx4vw"]
 [ext_resource type="AudioStream" uid="uid://d15a7paxhg6mj" path="res://assets/Sounds/collect.mp3" id="3_8ko5o"]
 

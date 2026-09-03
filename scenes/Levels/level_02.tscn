@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ckq8bvubd58s3" path="res://assets/Background/Gray.png" id="2_ucbth"]
 [ext_resource type="PackedScene" uid="uid://dnwldnf45llqh" path="res://scenes/Entities/Hazards/saw.tscn" id="4_ucbth"]
 [ext_resource type="PackedScene" uid="uid://c2c1xg1ce411k" path="res://scenes/Entities/collectable.tscn" id="4_vg82q"]
-[ext_resource type="PackedScene" uid="uid://clp5ch6rw3jd0" path="res://scenes/Entities/moving_platform.tscn" id="5_ai3hb"]
+[ext_resource type="PackedScene" uid="uid://clp5ch6rw3jd0" path="res://scenes/Entities/Traps/moving_platform.tscn" id="5_ai3hb"]
 
 [node name="Level02" unique_id=1923209002 instance=ExtResource("1_37a60")]
 
