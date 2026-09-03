@@ -16,67 +16,30 @@ level_id = 5
 background_color = ExtResource("2_3sxin")
 
 [node name="Spikes" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=669338303 instance=ExtResource("2_a0s4k")]
-position = Vector2(-80, 137)
+position = Vector2(-88, 144)
+length = 17
 
-[node name="Spikes10" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="1" unique_id=1962543803 instance=ExtResource("2_a0s4k")]
-position = Vector2(-256, -232)
+[node name="Spikes11" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="1" unique_id=150901540 instance=ExtResource("2_a0s4k")]
+position = Vector2(-224, -240)
 rotation = 3.1415927
+length = 4
 
-[node name="Spikes11" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="2" unique_id=150901540 instance=ExtResource("2_a0s4k")]
-position = Vector2(-224, -232)
+[node name="Spikes15" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="2" unique_id=1338944231 instance=ExtResource("2_a0s4k")]
+position = Vector2(72, -240)
 rotation = 3.1415927
+length = 7
 
-[node name="Spikes12" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="3" unique_id=679439974 instance=ExtResource("2_a0s4k")]
-position = Vector2(-17, -232)
-rotation = 3.1415927
-
-[node name="Spikes13" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="4" unique_id=1153632010 instance=ExtResource("2_a0s4k")]
-position = Vector2(15, -232)
-rotation = 3.1415927
-
-[node name="Spikes14" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="5" unique_id=2072704871 instance=ExtResource("2_a0s4k")]
-position = Vector2(47, -232)
-rotation = 3.1415927
-
-[node name="Spikes15" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="6" unique_id=1338944231 instance=ExtResource("2_a0s4k")]
-position = Vector2(63, -232)
-rotation = 3.1415927
-
-[node name="Spikes2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="7" unique_id=377909844 instance=ExtResource("2_a0s4k")]
-position = Vector2(-48, 137)
-
-[node name="Spikes3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="8" unique_id=719229006 instance=ExtResource("2_a0s4k")]
-position = Vector2(-16, 137)
-
-[node name="Spikes4" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="9" unique_id=1007421565 instance=ExtResource("2_a0s4k")]
-position = Vector2(16, 137)
-
-[node name="Spikes5" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="10" unique_id=1129708943 instance=ExtResource("2_a0s4k")]
-position = Vector2(48, 137)
-
-[node name="Spikes6" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="11" unique_id=7450595 instance=ExtResource("2_a0s4k")]
-position = Vector2(80, 137)
-
-[node name="Spikes7" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="12" unique_id=313690869 instance=ExtResource("2_a0s4k")]
-position = Vector2(112, 137)
-
-[node name="Spikes8" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="13" unique_id=473927675 instance=ExtResource("2_a0s4k")]
-position = Vector2(144, 137)
-
-[node name="Spikes9" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="14" unique_id=654383399 instance=ExtResource("2_a0s4k")]
-position = Vector2(160, 137)
-
-[node name="SpikedBall" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="15" unique_id=584708736 instance=ExtResource("3_5h7xu")]
+[node name="SpikedBall" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="3" unique_id=584708736 instance=ExtResource("3_5h7xu")]
 position = Vector2(-56, 24)
 rotation = -1.0471976
 swing_angle_degrees = 60.0
 
-[node name="SpikedBall2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="16" unique_id=1984702965 instance=ExtResource("3_5h7xu")]
+[node name="SpikedBall2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="4" unique_id=1984702965 instance=ExtResource("3_5h7xu")]
 position = Vector2(103, 24)
 rotation = 1.0471976
 swing_angle_degrees = -60.0
 
-[node name="SpikedBall3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="17" unique_id=1826134547 instance=ExtResource("3_5h7xu")]
+[node name="SpikedBall3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="5" unique_id=1826134547 instance=ExtResource("3_5h7xu")]
 position = Vector2(23, -199.00002)
 rotation = -1.3962634
 swing_angle_degrees = 80.0

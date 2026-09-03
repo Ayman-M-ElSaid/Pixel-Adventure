@@ -1,19 +1,24 @@
 [gd_scene format=3 uid="uid://dqk88coqenhgw"]
 
 [ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/Entities/Hazards/hazard.tscn" id="1_y1qxh"]
+[ext_resource type="Script" uid="uid://d33c76hfs1nt8" path="res://scripts/spikes.gd" id="2_3rmff"]
 [ext_resource type="Texture2D" uid="uid://bgkct1jkfryh2" path="res://assets/Traps/Spikes/Idle.png" id="2_cohtf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppjca"]
-size = Vector2(32, 12)
+size = Vector2(16, 8)
 
-[node name="Hazard" unique_id=669338303 instance=ExtResource("1_y1qxh")]
+[node name="Spikes" unique_id=669338303 instance=ExtResource("1_y1qxh")]
+script = ExtResource("2_3rmff")
+length = 2
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=999896328]
-position = Vector2(0, 2)
+unique_name_in_owner = true
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_ppjca")
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="2" unique_id=726519891]
 texture_repeat = 2
+position = Vector2(0, -4)
 texture = ExtResource("2_cohtf")
 region_enabled = true
-region_rect = Rect2(0, 0, 32, 16)
+region_rect = Rect2(0, 0, 16, 8)
