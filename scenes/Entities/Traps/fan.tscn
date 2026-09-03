@@ -77,7 +77,7 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_yr2er")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=168997]
-amount = 10
+amount = 50
 texture = ExtResource("4_2tyu8")
 lifetime = 0.8
 emission_shape = 3

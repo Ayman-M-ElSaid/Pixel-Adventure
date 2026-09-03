@@ -1,9 +1,9 @@
 extends StaticBody2D
 
-@export var height: float = 300
-@export var on_duration: float = 1.0
-@export var off_duration: float = 1.0
-@export var decel_zone: float = 40.0
+@export var height: float = 100
+@export var on_duration: float = 2.0
+@export var off_duration: float = 2.0
+@export var decel_zone: float = 20.0
 
 @onready var lift_area = $LiftArea
 @onready var animated_sprite = $AnimatedSprite2D
@@ -60,7 +60,7 @@ func _physics_process(delta: float) -> void:
 
 	if player_inside and is_on:
 		const BOB_AMPLITUDE: float = 6.0
-		const BOB_FREQUENCY: float = 1.5 # oscillations per second
+		const BOB_FREQUENCY: float = 1.5
 		const HOVER_GAIN: float = 10.0
 		var local_y = to_local(player_inside.global_position).y
 		var distance_to_top = local_y - top_edge
