@@ -44,19 +44,21 @@ func _complete_level() -> void:
 	)
 	SaveManager.save_game()
 
+
 func _unhandled_input(event: InputEvent):
 	if event.is_action_pressed("retry"):
 		_restart_leve()
-		
+
+
 func _on_restart_button_pressed():
 	_restart_leve()
 
 
-func _restart_leve()->void:
+func _restart_leve() -> void:
 	player.die()
 	get_tree().reload_current_scene()
-	
-	
+
+
 func _on_levels_button_pressed():
 	Transition.wipe_in_finished.connect(
 		func():
@@ -66,6 +68,3 @@ func _on_levels_button_pressed():
 		CONNECT_ONE_SHOT,
 	)
 	Transition.play_wipe_in()
-	
-
-	

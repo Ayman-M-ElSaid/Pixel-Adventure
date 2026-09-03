@@ -1,7 +1,7 @@
 extends TextureButton
 
-
 var original_position: Vector2
+
 
 func _ready():
 	original_position = position

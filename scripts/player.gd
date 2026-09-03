@@ -43,10 +43,7 @@ func _physics_process(delta: float) -> void:
 	elif is_wall_gliding:
 		velocity.y += get_gravity().y * WALL_GLIDE_GRAVITY_SCALE * delta
 		velocity.y = min(velocity.y, WALL_FALL_SPEED)
-		var current_wall = get_wall_normal().x
-		if last_wall_jump != current_wall:
-			last_wall_jump = current_wall
-			jumps_available = MAX_JUMPS
+		jumps_available = MAX_JUMPS
 	else:
 		velocity += get_gravity() * delta
 
