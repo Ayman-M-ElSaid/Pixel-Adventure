@@ -13,13 +13,19 @@ func _ready():
 	animated_sprite.play("on")
 
 
-func _on_trigger_zone_body_entered(_body: CharacterBody2D):
+func _on_trigger_zone_body_entered(body: CharacterBody2D) -> void:
 	if _triggered:
 		return
-	_triggered = true
-	set_deferred("trigger_zone:monitoring", false)
-	_shake()
-	timer.start()
+	for i in 10:
+		await get_tree().physics_frame
+		if not trigger_zone.overlaps_body(body):
+			return
+		if body.is_on_floor():
+			_triggered = true
+			set_deferred("trigger_zone:monitoring", false)
+			_shake()
+			timer.start()
+			return
 
 
 func _shake() -> void:
