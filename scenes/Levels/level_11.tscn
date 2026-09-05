@@ -1,0 +1,199 @@
+[gd_scene format=4 uid="uid://bcs8p35ja4sx7"]
+
+[ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_rdghe"]
+[ext_resource type="Texture2D" uid="uid://da08883y345fy" path="res://assets/Background/Yellow.png" id="2_4tude"]
+[ext_resource type="PackedScene" uid="uid://b8i4fbnvyvs4d" path="res://scenes/Entities/Hazards/fire.tscn" id="2_dy7kw"]
+[ext_resource type="PackedScene" uid="uid://cqlmnnt1ibbju" path="res://scenes/Entities/Traps/fan.tscn" id="3_e4hyj"]
+[ext_resource type="PackedScene" uid="uid://dnwldnf45llqh" path="res://scenes/Entities/Hazards/saw.tscn" id="4_a4c5p"]
+[ext_resource type="PackedScene" uid="uid://c2c1xg1ce411k" path="res://scenes/Entities/collectable.tscn" id="4_p4lon"]
+
+[node name="Level11" unique_id=1923209002 instance=ExtResource("1_rdghe")]
+
+[node name="LevelManager" parent="." index="0" unique_id=360763231]
+level_id = 11
+
+[node name="Background" parent="." index="1" unique_id=1374281801]
+z_index = -1
+background_color = ExtResource("2_4tude")
+
+[node name="Fire" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=1689757717 instance=ExtResource("2_dy7kw")]
+position = Vector2(-152, -32)
+length = 6
+
+[node name="Fire2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="1" unique_id=126142203 instance=ExtResource("2_dy7kw")]
+position = Vector2(-216, 96)
+length = 15
+on_duration = 1.5
+off_duration = 1.5
+
+[node name="Fan" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="2" unique_id=1943688247 instance=ExtResource("3_e4hyj")]
+position = Vector2(196, 125)
+height = 200.0
+
+[node name="Fan2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="3" unique_id=1219338996 instance=ExtResource("3_e4hyj")]
+position = Vector2(172, 125)
+height = 200.0
+
+[node name="Fan3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="4" unique_id=400848502 instance=ExtResource("3_e4hyj")]
+position = Vector2(149, 125)
+height = 200.0
+
+[node name="Fan4" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="5" unique_id=690081732 instance=ExtResource("3_e4hyj")]
+position = Vector2(125, 125)
+height = 200.0
+
+[node name="Fire3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="6" unique_id=609339370 instance=ExtResource("2_dy7kw")]
+position = Vector2(111, -72)
+rotation = 1.5707964
+length = 9
+
+[node name="Fire4" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="7" unique_id=25296756 instance=ExtResource("2_dy7kw")]
+position = Vector2(208, 88)
+rotation = -1.5707964
+length = 9
+
+[node name="Saw" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="8" unique_id=669338303 instance=ExtResource("4_a4c5p")]
+position = Vector2(256, -48)
+points = [Vector2(256, -174), Vector2(18, -174), Vector2(18, -82)]
+duration = 3.0
+
+[node name="Collectables" parent="." index="3" unique_id=941163762]
+z_index = -1
+
+[node name="Collectable" parent="Collectables" index="0" unique_id=310779860 instance=ExtResource("4_p4lon")]
+position = Vector2(119, 56)
+fruit_name = 6
+
+[node name="Collectable3" parent="Collectables" index="1" unique_id=1985335518 instance=ExtResource("4_p4lon")]
+position = Vector2(119, 24)
+fruit_name = 6
+
+[node name="Collectable5" parent="Collectables" index="2" unique_id=243069848 instance=ExtResource("4_p4lon")]
+position = Vector2(119, -8)
+fruit_name = 6
+
+[node name="Collectable7" parent="Collectables" index="3" unique_id=1130109162 instance=ExtResource("4_p4lon")]
+position = Vector2(119, -40)
+fruit_name = 6
+
+[node name="Collectable9" parent="Collectables" index="4" unique_id=1335914760 instance=ExtResource("4_p4lon")]
+position = Vector2(119, -72)
+fruit_name = 6
+
+[node name="Collectable33" parent="Collectables" index="5" unique_id=385765708 instance=ExtResource("4_p4lon")]
+position = Vector2(160.5, -93)
+fruit_name = 6
+
+[node name="Collectable2" parent="Collectables" index="6" unique_id=558352590 instance=ExtResource("4_p4lon")]
+position = Vector2(198, 86)
+fruit_name = 6
+
+[node name="Collectable4" parent="Collectables" index="7" unique_id=1008123048 instance=ExtResource("4_p4lon")]
+position = Vector2(198, 54)
+fruit_name = 6
+
+[node name="Collectable6" parent="Collectables" index="8" unique_id=1822337183 instance=ExtResource("4_p4lon")]
+position = Vector2(198, 22)
+fruit_name = 6
+
+[node name="Collectable8" parent="Collectables" index="9" unique_id=1365361842 instance=ExtResource("4_p4lon")]
+position = Vector2(198, -10)
+fruit_name = 6
+
+[node name="Collectable26" parent="Collectables" index="10" unique_id=1923942593 instance=ExtResource("4_p4lon")]
+position = Vector2(198, -42)
+fruit_name = 6
+
+[node name="Collectable10" parent="Collectables" index="11" unique_id=60103670 instance=ExtResource("4_p4lon")]
+position = Vector2(-144, -55)
+fruit_name = 5
+
+[node name="Collectable13" parent="Collectables" index="12" unique_id=1899848200 instance=ExtResource("4_p4lon")]
+position = Vector2(-200, 73)
+fruit_name = 5
+
+[node name="Collectable14" parent="Collectables" index="13" unique_id=1568900300 instance=ExtResource("4_p4lon")]
+position = Vector2(-168, 73)
+fruit_name = 5
+
+[node name="Collectable15" parent="Collectables" index="14" unique_id=1286890428 instance=ExtResource("4_p4lon")]
+position = Vector2(-136, 73)
+fruit_name = 5
+
+[node name="Collectable16" parent="Collectables" index="15" unique_id=1896152841 instance=ExtResource("4_p4lon")]
+position = Vector2(-104, 73)
+fruit_name = 5
+
+[node name="Collectable17" parent="Collectables" index="16" unique_id=10143603 instance=ExtResource("4_p4lon")]
+position = Vector2(-72, 73)
+fruit_name = 5
+
+[node name="Collectable18" parent="Collectables" index="17" unique_id=1792253045 instance=ExtResource("4_p4lon")]
+position = Vector2(-40, 73)
+fruit_name = 5
+
+[node name="Collectable19" parent="Collectables" index="18" unique_id=140222756 instance=ExtResource("4_p4lon")]
+position = Vector2(-8, 73)
+fruit_name = 5
+
+[node name="Collectable20" parent="Collectables" index="19" unique_id=2037322938 instance=ExtResource("4_p4lon")]
+position = Vector2(-24, 57)
+fruit_name = 5
+
+[node name="Collectable21" parent="Collectables" index="20" unique_id=903714434 instance=ExtResource("4_p4lon")]
+position = Vector2(-56, 57)
+fruit_name = 5
+
+[node name="Collectable22" parent="Collectables" index="21" unique_id=668078132 instance=ExtResource("4_p4lon")]
+position = Vector2(-88, 57)
+fruit_name = 5
+
+[node name="Collectable23" parent="Collectables" index="22" unique_id=1458527260 instance=ExtResource("4_p4lon")]
+position = Vector2(-120, 57)
+fruit_name = 5
+
+[node name="Collectable24" parent="Collectables" index="23" unique_id=861699804 instance=ExtResource("4_p4lon")]
+position = Vector2(-152, 57)
+fruit_name = 5
+
+[node name="Collectable25" parent="Collectables" index="24" unique_id=1448808524 instance=ExtResource("4_p4lon")]
+position = Vector2(-184, 57)
+fruit_name = 5
+
+[node name="Collectable11" parent="Collectables" index="25" unique_id=1599069336 instance=ExtResource("4_p4lon")]
+position = Vector2(-112, -55)
+fruit_name = 5
+
+[node name="Collectable12" parent="Collectables" index="26" unique_id=944302701 instance=ExtResource("4_p4lon")]
+position = Vector2(-80, -55)
+fruit_name = 5
+
+[node name="Collectable27" parent="Collectables" index="27" unique_id=568450938 instance=ExtResource("4_p4lon")]
+position = Vector2(32, -93)
+fruit_name = 1
+
+[node name="Collectable28" parent="Collectables" index="28" unique_id=1283302867 instance=ExtResource("4_p4lon")]
+position = Vector2(32, -118)
+fruit_name = 1
+
+[node name="Collectable29" parent="Collectables" index="29" unique_id=2048159239 instance=ExtResource("4_p4lon")]
+position = Vector2(32, -143)
+fruit_name = 1
+
+[node name="Collectable30" parent="Collectables" index="30" unique_id=47712570 instance=ExtResource("4_p4lon")]
+position = Vector2(239, -67)
+fruit_name = 1
+
+[node name="Collectable31" parent="Collectables" index="31" unique_id=1010951142 instance=ExtResource("4_p4lon")]
+position = Vector2(239, -92)
+fruit_name = 1
+
+[node name="Collectable32" parent="Collectables" index="32" unique_id=1486797065 instance=ExtResource("4_p4lon")]
+position = Vector2(239, -117)
+fruit_name = 1
+
+[node name="TileMap" parent="." index="4" unique_id=368368994]
+tile_map_data = PackedByteArray("AADu/wkAAAADAAkAAAAAAAkAAAAEAAkAAAAAAAgAAAAAAAgAAAABAAgAAAABAAgAAAACAAgAAAABAAgAAAADAAgAAAABAAgAAAAEAAgAAAABAAgAAAAFAAgAAAABAAgAAAAGAAgAAAABAAgAAAAHAAgAAAABAAgAAAD//wkAAAABAAgAAAD+/wkAAAABAAgAAAD9/wkAAAABAAgAAAD8/wkAAAABAAgAAAD7/wkAAAABAAgAAAD6/wkAAAABAAgAAAD5/wkAAAABAAgAAAD4/wkAAAABAAgAAAD3/wkAAAABAAgAAAD2/wkAAAABAAgAAAD1/wkAAAABAAgAAAD0/wkAAAABAAgAAADx/wkAAAABAAgAAADw/wkAAAABAAgAAADv/wkAAAABAAgAAADy/wkAAAABAAgAAADz/wkAAAABAAgAAADu/wQAAAACAAkAAADu/wUAAAACAAkAAADu/wYAAAACAAkAAADu/wcAAAACAAkAAADu/wgAAAACAAkAAADv/wMAAAACAAoAAADv/wIAAAACAAkAAADv/wEAAAACAAkAAADv/wAAAAACAAkAAADv////AAACAAkAAADv//7/AAACAAkAAADv//3/AAACAAkAAADv//z/AAACAAgAAADu//z/AAADAAkAAADu/wMAAAADAAgAAADu//n/AAADAAgAAADu//r/AAACAAkAAADu//v/AAACAAkAAADv//n/AAACAAIAAADv//j/AAACAAEAAADv//f/AAACAAEAAADv//b/AAACAAEAAADv//X/AAACAAEAAADv//T/AAADAAAAAAAIAAgAAAABAAgAAAAJAAgAAAABAAgAAAAKAAgAAAABAAgAAAALAAgAAAABAAgAAAAMAAgAAAABAAgAAAANAAgAAAABAAgAAAAOAAgAAAABAAgAAAAPAAgAAAABAAgAAAARAPz/AAAEAAgAAAARAP3/AAAAAAkAAAARAP7/AAAAAAkAAAARAP//AAAAAAkAAAARAAAAAAAAAAkAAAARAAEAAAAAAAkAAAARAAIAAAAAAAkAAAARAAMAAAAAAAkAAAARAAQAAAAAAAkAAAARAAUAAAAAAAkAAAARAAYAAAAAAAkAAAARAAcAAAAAAAkAAAARAAgAAAAEAAkAAAAQAAgAAAABAAgAAAAQAPz/AAAAAAIAAADw//T/AAABAAIAAADx//T/AAABAAIAAADy//T/AAABAAIAAADz//T/AAABAAIAAAD0//T/AAABAAIAAAD1//T/AAABAAIAAAD2//T/AAABAAIAAAD3//T/AAABAAIAAAD4//T/AAABAAIAAAD5//T/AAABAAIAAAD6//T/AAABAAIAAAD7//T/AAABAAIAAAD8//T/AAABAAIAAAD9//T/AAABAAIAAAD+//T/AAABAAIAAAD///T/AAAEAAAAAAAAAPT/AAADAAAAAAABAPT/AAABAAIAAAACAPT/AAABAAIAAAADAPT/AAABAAIAAAAEAPT/AAABAAIAAAAFAPT/AAABAAIAAAAGAPT/AAABAAIAAAAHAPT/AAABAAIAAAAIAPT/AAABAAIAAAAJAPT/AAABAAIAAAAKAPT/AAABAAIAAAALAPT/AAABAAIAAAAMAPT/AAABAAIAAAAQAPv/AAAAAAEAAAAQAPr/AAAAAAEAAAAQAPn/AAAAAAEAAAAQAPj/AAAAAAEAAAAQAPf/AAAAAAEAAAAQAPb/AAAAAAEAAAAQAPX/AAAAAAEAAAAQAPT/AAAEAAAAAAAPAPT/AAABAAIAAAAOAPT/AAABAAIAAAANAPT/AAABAAIAAAABAAkAAAABAAEAAAACAAkAAAABAAEAAAADAAkAAAABAAEAAAAEAAkAAAABAAEAAAAFAAkAAAABAAEAAAAGAAkAAAABAAEAAAAHAAkAAAABAAEAAAAIAAkAAAABAAEAAAAJAAkAAAABAAEAAAAKAAkAAAABAAEAAAALAAkAAAABAAEAAAAMAAkAAAABAAEAAAANAAkAAAABAAEAAAAOAAkAAAABAAEAAAAPAAkAAAABAAEAAAAQAAkAAAABAAEAAAARAAkAAAABAAEAAADu/wAAAAABAAEAAADu////AAABAAEAAADu//7/AAABAAEAAADu//3/AAABAAEAAADu/wEAAAABAAEAAADu/wIAAAABAAEAAADu//b/AAABAAEAAADu//X/AAABAAEAAADu//T/AAABAAEAAADu//f/AAABAAEAAADu//j/AAABAAEAAAARAPn/AAABAAEAAAARAPj/AAABAAEAAAARAPf/AAABAAEAAAARAPb/AAABAAEAAAARAPX/AAABAAEAAAARAPT/AAABAAEAAAARAPr/AAABAAEAAAARAPv/AAABAAEAAADv//r/AAAGAAgAAADv//v/AAAGAAoAAAD0//r/AAAIAAgAAAD0//v/AAAIAAoAAADz//r/AAAHAAgAAADy//r/AAAHAAgAAADx//r/AAAHAAgAAADw//r/AAAHAAgAAADz//v/AAAHAAoAAADy//v/AAAHAAoAAADx//v/AAAHAAoAAADw//v/AAAHAAoAAAD1//v/AAASAAAAAAD2//v/AAATAAAAAAD9//z/AAASAAAAAAD+//z/AAATAAAAAAAAAPz/AAACAAIAAAD///X/AAAAAAEAAAD///b/AAAAAAEAAAD///n/AAAAAAEAAAD///j/AAAAAAEAAAD///f/AAAAAAEAAAD///r/AAAAAAEAAAD///v/AAAAAAEAAAAAAPv/AAACAAEAAAAAAPr/AAACAAEAAAAAAPn/AAACAAEAAAAAAPj/AAACAAEAAAAAAPf/AAACAAEAAAAAAPb/AAACAAEAAAAAAPX/AAACAAEAAAD///z/AAACAAIAABD+//X/AAARAAkAAAAAAAcAAAAIAAgAAAD//wcAAAAHAAgAAAD+/wcAAAAHAAgAAAD9/wcAAAAHAAgAAAD8/wcAAAAHAAgAAAD7/wcAAAAHAAgAAAD6/wcAAAAHAAgAAAD5/wcAAAAHAAgAAAD4/wcAAAAHAAgAAAD3/wcAAAAHAAgAAAD2/wcAAAAHAAgAAAD1/wcAAAAHAAgAAAD0/wcAAAAHAAgAAADv/wQAAAAGAAgAAADw/wQAAAAHAAgAAADx/wQAAAAIAAgAAADx/wUAAAAIAAkAAADx/wYAAAAIAAkAAADy/wcAAAAHAAgAAADx/wcAAAAJAAkAAADz/wcAAAAHAAgAAADv/wUAAAAGAAkAAADv/wYAAAAGAAkAAADv/wcAAAAGAAkAAADv/wgAAAAGAAoAAAD//wgAAAAHAAoAAAD+/wgAAAAHAAoAAAD9/wgAAAAHAAoAAAD8/wgAAAAHAAoAAAD7/wgAAAAHAAoAAAD6/wgAAAAHAAoAAAD5/wgAAAAHAAoAAAD4/wgAAAAHAAoAAAD3/wgAAAAHAAoAAAD2/wgAAAAHAAoAAAD1/wgAAAAHAAoAAAD0/wgAAAAHAAoAAADz/wgAAAAHAAoAAADy/wgAAAAHAAoAAADx/wgAAAAHAAoAAADw/wgAAAAHAAoAAADw/wUAAAAHAAkAAADw/wYAAAAHAAkAAADw/wcAAAAHAAkAAAD2////AAARAAgAAAD3////AAATAAgAAAD4////AAARAAkAAAD5////AAARAAgAAAD6////AAASAAgAAAD7////AAATAAgAAAABAPv/AAASAAkAAAABAPz/AAASAAoAAAACAPv/AAATAAkAAAACAPz/AAATAAoAAAACAP3/AAARAAkAAAADAPv/AAAGAAgAAAADAAMAAAAGAAoAAAADAPz/AAAGAAkAAAADAP3/AAAGAAkAAAADAP7/AAAGAAkAAAADAP//AAAGAAkAAAADAAAAAAAGAAkAAAADAAEAAAAGAAkAAAADAAIAAAAGAAkAAAAQAP3/AAAIAAgAAAAQAP7/AAAIAAkAAAAQAP//AAAIAAkAAAAQAAAAAAAIAAkAAAAQAAEAAAAIAAkAAAAQAAIAAAAIAAkAAAAQAAMAAAAIAAkAAAAQAAQAAAAIAAkAAAAQAAUAAAAIAAkAAAAQAAYAAAAUAAgAAAAQAAcAAAAUAAoAAAAPAAcAAAAKAAkAAAANAAcAAAAGAAgAAAAOAAcAAAAHAAgAAAAOAP3/AAAGAAgAAAAOAP7/AAAGAAkAAAAOAP//AAAGAAkAAAAOAAAAAAAGAAkAAAAOAAEAAAAGAAkAAAAOAAIAAAAGAAkAAAAOAAMAAAAGAAkAAAAOAAQAAAAGAAkAAAAOAAUAAAAGAAkAAAAOAAYAAAAGAAkAAAAPAAYAAAAHAAkAAAAPAAUAAAAHAAkAAAAPAAQAAAAHAAkAAAAPAAMAAAAHAAkAAAAPAAIAAAAHAAkAAAAPAAEAAAAHAAkAAAAPAAAAAAAHAAkAAAAPAP//AAAHAAkAAAAPAP7/AAAHAAkAAAAPAP3/AAAHAAgAAAAFAPv/AAAIAAgAAAAFAPz/AAAIAAkAAAAFAP3/AAAIAAkAAAAFAP7/AAAIAAkAAAAFAP//AAAIAAkAAAAFAAAAAAAIAAkAAAAFAAEAAAAIAAkAAAAFAAIAAAAIAAkAAAAFAAMAAAAIAAoAAAAEAAMAAAAHAAoAAAAEAPv/AAAHAAgAAAAEAAIAAAAHAAkAAAAEAAEAAAAHAAkAAAAEAAAAAAAHAAkAAAAEAP//AAAHAAkAAAAEAP7/AAAHAAkAAAAEAP3/AAAHAAkAAAAEAPz/AAAHAAkAAAA=")
+
+[node name="Player" parent="." index="5" unique_id=829502222]
+position = Vector2(-224, -103)
