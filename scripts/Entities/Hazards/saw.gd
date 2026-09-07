@@ -4,13 +4,10 @@ extends Hazard
 @export var duration: float = 2.0
 @export var looping: bool = false
 
-var _start_position: Vector2
-var _tween: Tween
-
 
 func _ready() -> void:
-	_start_position = position
-	if points.size() < 0:
+	var _start_position: Vector2 = position
+	if points.size() <= 0:
 		return
 
 	var move_points: Array[Vector2] = [_start_position]
@@ -30,7 +27,7 @@ func _ready() -> void:
 	if total_length <= 0.0:
 		return
 
-	_tween = create_tween()
+	var _tween: Tween = create_tween()
 	_tween.set_loops(0)
 	if looping:
 		_tween.set_trans(Tween.TRANS_LINEAR)

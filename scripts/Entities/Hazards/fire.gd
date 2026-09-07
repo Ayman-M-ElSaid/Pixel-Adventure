@@ -13,7 +13,6 @@ extends StaticBody2D
 const TILE_WIDTH := 16.0
 const EDGE_INSET := 3.0
 
-
 var is_on := false
 var sprites: Array[AnimatedSprite2D] = []
 
@@ -35,7 +34,7 @@ func _setup_length() -> void:
 
 	if length > 1:
 		hazard_collision.shape = hazard_collision.shape.duplicate()
-		hazard_collision.shape.size.x = total_width - 2*EDGE_INSET
+		hazard_collision.shape.size.x = total_width - 2 * EDGE_INSET
 		hazard_collision.position.x = offset_x
 	sprites = [sprite_template]
 	for i in range(1, length):

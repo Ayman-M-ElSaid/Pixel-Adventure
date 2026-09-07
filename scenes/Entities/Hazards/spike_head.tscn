@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://b8ceo8onenq7a"]
+
+[ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/Entities/Hazards/hazard.tscn" id="1_apppw"]
+[ext_resource type="Script" uid="uid://bmkkmb7o3wcaa" path="res://scripts/Entities/Hazards/spike_head.gd" id="2_jvt1v"]
+[ext_resource type="Texture2D" uid="uid://bn81krku5qfwd" path="res://assets/Traps/Spike Head/Right Hit (54x52).png" id="3_ccup1"]
+[ext_resource type="Texture2D" uid="uid://c0xl5mdagvh5f" path="res://assets/Traps/Spike Head/Blink (54x52).png" id="4_2oi8l"]
+[ext_resource type="Texture2D" uid="uid://bfmkk8cd5hieq" path="res://assets/Traps/Spike Head/Idle.png" id="5_6tfto"]
+[ext_resource type="Texture2D" uid="uid://c51a2k6lxqgvx" path="res://assets/Traps/Spike Head/Bottom Hit (54x52).png" id="7_kq6id"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qj26j"]
+size = Vector2(36, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbaw2"]
+atlas = ExtResource("3_ccup1")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_30tw8"]
+atlas = ExtResource("3_ccup1")
+region = Rect2(54, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfasp"]
+atlas = ExtResource("3_ccup1")
+region = Rect2(108, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh8ug"]
+atlas = ExtResource("3_ccup1")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imp1d"]
+atlas = ExtResource("4_2oi8l")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cir5j"]
+atlas = ExtResource("4_2oi8l")
+region = Rect2(54, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei3ts"]
+atlas = ExtResource("4_2oi8l")
+region = Rect2(108, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mc4qf"]
+atlas = ExtResource("4_2oi8l")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_620ft"]
+atlas = ExtResource("7_kq6id")
+region = Rect2(0, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tp5yq"]
+atlas = ExtResource("7_kq6id")
+region = Rect2(54, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktltk"]
+atlas = ExtResource("7_kq6id")
+region = Rect2(108, 0, 54, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5rdr"]
+atlas = ExtResource("7_kq6id")
+region = Rect2(162, 0, 54, 52)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ri06"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbaw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_30tw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfasp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh8ug")
+}],
+"loop": 0,
+"name": &"horizontal_hit",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imp1d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cir5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei3ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mc4qf")
+}, {
+"duration": 20.0,
+"texture": ExtResource("5_6tfto")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_620ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tp5yq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktltk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5rdr")
+}],
+"loop": 0,
+"name": &"vertical_hit",
+"speed": 20.0
+}]
+
+[node name="SpikeHead" unique_id=669338303 instance=ExtResource("1_apppw")]
+script = ExtResource("2_jvt1v")
+trigger_direction = 1
+trigger_range = 100.0
+fall_distance = 100.0
+fall_time = 0.3
+retraction = true
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=999896328]
+shape = SubResource("RectangleShape2D_qj26j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1" unique_id=523071528]
+sprite_frames = SubResource("SpriteFrames_2ri06")
+animation = &"horizontal_hit"
+autoplay = "idle"
+
+[node name="TriggerRay" type="RayCast2D" parent="." index="2" unique_id=1425321048]
+collision_mask = 2
+
+[node name="RetractionTimer" type="Timer" parent="." index="4" unique_id=1358712523]
+one_shot = true
+
+[connection signal="timeout" from="RetractionTimer" to="." method="_on_retraction_timer_timeout"]

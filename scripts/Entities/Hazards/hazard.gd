@@ -6,8 +6,7 @@ class_name Hazard
 
 func _on_body_entered(body) -> void:
 	body.die()
-	timer.wait_time = 1
-	timer.start()
+	timer.start(1)
 
 
 func _on_timer_timeout() -> void:
