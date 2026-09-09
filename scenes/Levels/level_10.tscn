@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://cjpqnr1fctl87"]
 
 [ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_64bgv"]
-[ext_resource type="Texture2D" uid="uid://ce21d0osj86j2" path="res://assets/Background/Brown.png" id="2_b2xma"]
 [ext_resource type="PackedScene" uid="uid://bacb3thoylb0o" path="res://scenes/Entities/Traps/trampoline.tscn" id="2_nmluu"]
 [ext_resource type="PackedScene" uid="uid://dqk88coqenhgw" path="res://scenes/Entities/Hazards/spikes.tscn" id="3_h4qpp"]
 [ext_resource type="PackedScene" uid="uid://di8rm2v6y3bii" path="res://scenes/Entities/Traps/falling_platform.tscn" id="4_htihj"]
@@ -15,7 +14,7 @@
 level_id = 10
 
 [node name="Background" parent="." index="1" unique_id=1374281801]
-background_color = ExtResource("2_b2xma")
+background_color = 1
 
 [node name="Trampoline" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=265703658 instance=ExtResource("2_nmluu")]
 position = Vector2(190, 114)
@@ -50,11 +49,11 @@ automatic = true
 
 [node name="Saw" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="8" unique_id=15250972 instance=ExtResource("6_pifbj")]
 position = Vector2(-167, -72)
-points = [Vector2(-167, -100)]
+points = PackedVector2Array(-167, -100)
 
 [node name="Saw3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="9" unique_id=1676149826 instance=ExtResource("6_pifbj")]
 position = Vector2(-7, -72)
-points = [Vector2(-7, -100)]
+points = PackedVector2Array(-7, -100)
 
 [node name="Collectable" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="0" unique_id=310779860 instance=ExtResource("7_dnc2x")]
 position = Vector2(-140, 22)

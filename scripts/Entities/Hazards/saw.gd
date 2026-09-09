@@ -1,6 +1,6 @@
 extends Hazard
 
-@export var points: PackedVector2Array = []
+@export var points: PackedVector2Array
 @export var duration: float = 2.0
 @export var looping: bool = false
 

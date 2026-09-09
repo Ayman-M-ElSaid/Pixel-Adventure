@@ -1,6 +1,6 @@
 extends AnimatableBody2D
 
-@export var points: PackedVector2Array = []
+@export var points: PackedVector2Array
 @export var duration: float = 2.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D

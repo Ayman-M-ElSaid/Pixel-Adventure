@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://cdmep2s08nv4a"]
 
 [ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_45lso"]
-[ext_resource type="Texture2D" uid="uid://ckq8bvubd58s3" path="res://assets/Background/Gray.png" id="2_3dx67"]
 [ext_resource type="PackedScene" uid="uid://clp5ch6rw3jd0" path="res://scenes/Entities/Traps/moving_platform.tscn" id="3_bfupu"]
 [ext_resource type="PackedScene" uid="uid://dnwldnf45llqh" path="res://scenes/Entities/Hazards/saw.tscn" id="4_bfupu"]
 [ext_resource type="PackedScene" uid="uid://c0l4i3luvh77p" path="res://scenes/Entities/Hazards/spiked_ball.tscn" id="5_ybmf3"]
@@ -14,7 +13,7 @@
 level_id = 6
 
 [node name="Background" parent="." index="1" unique_id=1374281801]
-background_color = ExtResource("2_3dx67")
+background_color = 2
 
 [node name="MovingPlatform" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=559256925 instance=ExtResource("3_bfupu")]
 position = Vector2(-420, 0)
@@ -24,17 +23,17 @@ automatic = true
 
 [node name="Saw" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="1" unique_id=669338303 instance=ExtResource("4_bfupu")]
 position = Vector2(-170, -80)
-points = [Vector2(-170, 80)]
+points = PackedVector2Array(-170, 80)
 duration = 3.0
 
 [node name="Saw2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="2" unique_id=1466037437 instance=ExtResource("4_bfupu")]
 position = Vector2(-330, -80)
-points = [Vector2(-330, 80)]
+points = PackedVector2Array(-330, 80)
 duration = 3.0
 
 [node name="Saw3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="3" unique_id=1098809632 instance=ExtResource("4_bfupu")]
 position = Vector2(-250, 80)
-points = [Vector2(-250, -80)]
+points = PackedVector2Array(-250, -80)
 duration = 3.0
 
 [node name="SpikedBall" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="4" unique_id=584708736 instance=ExtResource("5_ybmf3")]
@@ -55,17 +54,17 @@ automatic = true
 
 [node name="Saw4" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="7" unique_id=1331751765 instance=ExtResource("4_bfupu")]
 position = Vector2(186, -80)
-points = [Vector2(186, 80)]
+points = PackedVector2Array(186, 80)
 duration = 3.0
 
 [node name="Saw5" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="8" unique_id=1681460290 instance=ExtResource("4_bfupu")]
 position = Vector2(346, -80)
-points = [Vector2(346, 80)]
+points = PackedVector2Array(346, 80)
 duration = 3.0
 
 [node name="Saw6" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="9" unique_id=1905934977 instance=ExtResource("4_bfupu")]
 position = Vector2(266, 80)
-points = [Vector2(266, -80)]
+points = PackedVector2Array(266, -80)
 duration = 3.0
 
 [node name="SpikedBall2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="10" unique_id=1089300798 instance=ExtResource("5_ybmf3")]

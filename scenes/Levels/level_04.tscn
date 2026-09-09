@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://bnnembbmbssph"]
 
 [ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_00yhp"]
-[ext_resource type="Texture2D" uid="uid://da08883y345fy" path="res://assets/Background/Yellow.png" id="2_tdyxl"]
 [ext_resource type="PackedScene" uid="uid://dqk88coqenhgw" path="res://scenes/Entities/Hazards/spikes.tscn" id="3_ge3pt"]
 [ext_resource type="PackedScene" uid="uid://c2c1xg1ce411k" path="res://scenes/Entities/collectable.tscn" id="4_xv6mf"]
 
@@ -11,7 +10,7 @@
 level_id = 4
 
 [node name="Background" parent="." index="1" unique_id=1374281801]
-background_color = ExtResource("2_tdyxl")
+background_color = 6
 
 [node name="Spikes" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=669338303 instance=ExtResource("3_ge3pt")]
 position = Vector2(-200, -64)

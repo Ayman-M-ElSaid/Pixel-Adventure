@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://101j3rvqmvis"]
 
 [ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_iko33"]
-[ext_resource type="Texture2D" uid="uid://ckq8bvubd58s3" path="res://assets/Background/Gray.png" id="2_o8auv"]
 [ext_resource type="PackedScene" uid="uid://di8rm2v6y3bii" path="res://scenes/Entities/Traps/falling_platform.tscn" id="2_obnyh"]
 [ext_resource type="PackedScene" uid="uid://dqk88coqenhgw" path="res://scenes/Entities/Hazards/spikes.tscn" id="3_bxr8a"]
 [ext_resource type="PackedScene" uid="uid://clp5ch6rw3jd0" path="res://scenes/Entities/Traps/moving_platform.tscn" id="4_bxr8a"]
@@ -14,7 +13,7 @@
 level_id = 8
 
 [node name="Background" parent="." index="1" unique_id=1374281801]
-background_color = ExtResource("2_o8auv")
+background_color = 2
 
 [node name="FallingPlatform" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=171401591 instance=ExtResource("2_obnyh")]
 position = Vector2(-117, 108)

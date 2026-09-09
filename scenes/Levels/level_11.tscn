@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://bcs8p35ja4sx7"]
 
 [ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_rdghe"]
-[ext_resource type="Texture2D" uid="uid://da08883y345fy" path="res://assets/Background/Yellow.png" id="2_4tude"]
 [ext_resource type="PackedScene" uid="uid://b8i4fbnvyvs4d" path="res://scenes/Entities/Hazards/fire.tscn" id="2_dy7kw"]
 [ext_resource type="PackedScene" uid="uid://cqlmnnt1ibbju" path="res://scenes/Entities/Traps/fan.tscn" id="3_e4hyj"]
 [ext_resource type="PackedScene" uid="uid://dnwldnf45llqh" path="res://scenes/Entities/Hazards/saw.tscn" id="4_a4c5p"]
@@ -14,7 +13,7 @@ level_id = 11
 
 [node name="Background" parent="." index="1" unique_id=1374281801]
 z_index = -1
-background_color = ExtResource("2_4tude")
+background_color = 6
 
 [node name="Fire" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=1689757717 instance=ExtResource("2_dy7kw")]
 position = Vector2(-152, -32)
@@ -54,7 +53,7 @@ length = 9
 
 [node name="Saw" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="8" unique_id=669338303 instance=ExtResource("4_a4c5p")]
 position = Vector2(256, -48)
-points = [Vector2(256, -174), Vector2(18, -174), Vector2(18, -82)]
+points = PackedVector2Array(256, -174, 18, -174, 18, -82)
 duration = 3.0
 
 [node name="Collectables" parent="." index="3" unique_id=941163762]

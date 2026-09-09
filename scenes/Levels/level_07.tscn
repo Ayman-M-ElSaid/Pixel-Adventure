@@ -1,7 +1,6 @@
 [gd_scene format=4 uid="uid://xw51weo5d2ws"]
 
 [ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_i7otd"]
-[ext_resource type="Texture2D" uid="uid://drjlunito0ida" path="res://assets/Background/Purple.png" id="2_245nh"]
 [ext_resource type="PackedScene" uid="uid://dqk88coqenhgw" path="res://scenes/Entities/Hazards/spikes.tscn" id="2_t1482"]
 [ext_resource type="PackedScene" uid="uid://dnwldnf45llqh" path="res://scenes/Entities/Hazards/saw.tscn" id="3_245nh"]
 [ext_resource type="PackedScene" uid="uid://c2c1xg1ce411k" path="res://scenes/Entities/collectable.tscn" id="3_fllhl"]
@@ -13,7 +12,7 @@
 level_id = 7
 
 [node name="Background" parent="." index="1" unique_id=1374281801]
-background_color = ExtResource("2_245nh")
+background_color = 5
 
 [node name="FallingPlatform" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=171401591 instance=ExtResource("4_245nh")]
 position = Vector2(256, 75)
@@ -26,18 +25,18 @@ position = Vector2(205, -40)
 
 [node name="Saw" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="3" unique_id=543324754 instance=ExtResource("3_245nh")]
 position = Vector2(79, 114)
-points = [Vector2(4, 114)]
+points = PackedVector2Array(4, 114)
 duration = 1.5
 
 [node name="Saw2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="4" unique_id=904794558 instance=ExtResource("3_245nh")]
 position = Vector2(127, -48)
-points = [Vector2(127, -79), Vector2(-192, -79), Vector2(-192, -48)]
+points = PackedVector2Array(127, -79, -192, -79, -192, -48)
 duration = 3.0
 looping = true
 
 [node name="Saw3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="5" unique_id=1775992089 instance=ExtResource("3_245nh")]
 position = Vector2(-192, -79)
-points = [Vector2(-192, -48), Vector2(127, -48), Vector2(127, -79)]
+points = PackedVector2Array(-192, -48, 127, -48, 127, -79)
 duration = 3.0
 looping = true
 
