@@ -7,9 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bpi32wpde4oci" path="res://assets/Traps/Rock Head/Bottom Hit (42x42).png" id="5_rsnjx"]
 [ext_resource type="Script" uid="uid://2xvgdeigxbtv" path="res://scripts/Entities/Hazards/hazard.gd" id="6_7hbtu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i4bv"]
-size = Vector2(30, 30)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmdeg"]
 atlas = ExtResource("2_7hbtu")
 region = Rect2(0, 0, 42, 42)
@@ -72,6 +69,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pgxne")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_6m18g")
 }],
 "loop": 0,
 "name": &"horizontal_hit",
@@ -109,11 +109,17 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dpk45")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_6m18g")
 }],
 "loop": 0,
 "name": &"vertical_hit",
 "speed": 20.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i4bv"]
+size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yr2er"]
 size = Vector2(32, 32)
@@ -121,13 +127,13 @@ size = Vector2(32, 32)
 [node name="RockHead" type="AnimatableBody2D" unique_id=428540639]
 script = ExtResource("1_hnb35")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1580388882]
-shape = SubResource("RectangleShape2D_6i4bv")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1330983378]
 sprite_frames = SubResource("SpriteFrames_yexha")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1580388882]
+shape = SubResource("RectangleShape2D_6i4bv")
 
 [node name="Hazard" type="Area2D" parent="." unique_id=445065441]
 collision_mask = 2

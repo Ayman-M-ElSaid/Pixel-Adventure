@@ -8,14 +8,12 @@ enum Direction {
 }
 
 @export var trigger_direction: Direction = Direction.DOWN
-@export var trigger_range: float = 100.0
 @export var fall_distance: float = 100.0
 @export var fall_time: float = 0.3
 @export var retraction := true
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var trigger_ray: RayCast2D = $TriggerRay
-@onready var retraction_timer = $RetractionTimer
 
 var _triggered := false
 var _direction: Vector2
@@ -36,7 +34,7 @@ func _get_direction(dir: Direction) -> Vector2:
 
 func _ready() -> void:
 	_direction = _get_direction(trigger_direction)
-	trigger_ray.target_position = _direction * trigger_range
+	trigger_ray.target_position = _direction * fall_distance
 	trigger_ray.enabled = true
 	animated_sprite.animation_finished.connect(_on_hit_animation_finished)
 
@@ -60,18 +58,22 @@ func _fall() -> void:
 func _play_hit_animation() -> void:
 	if abs(_direction.x) > abs(_direction.y):
 		animated_sprite.play(&"horizontal_hit")
+		animated_sprite.flip_h = _direction.x < 0
 	else:
 		animated_sprite.play(&"vertical_hit")
 
 
 func _on_hit_animation_finished() -> void:
 	animated_sprite.play(&"idle")
-	retraction_timer.start(0.3)
+	_retract()
 
 
-func _on_retraction_timer_timeout():
+func _retract() -> void:
 	var target := position - _direction * fall_distance
 	var tween := create_tween()
 	tween.set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self, "position", target, fall_time * 3)
-	_triggered = false
+	tween.tween_callback(
+		func():
+			_triggered = false,
+	)

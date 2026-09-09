@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c51a2k6lxqgvx" path="res://assets/Traps/Spike Head/Bottom Hit (54x52).png" id="7_kq6id"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qj26j"]
-size = Vector2(36, 32)
+size = Vector2(42, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbaw2"]
 atlas = ExtResource("3_ccup1")
@@ -72,6 +72,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kh8ug")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_6tfto")
 }],
 "loop": 0,
 "name": &"horizontal_hit",
@@ -109,6 +112,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l5rdr")
+}, {
+"duration": 10.0,
+"texture": ExtResource("5_6tfto")
 }],
 "loop": 0,
 "name": &"vertical_hit",
@@ -118,7 +124,6 @@ animations = [{
 [node name="SpikeHead" unique_id=669338303 instance=ExtResource("1_apppw")]
 script = ExtResource("2_jvt1v")
 trigger_direction = 1
-trigger_range = 100.0
 fall_distance = 100.0
 fall_time = 0.3
 retraction = true
@@ -128,13 +133,8 @@ shape = SubResource("RectangleShape2D_qj26j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1" unique_id=523071528]
 sprite_frames = SubResource("SpriteFrames_2ri06")
-animation = &"horizontal_hit"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="TriggerRay" type="RayCast2D" parent="." index="2" unique_id=1425321048]
 collision_mask = 2
-
-[node name="RetractionTimer" type="Timer" parent="." index="4" unique_id=1358712523]
-one_shot = true
-
-[connection signal="timeout" from="RetractionTimer" to="." method="_on_retraction_timer_timeout"]
