@@ -46,7 +46,7 @@ func _complete_level() -> void:
 
 
 func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed("retry"):
+	if event.is_action_pressed(&"retry"):
 		_restart_leve()
 
 

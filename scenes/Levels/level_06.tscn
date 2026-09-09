@@ -10,6 +10,9 @@
 
 [node name="Level06" unique_id=1923209002 instance=ExtResource("1_45lso")]
 
+[node name="LevelManager" parent="." index="0" unique_id=360763231]
+level_id = 6
+
 [node name="Background" parent="." index="1" unique_id=1374281801]
 background_color = ExtResource("2_3dx67")
 

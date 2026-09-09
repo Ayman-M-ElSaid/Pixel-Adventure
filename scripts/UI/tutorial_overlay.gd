@@ -22,7 +22,7 @@ func start(step_list: Array) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if active and event.is_action_pressed("ui_accept"):
+	if active and event.is_action_pressed(&"ui_accept"):
 		get_viewport().set_input_as_handled()
 		_advance()
 

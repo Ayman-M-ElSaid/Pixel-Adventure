@@ -52,9 +52,9 @@ func get_level_grid_rect() -> Rect2:
 
 
 func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed(&"ui_accept"):
 		_go_to_level(SaveManager.data["highest_unlocked_level"])
-	elif event.is_action_pressed("ui_cancel"):
+	elif event.is_action_pressed(&"ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/States/start_screen.tscn")
 
 

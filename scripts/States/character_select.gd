@@ -12,23 +12,23 @@ var selection := 0
 func _ready() -> void:
 	var chosen_character = SaveManager.data["character"]
 	animated_sprite.sprite_frames = Characters.CHARACTERS[chosen_character]
-	animated_sprite.play("idle")
+	animated_sprite.play(&"idle")
 	selection = OPTIONS.find(chosen_character)
 
 
 func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed("ui_right"):
+	if event.is_action_pressed(&"ui_right"):
 		_increment_selection()
-	elif event.is_action_pressed("ui_left"):
+	elif event.is_action_pressed(&"ui_left"):
 		_decrement_selection()
-	elif event.is_action_pressed("ui_accept"):
+	elif event.is_action_pressed(&"ui_accept"):
 		var active_character = OPTIONS[selection]
 		if active_character in SaveManager.data["unlocked_characters"]:
 			SaveManager.data["character"] = active_character
 			get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
 		else:
 			$ErrorSound.play()
-	elif event.is_action_pressed("ui_cancel"):
+	elif event.is_action_pressed(&"ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
 
 	_change_character()
@@ -69,7 +69,7 @@ func _change_character() -> void:
 		if active_character in SaveManager.data["unlocked_characters"]
 		else Color(.3, .3, .3, 1)
 	)
-	animated_sprite.play("idle")
+	animated_sprite.play(&"idle")
 
 
 func _update_buttons() -> void:

@@ -36,8 +36,8 @@ func _ready() -> void:
 
 
 func _set_state() -> void:
-	animated_sprite.play("on" if is_on else "off")
-	lift_area.set_deferred("monitoring", is_on)
+	animated_sprite.play(&"on" if is_on else &"off")
+	lift_area.set_deferred(&"monitoring", is_on)
 	particles.emitting = is_on
 	timer.start(on_duration if is_on else off_duration)
 

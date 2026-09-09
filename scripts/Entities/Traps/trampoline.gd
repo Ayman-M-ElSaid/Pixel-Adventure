@@ -11,8 +11,8 @@ func _ready() -> void:
 
 func _on_body_entered(body: CharacterBody2D) -> void:
 	body.bounce(bounce_force)
-	set_deferred("monitoring", false)
-	animated_sprite.play("jump")
+	set_deferred(&"monitoring", false)
+	animated_sprite.play(&"jump")
 	await animated_sprite.animation_finished
-	animated_sprite.play("idle")
-	set_deferred("monitoring", true)
+	animated_sprite.play(&"idle")
+	set_deferred(&"monitoring", true)

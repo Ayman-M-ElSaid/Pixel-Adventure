@@ -10,7 +10,7 @@ var _triggered := false
 
 
 func _ready():
-	animated_sprite.play("on")
+	animated_sprite.play(&"on")
 
 
 func _on_trigger_zone_body_entered(body: CharacterBody2D) -> void:
@@ -22,7 +22,7 @@ func _on_trigger_zone_body_entered(body: CharacterBody2D) -> void:
 			return
 		if body.is_on_floor():
 			_triggered = true
-			set_deferred("trigger_zone:monitoring", false)
+			set_deferred(&"trigger_zone:monitoring", false)
 			_shake()
 			timer.start()
 			return
@@ -49,7 +49,7 @@ func _apply_shake_x(t: float, base_x: float) -> void:
 
 
 func _on_timer_timeout():
-	animated_sprite.play("off")
+	animated_sprite.play(&"off")
 	if _tween:
 		_tween.kill()
 	_tween = create_tween()

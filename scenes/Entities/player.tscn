@@ -15,7 +15,7 @@ script = ExtResource("1_3wtrq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=510084763]
 position = Vector2(0, -16)
 sprite_frames = ExtResource("2_chgf7")
-animation = &"appear"
+animation = &"idle"
 autoplay = "appear"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=839537483]

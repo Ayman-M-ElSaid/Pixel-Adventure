@@ -38,16 +38,16 @@ func _ready() -> void:
 		var weights = PackedFloat32Array([2.5, 2.5, 2.5, 1, 2.5, 2.5, 2.5, 2.5, 0])
 		var fruit: Fruit = Fruit.values()[RandomNumberGenerator.new().rand_weighted(weights)]
 		animated_sprite.sprite_frames = FRAMES[fruit]
-	animated_sprite.play("fruit")
+	animated_sprite.play(&"fruit")
 	collect_effect.hide()
 
 
 func _on_body_entered(_body) -> void:
 	collected.emit()
-	collision.set_deferred("disabled", true)
+	collision.set_deferred(&"disabled", true)
 	animated_sprite.hide()
 	collect_sound.play()
 	collect_effect.show()
-	collect_effect.play("collect")
+	collect_effect.play(&"collect")
 	await collect_effect.animation_finished
 	queue_free()

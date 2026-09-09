@@ -93,8 +93,8 @@ func reverse_tween() -> void:
 
 func _process(_delta: float) -> void:
 	if automatic:
-		_sprite.play("gray")
+		_sprite.play(&"gray")
 	elif _moving:
-		_sprite.play("brown")
+		_sprite.play(&"brown")
 	else:
-		_sprite.play("off")
+		_sprite.play(&"off")
