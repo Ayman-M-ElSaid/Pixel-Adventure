@@ -19,7 +19,6 @@ animation = &"idle"
 autoplay = "appear"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=839537483]
-z_index = 5
 position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_yqjtg")
 

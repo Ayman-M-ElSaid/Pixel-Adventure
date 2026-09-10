@@ -320,14 +320,16 @@ unique_name_in_owner = true
 
 [node name="Background" parent="." unique_id=1374281801 instance=ExtResource("2_0b4ue")]
 
-[node name="Hazards" type="Node2D" parent="." unique_id=1328419987]
-
 [node name="Collectables" type="Node2D" parent="." unique_id=941163762]
 unique_name_in_owner = true
+
+[node name="Hazards" type="Node2D" parent="." unique_id=1328419987]
 
 [node name="TileMap" type="TileMapLayer" parent="." unique_id=368368994]
 unique_name_in_owner = true
 tile_set = SubResource("TileSet_rka8t")
+
+[node name="Enemies" type="Node2D" parent="." unique_id=1981534313]
 
 [node name="Player" parent="." unique_id=829502222 instance=ExtResource("3_f2txt")]
 unique_name_in_owner = true
