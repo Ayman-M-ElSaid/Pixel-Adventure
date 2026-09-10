@@ -5,7 +5,7 @@ extends AnimatableBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hazard: Area2D = $Hazard
-@onready var hazard_collision = $Hazard/CollisionShape2D
+@onready var hazard_collision: CollisionShape2D = $Hazard/CollisionShape2D
 
 const BLOCK_SIZE := 32.0
 

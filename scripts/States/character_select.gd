@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var background = $Background
-@onready var animated_sprite = $AnimatedSprite
+@onready var background: Sprite2D = $Background
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite
 
 const OPTIONS = ["virtual_guy", "pink_man", "mask_dude", "ninja_frog"]
 const SCROLL_SPEED = -30
@@ -16,7 +16,7 @@ func _ready() -> void:
 	selection = OPTIONS.find(chosen_character)
 
 
-func _unhandled_input(event: InputEvent):
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"ui_right"):
 		_increment_selection()
 	elif event.is_action_pressed(&"ui_left"):
@@ -39,11 +39,11 @@ func _process(delta: float) -> void:
 	background.region_rect.position.y += SCROLL_SPEED * delta
 
 
-func _on_next_button_pressed():
+func _on_next_button_pressed() -> void:
 	_increment_selection()
 
 
-func _on_back_button_pressed():
+func _on_back_button_pressed() -> void:
 	_decrement_selection()
 
 

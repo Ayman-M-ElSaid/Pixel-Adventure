@@ -2,7 +2,7 @@ extends Area2D
 
 @export var bounce_force := 500.0
 
-@onready var animated_sprite = $AnimatedSprite2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:

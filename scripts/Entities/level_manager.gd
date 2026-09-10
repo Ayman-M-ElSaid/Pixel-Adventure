@@ -1,9 +1,11 @@
 extends Node
 
 @export var level_id: int
+
 @onready var tilemap = %TileMap
 @onready var collectables = %Collectables
 @onready var player = %Player
+
 var _remaining_collectables
 
 
@@ -45,12 +47,12 @@ func _complete_level() -> void:
 	SaveManager.save_game()
 
 
-func _unhandled_input(event: InputEvent):
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"retry"):
 		_restart_leve()
 
 
-func _on_restart_button_pressed():
+func _on_restart_button_pressed() -> void:
 	_restart_leve()
 
 
@@ -59,7 +61,7 @@ func _restart_leve() -> void:
 	get_tree().reload_current_scene()
 
 
-func _on_levels_button_pressed():
+func _on_levels_button_pressed() -> void:
 	Transition.wipe_in_finished.connect(
 		func():
 			get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")

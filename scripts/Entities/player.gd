@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-@onready var sprite = $AnimatedSprite2D
-@onready var collision = $CollisionShape2D
-@onready var hit_sound = $HitSound
-@onready var jump_sound = $JumpSound
-@onready var camera = $Camera
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var hit_sound: AudioStreamPlayer2D = $HitSound
+@onready var jump_sound: AudioStreamPlayer2D = $JumpSound
+@onready var camera: Camera2D = $Camera
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -300.0

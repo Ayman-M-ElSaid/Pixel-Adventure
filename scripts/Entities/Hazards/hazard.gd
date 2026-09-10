@@ -1,7 +1,7 @@
 extends Area2D
 class_name Hazard
 
-@onready var timer = $Timer
+@onready var timer: Timer = $Timer
 
 
 func _on_body_entered(body) -> void:

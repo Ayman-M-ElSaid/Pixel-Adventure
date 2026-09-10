@@ -2,8 +2,8 @@ extends Hazard
 
 @export var length: int = 2
 
-@onready var sprite = $Sprite2D
-@onready var collision_rect = $CollisionShape2D
+@onready var sprite: Sprite2D = $Sprite2D
+@onready var collision_rect: CollisionShape2D = $CollisionShape2D
 
 const SPIKES_HEIGHT = 8
 const SPIKES_WIDTH = 16

@@ -1,10 +1,10 @@
 extends Node2D
 
-@onready var background = $Background
-@onready var tutorial_overlay = $TutorialOverlay
+@onready var background: Sprite2D = $Background
+@onready var tutorial_overlay: CanvasLayer = $TutorialOverlay
 
-const LEVEL_COUNT := 30
-const COLS := 6
+const LEVEL_COUNT := 30.0
+const COLS := 6.0
 const ROWS := LEVEL_COUNT / COLS
 const SCROLL_SPEED = -30
 
@@ -51,7 +51,7 @@ func get_level_grid_rect() -> Rect2:
 	return rect
 
 
-func _unhandled_input(event: InputEvent):
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"ui_accept"):
 		_go_to_level(SaveManager.data["highest_unlocked_level"])
 	elif event.is_action_pressed(&"ui_cancel"):
@@ -66,11 +66,11 @@ func _on_level_pressed(level_id: int) -> void:
 	_go_to_level(level_id)
 
 
-func _on_character_select_button_pressed():
+func _on_character_select_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/States/character_select.tscn")
 
 
-func _go_to_level(level_id):
+func _go_to_level(level_id) -> void:
 	Transition.wipe_in_finished.connect(
 		func():
 			get_tree().change_scene_to_file("res://scenes/Levels/level_%02d.tscn" % level_id),

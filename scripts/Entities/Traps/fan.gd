@@ -5,11 +5,11 @@ extends StaticBody2D
 @export var off_duration: float = 2.0
 @export var decel_zone: float = 20.0
 
-@onready var lift_area = $LiftArea
-@onready var animated_sprite = $AnimatedSprite2D
-@onready var collision_shape = $LiftArea/CollisionShape2D
-@onready var particles = $CPUParticles2D
-@onready var timer = $Timer
+@onready var lift_area: Area2D = $LiftArea
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape: CollisionShape2D = $LiftArea/CollisionShape2D
+@onready var particles: CPUParticles2D = $CPUParticles2D
+@onready var timer: Timer = $Timer
 
 const ACCELERATION: float = 1200.0
 const MAX_SPEED: float = 400.0

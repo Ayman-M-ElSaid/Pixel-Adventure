@@ -1,15 +1,15 @@
 extends AnimatableBody2D
 
-@onready var animated_sprite = $AnimatedSprite2D
-@onready var collision_shape = $CollisionShape2D
-@onready var trigger_zone = $TriggerZone
-@onready var timer = $Timer
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var trigger_zone: Area2D = $TriggerZone
+@onready var timer: Timer = $Timer
 
 var _tween: Tween
 var _triggered := false
 
 
-func _ready():
+func _ready() -> void:
 	animated_sprite.play(&"on")
 
 
@@ -48,7 +48,7 @@ func _apply_shake_x(t: float, base_x: float) -> void:
 	position.x = base_x + 4 * decay * sin(t * 4 * TAU)
 
 
-func _on_timer_timeout():
+func _on_timer_timeout() -> void:
 	animated_sprite.play(&"off")
 	if _tween:
 		_tween.kill()

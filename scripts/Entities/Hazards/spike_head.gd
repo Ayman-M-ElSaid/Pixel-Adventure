@@ -10,7 +10,6 @@ enum Direction {
 @export var trigger_direction: Direction = Direction.DOWN
 @export var fall_distance: float = 100.0
 @export var fall_time: float = 0.3
-@export var retraction := true
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var trigger_ray: RayCast2D = $TriggerRay

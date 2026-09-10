@@ -25,10 +25,10 @@ const FRAMES: Dictionary = {
 }
 @export var fruit_name: Fruit = Fruit.RANDOM
 
-@onready var collision = $CollisionShape2D
-@onready var animated_sprite = $AnimatedSprite
-@onready var collect_effect = $CollectEffect
-@onready var collect_sound = $CollectSound
+@onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite
+@onready var collect_effect: AnimatedSprite2D = $CollectEffect
+@onready var collect_sound: AudioStreamPlayer2D = $CollectSound
 
 
 func _ready() -> void:

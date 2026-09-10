@@ -4,7 +4,7 @@ extends StaticBody2D
 @export var on_duration: float = 1.0
 @export var off_duration: float = 1.0
 
-@onready var timer = $Timer
+@onready var timer: Timer = $Timer
 @onready var sprite_template: AnimatedSprite2D = $AnimatedSprite2D
 @onready var body_collision: CollisionShape2D = $CollisionShape2D
 @onready var hazard: Area2D = $Hazard

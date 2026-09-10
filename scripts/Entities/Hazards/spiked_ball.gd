@@ -4,8 +4,8 @@ extends Node2D
 @export var swing_duration: float = 1.0
 @export var chain_length: int = 6
 
-@onready var chain = $Chain
-@onready var spiked_ball = $SpikedBall
+@onready var chain: Sprite2D = $Chain
+@onready var spiked_ball: Sprite2D = $SpikedBall
 
 const CHAIN_SIZE = 8
 
