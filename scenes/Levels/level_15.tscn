@@ -1,0 +1,165 @@
+[gd_scene format=4 uid="uid://baffkmunwagve"]
+
+[ext_resource type="PackedScene" uid="uid://drgf0f6ypprio" path="res://scenes/Levels/level.tscn" id="1_k7nqy"]
+[ext_resource type="PackedScene" uid="uid://bp50dyhdn1ec0" path="res://scenes/Entities/Traps/rock_head.tscn" id="2_tpkdq"]
+[ext_resource type="PackedScene" uid="uid://b8ceo8onenq7a" path="res://scenes/Entities/Hazards/spike_head.tscn" id="3_46pme"]
+[ext_resource type="PackedScene" uid="uid://di8rm2v6y3bii" path="res://scenes/Entities/Traps/falling_platform.tscn" id="4_swf6x"]
+[ext_resource type="PackedScene" uid="uid://b8i4fbnvyvs4d" path="res://scenes/Entities/Hazards/fire.tscn" id="5_y35ew"]
+[ext_resource type="PackedScene" uid="uid://bacb3thoylb0o" path="res://scenes/Entities/Traps/trampoline.tscn" id="6_bu7yh"]
+[ext_resource type="PackedScene" uid="uid://dqk88coqenhgw" path="res://scenes/Entities/Hazards/spikes.tscn" id="7_i6vho"]
+[ext_resource type="PackedScene" uid="uid://c0l4i3luvh77p" path="res://scenes/Entities/Hazards/spiked_ball.tscn" id="8_bu7yh"]
+[ext_resource type="PackedScene" uid="uid://c2c1xg1ce411k" path="res://scenes/Entities/collectable.tscn" id="9_i6vho"]
+
+[node name="Level15" unique_id=1923209002 instance=ExtResource("1_k7nqy")]
+
+[node name="LevelManager" parent="." index="0" unique_id=360763231]
+level_id = 15
+
+[node name="Background" parent="." index="1" unique_id=1374281801]
+background_color = 5
+
+[node name="Collectable" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="0" unique_id=310779860 instance=ExtResource("9_i6vho")]
+position = Vector2(-192, 112)
+
+[node name="Collectable22" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="1" unique_id=150476806 instance=ExtResource("9_i6vho")]
+position = Vector2(-192, -160)
+
+[node name="Collectable2" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="2" unique_id=1341455953 instance=ExtResource("9_i6vho")]
+position = Vector2(0, 68)
+
+[node name="Collectable3" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="3" unique_id=1909147952 instance=ExtResource("9_i6vho")]
+position = Vector2(-56, -23)
+
+[node name="Collectable4" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="4" unique_id=1722245375 instance=ExtResource("9_i6vho")]
+position = Vector2(3, -106)
+
+[node name="Collectable5" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="5" unique_id=1469190960 instance=ExtResource("9_i6vho")]
+position = Vector2(254, -133)
+
+[node name="Collectable6" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="6" unique_id=786346284 instance=ExtResource("9_i6vho")]
+position = Vector2(195, -63)
+
+[node name="Collectable7" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="7" unique_id=920815384 instance=ExtResource("9_i6vho")]
+position = Vector2(258, 28)
+
+[node name="Collectable8" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="8" unique_id=640947049 instance=ExtResource("9_i6vho")]
+position = Vector2(77, -140)
+fruit_name = 1
+
+[node name="Collectable9" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="9" unique_id=293514499 instance=ExtResource("9_i6vho")]
+position = Vector2(130, -140)
+fruit_name = 1
+
+[node name="Collectable10" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="10" unique_id=1837758171 instance=ExtResource("9_i6vho")]
+position = Vector2(103.5, -156)
+fruit_name = 1
+
+[node name="Collectable11" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="11" unique_id=1747636923 instance=ExtResource("9_i6vho")]
+position = Vector2(455, 107)
+fruit_name = 1
+
+[node name="Collectable12" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="12" unique_id=1373772767 instance=ExtResource("9_i6vho")]
+position = Vector2(475, 107)
+fruit_name = 1
+
+[node name="Collectable13" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="13" unique_id=1090048700 instance=ExtResource("9_i6vho")]
+position = Vector2(495, 107)
+fruit_name = 1
+
+[node name="Collectable14" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="14" unique_id=507603525 instance=ExtResource("9_i6vho")]
+position = Vector2(515, 107)
+fruit_name = 1
+
+[node name="Collectable15" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="15" unique_id=1841468586 instance=ExtResource("9_i6vho")]
+position = Vector2(535, 107)
+fruit_name = 1
+
+[node name="Collectable16" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="16" unique_id=980935447 instance=ExtResource("9_i6vho")]
+position = Vector2(467, -91)
+
+[node name="Collectable17" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="17" unique_id=1728531328 instance=ExtResource("9_i6vho")]
+position = Vector2(499, -91)
+
+[node name="Collectable21" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="18" unique_id=709098752 instance=ExtResource("9_i6vho")]
+position = Vector2(499, -123)
+
+[node name="Collectable19" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="19" unique_id=1819142526 instance=ExtResource("9_i6vho")]
+position = Vector2(483, -107)
+
+[node name="Collectable20" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="20" unique_id=1234035800 instance=ExtResource("9_i6vho")]
+position = Vector2(515, -107)
+
+[node name="Collectable18" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="21" unique_id=1324313714 instance=ExtResource("9_i6vho")]
+position = Vector2(531, -91)
+
+[node name="RockHead" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=428540639 instance=ExtResource("2_tpkdq")]
+position = Vector2(-192, 112)
+points = PackedVector2Array(-192, -160)
+
+[node name="SpikeHead" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="1" unique_id=669338303 instance=ExtResource("3_46pme")]
+position = Vector2(43, -5)
+trigger_direction = 2
+fall_distance = 134.0
+fall_time = 0.65
+
+[node name="SpikeHead2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="2" unique_id=1047804888 instance=ExtResource("3_46pme")]
+position = Vector2(-91, -107)
+trigger_direction = 3
+fall_distance = 134.0
+fall_time = 0.65
+
+[node name="SpikeHead3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="3" unique_id=1193478407 instance=ExtResource("3_46pme")]
+position = Vector2(166, -5)
+trigger_direction = 3
+fall_distance = 134.0
+fall_time = 0.65
+
+[node name="SpikeHead4" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="4" unique_id=27650276 instance=ExtResource("3_46pme")]
+position = Vector2(299, -81)
+trigger_direction = 2
+fall_distance = 134.0
+fall_time = 0.65
+
+[node name="FallingPlatform" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="5" unique_id=171401591 instance=ExtResource("4_swf6x")]
+position = Vector2(0, 88)
+
+[node name="FallingPlatform2" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="6" unique_id=1250979376 instance=ExtResource("4_swf6x")]
+position = Vector2(-55, -3)
+
+[node name="FallingPlatform3" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="7" unique_id=801623355 instance=ExtResource("4_swf6x")]
+position = Vector2(3, -86)
+
+[node name="FallingPlatform4" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="8" unique_id=1554390563 instance=ExtResource("4_swf6x")]
+position = Vector2(258, 48)
+
+[node name="FallingPlatform5" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="9" unique_id=392752098 instance=ExtResource("4_swf6x")]
+position = Vector2(195, -43)
+
+[node name="FallingPlatform6" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="10" unique_id=924885864 instance=ExtResource("4_swf6x")]
+position = Vector2(254, -113)
+
+[node name="Fire" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="11" unique_id=1689757717 instance=ExtResource("5_y35ew")]
+position = Vector2(440, 128)
+length = 8
+on_duration = 2.0
+off_duration = 2.0
+
+[node name="Trampoline" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="12" unique_id=265703658 instance=ExtResource("6_bu7yh")]
+position = Vector2(408, 66)
+bounce_force = 600.0
+
+[node name="Spikes" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="13" unique_id=1299744779 instance=ExtResource("7_i6vho")]
+position = Vector2(352, -136)
+rotation = 1.5707964
+length = 11
+
+[node name="SpikedBall" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="14" unique_id=584708736 instance=ExtResource("8_bu7yh")]
+position = Vector2(451, -50)
+swing_angle_degrees = 60.0
+chain_length = 7
+
+[node name="TileMap" parent="." index="4" unique_id=368368994]
+tile_map_data = PackedByteArray("AADu//T/AAABAAEAABDu//X/AAABAAEAABDu//b/AAABAAEAABDu//f/AAABAAEAABDu//j/AAABAAEAABDu//n/AAABAAEAABDu//r/AAABAAEAABDu//v/AAABAAEAABDu//z/AAADAAQAAADu//3/AAAAAAkAABDu//7/AAAAAAkAABDu////AAAAAAkAABDu/wAAAAAAAAkAABDu/wEAAAAAAAkAABDu/wIAAAAAAAkAABDu/wMAAAAAAAkAABDu/wQAAAAAAAkAABDu/wUAAAAAAAkAABDu/wYAAAAAAAkAABDu/wcAAAAAAAkAABDu/wgAAAAEAAkAABDu/wkAAAABAAEAABDv//T/AAADAAQAAADv//X/AAACAAUAAADv//b/AAACAAUAAADv//f/AAACAAUAAADv//j/AAACAAUAAADv//n/AAACAAUAAADv//r/AAACAAUAAADv//v/AAACAAUAAADv//z/AAACAAYAAADv//3/AAAIAAgAABDv//7/AAAIAAkAABDv////AAAIAAkAABDv/wAAAAAIAAkAABDv/wEAAAAIAAkAABDv/wIAAAAIAAkAABDv/wMAAAAIAAkAABDv/wQAAAAIAAkAABDv/wUAAAAIAAkAABDv/wYAAAAUAAgAABDv/wcAAAAUAAoAABDv/wgAAAABAAgAABDv/wkAAAABAAEAABDw//T/AAABAAYAAADw//3/AAAHAAgAABDw//7/AAAHAAkAABDw////AAAHAAkAABDw/wAAAAAHAAkAABDw/wEAAAAHAAkAABDw/wIAAAAHAAkAABDw/wMAAAAHAAkAABDw/wQAAAAHAAkAABDw/wUAAAAHAAkAABDw/wYAAAAHAAkAABDw/wcAAAAKAAkAABDw/wgAAAABAAgAABDw/wkAAAABAAEAABDx//T/AAABAAYAAADx//3/AAAGAAgAABDx//7/AAAGAAkAABDx////AAAGAAkAABDx/wAAAAAGAAkAABDx/wEAAAAGAAkAABDx/wIAAAAGAAkAABDx/wMAAAAGAAkAABDx/wQAAAAGAAkAABDx/wUAAAAGAAkAABDx/wYAAAAGAAkAABDx/wcAAAAHAAgAABDx/wgAAAABAAgAABDx/wkAAAABAAEAABDy//T/AAABAAYAAADy/wcAAAAGAAgAABDy/wgAAAABAAgAABDy/wkAAAABAAEAABDz//T/AAABAAYAAADz/wgAAAABAAgAABDz/wkAAAABAAEAABD0//T/AAABAAYAAAD0/wgAAAABAAgAABD0/wkAAAABAAEAABD1//T/AAABAAYAAAD1/wgAAAABAAgAABD1/wkAAAABAAEAABD2//T/AAABAAYAAAD2/wgAAAABAAgAABD2/wkAAAABAAEAABD3//T/AAABAAYAAAD3/wgAAAABAAgAABD3/wkAAAABAAEAABD4//T/AAABAAYAAAD4/wgAAAABAAgAABD4/wkAAAABAAEAABD5//T/AAABAAYAAAD5/wgAAAABAAgAABD5/wkAAAABAAEAABD6//T/AAABAAYAAAD6/wgAAAABAAgAABD6/wkAAAABAAEAABD7//T/AAABAAYAAAD7/wgAAAABAAgAABD7/wkAAAABAAEAABD8//T/AAABAAYAAAD8/wgAAAABAAgAABD8/wkAAAABAAEAABD5//X/AAAGAAgAAAD6//X/AAAHAAgAAAANAPT/AAABAAYAAAANAAgAAAAAAAgAABANAAkAAAAEAAkAABAOAPT/AAABAAYAAAAOAAkAAAABAAgAABAPAPT/AAABAAYAAAAPAAkAAAABAAgAABAQAPT/AAABAAYAAAAQAAkAAAABAAgAABARAPT/AAABAAYAAAARAAkAAAABAAgAABASAPT/AAABAAYAAAASAAkAAAABAAgAABATAPT/AAABAAYAAAATAAkAAAABAAgAABAUAPT/AAAEAAQAAAAUAAkAAAABAAgAABAVAPT/AAADAAQAAAAVAAkAAAABAAgAABAWAPT/AAABAAYAAAAWAAkAAAABAAgAABAXAPT/AAABAAYAAAAXAAkAAAABAAgAABAYAPT/AAABAAYAAAAYAAkAAAABAAgAABAZAPT/AAABAAYAAAAZAAkAAAABAAgAABALAAgAAAABAAgAABALAAkAAAABAAEAABAMAAgAAAABAAgAABAMAAkAAAABAAEAABD9/wgAAAABAAgAAAAGAPj/AAAHAAgAABAGAPn/AAAHAAkAAAAHAPj/AAAHAAgAABAHAPn/AAAHAAkAAAAIAPj/AAAGAAgAABAIAPn/AAAIAAkAAAAEAPj/AAAIAAgAABAEAPn/AAAGAAkAAAAFAPj/AAAHAAgAABAFAPn/AAAHAAkAAAD7//X/AAAIAAgAAAD2//j/AAAGAAkAAAD2//n/AAAGAAkAAAD2//r/AAAGAAkAAAD2//v/AAAGAAkAAAD2//z/AAAGAAkAAAD2//3/AAAGAAkAAAD2//7/AAAGAAkAAAD2////AAAGAAkAAAD3//j/AAAHAAkAAAD3//n/AAAHAAkAAAD3//r/AAAHAAkAAAD3//v/AAAHAAkAAAD3//z/AAAHAAkAAAD3//3/AAAHAAkAAAD3//7/AAAHAAkAAAD3////AAAHAAkAAAD4//n/AAAIAAkAAAD4//r/AAAIAAkAAAD4//v/AAAIAAkAAAD4//z/AAAIAAkAAAD4//3/AAAIAAkAAAD4//7/AAAIAAkAAAD4////AAAIAAkAAAD2//f/AAAGAAgAAAD3//f/AAAHAAgAAAD6//b/AAAHAAkAAAD7//b/AAAIAAkAAAD6//f/AAAHAAoAAAD7//f/AAAIAAoAAAD5//b/AAAKAAkAAAD4//f/AAAKAAkAAAD5//f/AAARAAkAAAD4//b/AAAGAAgAAAD4//j/AAAIAAkAAAAEAPr/AAAGAAkAAAAEAPv/AAAGAAkAAAAEAPz/AAAGAAkAAAAEAP3/AAAGAAkAAAAEAP7/AAAGAAkAAAAEAP//AAAGAAkAAAAEAAAAAAAGAAkAAAAEAAEAAAAGAAkAAAAEAAIAAAAGAAkAAAAEAAMAAAAGAAkAAAAEAAQAAAAGAAkAAAAEAAUAAAAGAAkAAAADAAYAAAAAAAgAAAAJAAYAAAACAAgAAAAIAAYAAAABAAgAAAAHAAYAAAABAAgAAAAGAAYAAAABAAgAAAAFAAYAAAABAAgAAAAEAAYAAAABAAgAAAADAAgAAAAEAAkAAAAJAAgAAAADAAkAAAAKAAgAAAABAAgAAAD+/wgAAAABAAgAAAD//wgAAAABAAgAAAAAAAgAAAABAAgAAAABAAgAAAABAAgAAAACAAgAAAABAAgAAAADAAcAAAAAAAkAAAAEAAkAAAABAAkAAAAEAAgAAAABAAkAAAAEAAcAAAABAAkAAAAFAAcAAAABAAkAAAAFAAgAAAABAAkAAAAFAAkAAAABAAkAAAAGAAkAAAABAAkAAAAGAAgAAAABAAkAAAAGAAcAAAABAAkAAAAHAAcAAAABAAkAAAAHAAgAAAABAAkAAAAHAAkAAAABAAkAAAAIAAkAAAABAAkAAAAIAAgAAAABAAkAAAAIAAcAAAABAAkAAAAJAAkAAAABAAkAAAAKAAkAAAABAAkAAAADAAkAAAABAAkAAAACAAkAAAABAAkAAAABAAkAAAABAAkAAAAAAAkAAAABAAkAAAD//wkAAAABAAkAAAD+/wkAAAABAAkAAAD9/wkAAAABAAkAAAAJAAcAAAACAAkAAAAIAPr/AAAIAAkAAAAIAPv/AAAIAAkAAAAIAPz/AAAIAAkAAAAIAP3/AAAIAAkAAAAIAP7/AAAIAAkAAAAIAP//AAAIAAkAAAAIAAAAAAAIAAkAAAAIAAEAAAAIAAkAAAAIAAIAAAAIAAkAAAAIAAMAAAAIAAkAAAAIAAQAAAAIAAkAAAAIAAUAAAAIAAkAAAAFAP//AAAIAAkAAAAFAP7/AAAIAAkAAAAFAP3/AAAIAAkAAAAFAPz/AAAJAAgAAAAFAPv/AAAHAAkAAAAFAPr/AAAHAAkAAAAGAPr/AAAHAAkAAAAGAPv/AAAHAAkAAAAGAPz/AAAHAAoAAAAGAAAAAAAHAAgAAAAFAAAAAAAJAAkAAAAFAAEAAAAHAAkAAAAFAAIAAAAHAAkAAAAFAAMAAAAHAAkAAAAFAAQAAAAHAAkAAAAFAAUAAAAHAAkAAAAGAAUAAAAHAAkAAAAGAAQAAAAHAAkAAAAGAAMAAAAHAAkAAAAGAAIAAAAHAAkAAAAGAAEAAAAHAAkAAAAHAAEAAAAHAAkAAAAHAAAAAAAKAAkAAAAHAP//AAAGAAkAAAAHAP7/AAAGAAkAAAAHAP3/AAAGAAkAAAAHAPz/AAAKAAgAAAAHAPv/AAAHAAkAAAAHAPr/AAAHAAkAAAAHAAIAAAAHAAkAAAAHAAMAAAAHAAkAAAAHAAQAAAAHAAkAAAAHAAUAAAAHAAkAAAAMAPT/AAABAAYAAAALAPT/AAABAAYAAAAKAPT/AAABAAYAAAAJAPT/AAABAAYAAAAIAPT/AAABAAYAAAAHAPT/AAABAAYAAAAGAPT/AAABAAYAAAAFAPT/AAABAAYAAAAEAPT/AAABAAYAAAADAPT/AAABAAYAAAACAPT/AAABAAYAAAABAPT/AAABAAYAAAAAAPT/AAABAAYAAAD///T/AAABAAYAAAD+//T/AAABAAYAAAD9//T/AAABAAYAAAD2/wAAAAAGAAkAAAD3/wAAAAAHAAkAAAD4/wAAAAAIAAkAAAD2/wIAAAAGAAoAAAD3/wIAAAAHAAoAAAD4/wIAAAAIAAoAAAD2/wEAAAAGAAkAAAD3/wEAAAAHAAkAAAD4/wEAAAAIAAkAAAAUAPX/AAAAAAUAAAAUAPb/AAAAAAUAAAAUAPf/AAAAAAUAAAAVAPX/AAACAAUAAAAVAPb/AAACAAUAAAAVAPf/AAACAAUAAAAWAPX/AAASAAkAAAAUAP3/AAAAAAUAAAAUAP7/AAAAAAUAAAAUAP//AAAAAAUAAAAUAAAAAAAAAAUAAAAUAAEAAAAAAAYAAAAVAP3/AAACAAUAAAAVAP7/AAACAAUAAAAVAP//AAACAAUAAAAVAAAAAAACAAUAAAAVAAEAAAACAAYAAAAUAPj/AAAAAAUAAAAVAPj/AAACAAUAAAAUAPn/AAAAAAUAAAAVAPn/AAACAAUAAAAUAPr/AAAAAAUAAAAVAPr/AAACAAUAAAAUAPv/AAAAAAUAAAAVAPv/AAACAAUAAAAUAPz/AAAAAAUAAAAVAPz/AAACAAUAAAAiAPT/AAAEAAQAAAAiAPX/AAAAAAUAAAAiAPb/AAAAAAUAAAAiAPf/AAAAAAUAAAAiAPj/AAAAAAUAAAAiAPz/AAAIAAoAAAAiAP3/AAAAAAQAAAAiAP7/AAAAAAUAAAAiAP//AAAAAAUAAAAiAAAAAAAAAAUAAAAiAAEAAAAAAAUAAAAiAAIAAAAAAAUAAAAiAAMAAAAAAAYAAAAiAAkAAAABAAgAAAAjAPT/AAABAAEAABAjAPX/AAABAAEAABAjAPb/AAABAAEAABAjAPf/AAABAAEAABAjAPj/AAABAAEAABAjAPr/AAAEAAQAAAAjAPv/AAAAAAUAAAAjAPz/AAAAAAUAAAAjAP3/AAAEAAUAAAAjAP7/AAABAAkAAAAjAP//AAABAAkAAAAjAAAAAAABAAkAAAAjAAEAAAABAAkAAAAjAAIAAAABAAkAAAAjAAMAAAAEAAQAAAAjAAQAAAACAAkAABAjAAUAAAACAAkAABAjAAYAAAACAAkAABAjAAcAAAACAAkAABAjAAgAAAACAAkAABAjAAkAAAADAAkAABAaAAkAAAABAAgAAAAbAAkAAAABAAgAAAAcAAkAAAABAAgAAAAdAAkAAAABAAgAAAAeAAkAAAABAAgAAAAfAAkAAAABAAgAAAAgAAkAAAABAAgAAAAhAAkAAAABAAgAAAAaAPT/AAABAAYAAAAbAPT/AAABAAYAAAAcAPT/AAABAAYAAAAdAPT/AAABAAYAAAAeAPT/AAABAAYAAAAfAPT/AAABAAYAAAAgAPT/AAABAAYAAAAhAPT/AAABAAYAAAANAAcAAAAIAAgAABAOAAcAAAAHAAgAABAOAAgAAAAHAAoAABAPAAcAAAAHAAgAABAPAAgAAAAHAAoAABAQAAcAAAAHAAgAABAQAAgAAAAHAAoAABARAAcAAAAHAAgAABARAAgAAAAHAAoAABASAAcAAAAHAAgAABASAAgAAAAHAAoAABATAAcAAAAHAAgAABATAAgAAAAHAAoAABAUAAcAAAAHAAgAABAUAAgAAAAHAAoAABAVAAcAAAAHAAgAABAVAAgAAAAHAAoAABAWAAcAAAAHAAgAABAWAAgAAAAHAAoAABAXAAcAAAAHAAgAABAXAAgAAAAHAAoAABAYAAUAAAAIAAgAABAYAAYAAAAIAAkAABAYAAcAAAAJAAkAABAYAAgAAAAHAAoAABAZAAUAAAAHAAgAABAZAAYAAAAHAAkAABAZAAcAAAAHAAkAABAZAAgAAAAHAAoAABAiAPn/AAAAAAUAAAAiAPr/AAAAAAYAAAAiAPv/AAAIAAgAAAAjAPn/AAABAAkAAAAaAAUAAAAIAAgAAAAaAAgAAAAIAAoAAAAaAAYAAAAIAAkAAAAaAAcAAAAIAAkAAAAhAPv/AAAHAAgAAAAgAPv/AAAHAAgAAAAfAPv/AAAHAAgAAAAeAPv/AAAHAAgAAAAdAPv/AAAHAAgAAAAcAPv/AAAGAAgAAAAhAPz/AAAHAAoAAAAgAPz/AAAHAAoAAAAfAPz/AAAHAAoAAAAeAPz/AAAHAAoAAAAdAPz/AAAHAAoAAAAcAPz/AAAGAAoAAAAWAPb/AAASAAoAAAAXAPX/AAATAAkAAAAXAPb/AAATAAoAAAATAPX/AAAUAAgAAAATAPb/AAAUAAkAAAATAPf/AAAUAAoAAAASAPX/AAARAAkAAAAKAAYAAAANAAkAAAAKAAcAAAANAAoAAAALAAYAAAAOAAkAAAALAAcAAAAOAAoAAAAMAAcAAAAMAAkAAAA=")
+
+[node name="Player" parent="." index="5" unique_id=829502222]
+position = Vector2(-145, -148)
