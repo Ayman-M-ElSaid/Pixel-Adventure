@@ -9,7 +9,8 @@ speed = 100.0
 
 [node name="WallCheck" type="RayCast2D" parent="." index="4" unique_id=1592137927]
 target_position = Vector2(50, 0)
-collision_mask = 17
+collision_mask = 21
+collide_with_areas = true
 
 [node name="LedgeCheck" type="RayCast2D" parent="." index="5" unique_id=149577384]
 

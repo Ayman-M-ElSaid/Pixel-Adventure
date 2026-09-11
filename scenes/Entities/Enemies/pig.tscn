@@ -396,7 +396,8 @@ position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_d6y0u")
 
 [node name="WallCheck" parent="." index="4" unique_id=1592137927]
-target_position = Vector2(-20, 0)
+position = Vector2(0, 13)
+target_position = Vector2(-18, 0)
 
 [node name="LedgeCheck" parent="." index="5" unique_id=149577384]
 position = Vector2(-15, 0)
