@@ -6,13 +6,17 @@
 [node name="PatrolEnemy" unique_id=732408310 instance=ExtResource("1_tvqi4")]
 script = ExtResource("2_i8i6r")
 speed = 100.0
+direction = -1
+flying = false
+patrol_distance = 0.0
 
 [node name="WallCheck" type="RayCast2D" parent="." index="4" unique_id=1592137927]
-target_position = Vector2(50, 0)
+target_position = Vector2(-20, 0)
 collision_mask = 21
 collide_with_areas = true
 
 [node name="LedgeCheck" type="RayCast2D" parent="." index="5" unique_id=149577384]
+target_position = Vector2(0, 30)
 
 [node name="PauseTimer" type="Timer" parent="." index="6" unique_id=64948039]
 one_shot = true

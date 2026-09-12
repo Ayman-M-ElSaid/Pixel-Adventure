@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dwvnat6oscvta"]
+
+[ext_resource type="Script" uid="uid://dd04i6m4bnxat" path="res://scripts/Effects/fall_and_fade.gd" id="1_xsfbe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ri06"]
+size = Vector2(12, 7)
+
+[node name="Debris" type="RigidBody2D" unique_id=734137281]
+collision_layer = 0
+freeze_mode = 1
+script = ExtResource("1_xsfbe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1238442695]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_2ri06")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1226581069]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

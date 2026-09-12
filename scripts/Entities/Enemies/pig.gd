@@ -9,10 +9,12 @@ func _on_stomp(remaining: int) -> void:
 		pause_timer.stop()
 		pause_timer.queue_free()
 		speed = enraged_speed
-		animated_sprite.play(&"hit")
+		animated_sprite.play(&"enrage")
+		_move_animation = &"enraged_run"
 		animated_sprite.animation_finished.connect(
 			func():
-				animated_sprite.play(&"run_2"),
+				animated_sprite.play(_move_animation),
+			CONNECT_ONE_SHOT,
 		)
 
 
@@ -20,17 +22,7 @@ func _change_direction() -> void:
 	if hit_points == 2:
 		super._change_direction()
 	else:
-		_direction *= -1
+		direction = (direction * -1) as Direction
 		wall_check.target_position.x *= -1
 		ledge_check.position.x *= -1
-		animated_sprite.flip_h = _direction > 0
-
-
-func die() -> void:
-	if is_dead:
-		return
-	is_dead = true
-	hazard.monitoring = false
-	animated_sprite.play(&"hit_2")
-	collision.queue_free()
-	died.emit()
+		animated_sprite.flip_h = direction == Direction.RIGHT

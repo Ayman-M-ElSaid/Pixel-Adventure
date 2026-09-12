@@ -45,7 +45,7 @@ func _setup_length() -> void:
 
 
 func _set_state() -> void:
-	hazard.monitoring = is_on
+	hazard.set_deferred(&"monitoring", is_on)
 	for sprite in sprites:
 		sprite.play(&"on" if is_on else &"off")
 	timer.start(on_duration if is_on else off_duration)

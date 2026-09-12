@@ -2,9 +2,14 @@ extends CharacterBody2D
 class_name Enemy
 
 signal died
+enum Direction {
+	LEFT = -1,
+	RIGHT = 1,
+}
 
 @export var hit_points := 1
-@export var gravity := 900.0
+@export var gravity := 980.0
+@export var direction := Direction.LEFT
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
@@ -37,7 +42,8 @@ func die() -> void:
 	if is_dead:
 		return
 	is_dead = true
-	hazard.monitoring = false
+	gravity = 980.0
+	hazard.set_deferred(&"monitoring", false)
 	animated_sprite.play(&"hit")
 	collision.queue_free()
 	died.emit()

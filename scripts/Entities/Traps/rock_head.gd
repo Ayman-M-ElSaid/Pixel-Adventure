@@ -15,7 +15,7 @@ var _tween: Tween
 func _ready() -> void:
 	var _start_position: Vector2 = position
 	animated_sprite.animation_finished.connect(_on_hit_animation_finished)
-	hazard.monitoring = false
+	hazard.set_deferred(&"monitoring", false)
 	hazard_collision.shape = RectangleShape2D.new()
 
 	if points.size() <= 0:
@@ -53,7 +53,7 @@ func _ready() -> void:
 
 
 func _activate_hazard(direction: Vector2) -> void:
-	hazard.monitoring = true
+	hazard.set_deferred(&"monitoring", true)
 	if abs(direction.x) > abs(direction.y):
 		hazard_collision.shape.size = Vector2(16, 32)
 		hazard.position = Vector2(-24, 0) if direction.x < 0 else Vector2(24, 0)
@@ -72,6 +72,6 @@ func _play_hit_animation(direction: Vector2) -> void:
 
 
 func _on_hit_animation_finished() -> void:
-	hazard.monitoring = false
+	hazard.set_deferred(&"monitoring", false)
 	animated_sprite.play(&"idle")
 	_tween.play()
