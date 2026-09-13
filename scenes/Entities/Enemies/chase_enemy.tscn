@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b70mekbp5vil"]
+
+[ext_resource type="PackedScene" uid="uid://c3jhbl815l6f" path="res://scenes/Entities/Enemies/enemy.tscn" id="1_d2lqm"]
+[ext_resource type="Script" uid="uid://dkww63ravqw7n" path="res://scripts/Entities/Enemies/chase_enemy.gd" id="2_ibsi3"]
+
+[node name="ChaseEnemy" unique_id=732408310 instance=ExtResource("1_d2lqm")]
+script = ExtResource("2_ibsi3")
+speed = 100.0
+direction = 0
+trigger_area = null
+flying = false
+
+[node name="TriggerArea" type="Area2D" parent="." index="4" unique_id=651005517]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea" index="0" unique_id=642303562]
+
+[node name="LineOfSight" type="RayCast2D" parent="." index="5" unique_id=427707176]
+target_position = Vector2(-50, 0)
+
+[connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
+[connection signal="body_exited" from="TriggerArea" to="." method="_on_trigger_area_body_exited"]

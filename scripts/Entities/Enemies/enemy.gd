@@ -27,12 +27,15 @@ func _physics_process(delta) -> void:
 func _on_stomp_area_body_entered(body: CharacterBody2D) -> void:
 	if body.velocity.y < 0 or body.global_position.y > global_position.y:
 		return
+	hazard.set_deferred(&"monitoring", false)
 	body.bounce(300)
 	hit_points -= 1
 	_on_stomp(hit_points)
 	if hit_points <= 0:
 		die()
-
+		
+func _on_stomp_area_body_exited(_body: CharacterBody2D) -> void:
+	hazard.set_deferred(&"monitoring", true)
 
 func _on_stomp(_remaining: int) -> void:
 	pass
