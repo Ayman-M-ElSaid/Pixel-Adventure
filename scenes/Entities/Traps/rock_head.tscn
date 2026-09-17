@@ -136,7 +136,7 @@ autoplay = "idle"
 shape = SubResource("RectangleShape2D_6i4bv")
 
 [node name="Hazard" type="Area2D" parent="." unique_id=445065441]
-collision_mask = 2
+collision_mask = 18
 script = ExtResource("6_7hbtu")
 metadata/_custom_type_script = "uid://2xvgdeigxbtv"
 
