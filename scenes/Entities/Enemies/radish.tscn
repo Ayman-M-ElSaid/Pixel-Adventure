@@ -271,7 +271,6 @@ radius_x = 60.0
 radius_y = 24.0
 clockwise = true
 flying = true
-patrol_distance = 60.0
 hit_points = 2
 gravity = 0.0
 

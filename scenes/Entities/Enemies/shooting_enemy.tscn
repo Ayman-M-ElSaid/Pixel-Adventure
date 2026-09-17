@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c2jk8l6kflpkx"]
+
+[ext_resource type="PackedScene" uid="uid://bba5rvy51wbgc" path="res://scenes/Entities/Enemies/patrol_enemy.tscn" id="1_7g8aq"]
+[ext_resource type="Script" uid="uid://boab1yfmkx2dx" path="res://scripts/Entities/Enemies/shooting_enemy.gd" id="2_ixyos"]
+[ext_resource type="PackedScene" uid="uid://bvrofgtr8g2ep" path="res://scenes/Entities/Hazards/bullet.tscn" id="2_ldyvr"]
+
+[node name="ShootingEnemy" unique_id=732408310 instance=ExtResource("1_7g8aq")]
+script = ExtResource("2_ixyos")
+fire_rate = 1.0
+detection_range = Vector2(-100, 0)
+requires_line_of_sight = true
+shoot_frame = 0
+
+[node name="LineOfSight" type="RayCast2D" parent="." index="5" unique_id=1268287286]
+collision_mask = 3
+
+[node name="ShootTimer" type="Timer" parent="." index="8" unique_id=1003518902]
+
+[node name="Bullet" parent="." index="9" unique_id=669338303 instance=ExtResource("2_ldyvr")]
+
+[node name="BulletSpawnPoint" type="Marker2D" parent="." index="10" unique_id=80271811]
+
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_attack_frame_changed"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]

@@ -27,19 +27,22 @@ func _ready():
 
 
 func _physics_process(delta: float) -> void:
-	if not is_dead:
-		if _has_stopped:
-			velocity.x = 0
-			return
+	super._physics_process(delta)
 
-		if patrol_distance:
-			if absf(position.x - _base_position.x) >= patrol_distance or wall_check.is_colliding():
-				_change_direction()
-		elif wall_check.is_colliding() or (not flying and not ledge_check.is_colliding()):
+	if is_dead:
+		return
+
+	if _has_stopped:
+		velocity.x = 0
+		return
+
+	if patrol_distance:
+		if absf(position.x - _base_position.x) >= patrol_distance or wall_check.is_colliding():
 			_change_direction()
+	elif wall_check.is_colliding() or (not flying and not ledge_check.is_colliding()):
+		_change_direction()
 
 	velocity.x = direction * speed
-	super._physics_process(delta)
 
 
 func _change_direction() -> void:

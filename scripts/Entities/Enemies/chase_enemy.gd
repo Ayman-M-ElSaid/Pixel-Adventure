@@ -22,6 +22,8 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	super._physics_process(delta)
+
 	if not is_dead and _target:
 		if _has_line_of_sight() and not _is_chasing:
 			_wake_up()
@@ -29,8 +31,6 @@ func _physics_process(delta: float) -> void:
 			_go_idle()
 		if _is_chasing:
 			_chase()
-
-	super._physics_process(delta)
 
 
 func _chase() -> void:

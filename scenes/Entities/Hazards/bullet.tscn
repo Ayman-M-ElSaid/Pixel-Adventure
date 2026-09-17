@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bvrofgtr8g2ep"]
+
+[ext_resource type="PackedScene" uid="uid://cbefqg6geix3s" path="res://scenes/Entities/Hazards/hazard.tscn" id="1_6phi4"]
+[ext_resource type="PackedScene" uid="uid://dwvnat6oscvta" path="res://scenes/Entities/debris.tscn" id="2_a7578"]
+[ext_resource type="Script" uid="uid://djkhh6g1am5lr" path="res://scripts/Entities/Hazards/bullet.gd" id="2_h7knl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a7578"]
+radius = 6.0
+
+[node name="Bullet" unique_id=669338303 instance=ExtResource("1_6phi4")]
+collision_mask = 3
+script = ExtResource("2_h7knl")
+bullet_texture = null
+bullet_pieces_texture = null
+direction = Vector2(-1, 0)
+speed = 200.0
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=999896328]
+shape = SubResource("CircleShape2D_a7578")
+
+[node name="Sprite" type="Sprite2D" parent="." index="2" unique_id=360554166]
+
+[node name="LeftDebris" parent="." index="3" unique_id=734137281 instance=ExtResource("2_a7578")]
+
+[node name="RightDebris" parent="." index="4" unique_id=1220588078 instance=ExtResource("2_a7578")]

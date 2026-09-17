@@ -33,9 +33,11 @@ func _on_stomp_area_body_entered(body: CharacterBody2D) -> void:
 	_on_stomp(hit_points)
 	if hit_points <= 0:
 		die()
-		
+
+
 func _on_stomp_area_body_exited(_body: CharacterBody2D) -> void:
 	hazard.set_deferred(&"monitoring", true)
+
 
 func _on_stomp(_remaining: int) -> void:
 	pass

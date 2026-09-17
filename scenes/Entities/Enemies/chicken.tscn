@@ -278,6 +278,3 @@ shape = SubResource("RectangleShape2D_brnje")
 
 [node name="CollisionShape2D" parent="Hazard" parent_id_path=PackedInt32Array(254585236) index="0" unique_id=1071401357]
 shape = SubResource("CircleShape2D_uphsb")
-
-[node name="CollisionShape2D" parent="TriggerArea" parent_id_path=PackedInt32Array(651005517) index="0" unique_id=642303562]
-position = Vector2(0, -5)

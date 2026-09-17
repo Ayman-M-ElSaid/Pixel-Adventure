@@ -30,7 +30,6 @@ func _on_stomp(remaining: int) -> void:
 		_move_animation = &"run"
 		animated_sprite.play(&"hit")
 		_is_falling = true
-		patrol_distance = 0.0
 		left_leaf.activate(Vector2(randi_range(-30, -50), -100), randi_range(-3, -6))
 		right_leaf.activate(Vector2(randi_range(30, 50), -100), randi_range(3, 6))
 
