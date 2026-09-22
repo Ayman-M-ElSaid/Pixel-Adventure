@@ -25,9 +25,10 @@ shape = SubResource("RectangleShape2D_yqjtg")
 [node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=1699284768]
 position = Vector2(0.5, -12)
 stream = ExtResource("9_rvc5h")
+volume_db = -12.0
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=187633677]
 stream = ExtResource("10_bbr4a")
-volume_db = -6.0
+volume_db = -15.0
 pitch_scale = 0.75
 attenuation = 2.0

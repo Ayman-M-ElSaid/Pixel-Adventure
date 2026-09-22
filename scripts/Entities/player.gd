@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
@@ -18,6 +19,7 @@ var jumps_available := MAX_JUMPS
 var is_wall_gliding := false
 var last_wall_jump = 0
 var is_dead := false
+var inventory := []
 
 
 func _ready() -> void:
@@ -110,6 +112,27 @@ func die() -> void:
 	collision.queue_free()
 	SaveManager.data["death_count"] += 1
 	SaveManager.save_game()
+
+	if not inventory.size():
+		return
+	var dropped_item_count = clamp(10 * (1 - exp(-inventory.size() / 14.0)), 0, 10)
+	for i in range(dropped_item_count + randf_range(-.5, .5)):
+		var item: Debris = preload("res://scenes/Entities/debris.tscn").instantiate()
+		var selection = inventory.pick_random()
+		inventory.erase(selection)
+		item.sprite = Collectable.FRAMES[Collectable.Fruit[selection]].get_frame_texture(
+			&"fruit",
+			0,
+		)
+		item.sprite_region = Rect2(0, 0, 32, 32)
+		call_deferred(&"add_child", item)
+		item.activate.call_deferred(
+			Vector2(randi_range(-100, 100), randi_range(-300, -200)),
+			randi_range(-5, 5),
+		)
+		(func():
+			item.collision.set_deferred(&"disabled", true)
+		).call_deferred()
 
 
 func disappear() -> void:

@@ -6,7 +6,7 @@ class_name Hazard
 
 func _on_body_entered(body: CharacterBody2D) -> void:
 	body.die()
-	if body.get_collision_layer_value(2):
+	if is_instance_of(body, Player):
 		timer.start(1)
 
 

@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		State.IDLE:
 			animated_sprite.play(&"idle")
 			velocity.x = 0.0
-			if is_instance_of(line_of_sight.get_collider(), CharacterBody2D):
+			if is_instance_of(line_of_sight.get_collider(), Player):
 				_change_state(State.WINDUP, windup_time)
 		State.WINDUP:
 			_state_time -= delta

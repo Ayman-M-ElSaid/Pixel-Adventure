@@ -11,7 +11,7 @@ class_name ChaseEnemy
 
 const FACING_DEADZONE := 4
 
-var _target: CharacterBody2D = null
+var _target: Player = null
 var _is_chasing := false
 
 
@@ -75,13 +75,13 @@ func _go_idle() -> void:
 	animated_sprite.play(&"idle")
 
 
-func _on_trigger_area_body_entered(body: CharacterBody2D) -> void:
+func _on_trigger_area_body_entered(body: Player) -> void:
 	if is_dead:
 		return
 	_target = body
 
 
-func _on_trigger_area_body_exited(_body: CharacterBody2D) -> void:
+func _on_trigger_area_body_exited(_body: Player) -> void:
 	if is_dead or flying:
 		return
 	_target = null

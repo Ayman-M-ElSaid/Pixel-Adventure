@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		return
 
 	if requires_line_of_sight:
-		if is_instance_of(line_of_sight.get_collider(),CharacterBody2D):
+		if is_instance_of(line_of_sight.get_collider(), Player):
 			_shoot()
 	else:
 		_shoot()

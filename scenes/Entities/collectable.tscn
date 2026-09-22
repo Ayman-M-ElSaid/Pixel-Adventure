@@ -71,7 +71,7 @@ shape = SubResource("CircleShape2D_yr2er")
 
 [node name="CollectSound" type="AudioStreamPlayer2D" parent="." unique_id=1400829156]
 stream = ExtResource("3_8ko5o")
-volume_db = -12.0
+volume_db = -18.0
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1603390307]
 

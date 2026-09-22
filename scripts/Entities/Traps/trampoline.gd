@@ -9,7 +9,7 @@ func _ready() -> void:
 	animated_sprite.play("idle")
 
 
-func _on_body_entered(body: CharacterBody2D) -> void:
+func _on_body_entered(body: Player) -> void:
 	body.bounce(bounce_force)
 	set_deferred(&"monitoring", false)
 	animated_sprite.play(&"jump")

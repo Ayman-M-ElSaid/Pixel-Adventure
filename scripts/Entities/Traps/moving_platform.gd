@@ -12,7 +12,7 @@ var _start_pos: Vector2
 var _triggered := false
 var _moving := false
 var _tween: Tween
-var _pending_body: CharacterBody2D = null
+var _pending_body: Player = null
 
 
 func _position_chain() -> void:
@@ -46,7 +46,7 @@ func _physics_process(_delta: float) -> void:
 func _on_trigger_zone_body_entered(body: Node2D) -> void:
 	if automatic or _triggered:
 		return
-	if body is CharacterBody2D:
+	if is_instance_of(body, Player):
 		_pending_body = body
 
 

@@ -2,9 +2,9 @@ extends Node
 
 @export var level_id: int
 
-@onready var tilemap = %TileMap
-@onready var collectables = %Collectables
-@onready var player = %Player
+@onready var tilemap: TileMapLayer = %TileMap
+@onready var collectables: Node2D = %Collectables
+@onready var player: Player = %Player
 
 var _remaining_collectables
 
@@ -24,12 +24,12 @@ func _ready() -> void:
 	_remaining_collectables = collectables.get_child_count()
 	for item in collectables.get_children():
 		item.collected.connect(_on_item_collected)
-	if not PlayerManager.is_respawning:
-		Transition.play_wipe_out()
 
 
-func _on_item_collected() -> void:
+func _on_item_collected(item_name) -> void:
 	_remaining_collectables -= 1
+	player.inventory.append(Collectable.Fruit.keys()[item_name])
+
 	if _remaining_collectables == 0:
 		_complete_level()
 

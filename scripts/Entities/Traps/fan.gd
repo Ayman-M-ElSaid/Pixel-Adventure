@@ -15,7 +15,7 @@ const ACCELERATION: float = 1200.0
 const MAX_SPEED: float = 400.0
 
 var is_on := false
-var player_inside: CharacterBody2D = null
+var player_inside: Player = null
 var top_edge: float
 var bob_timer := 0.0
 
@@ -47,11 +47,11 @@ func _on_timer_timeout() -> void:
 	_set_state()
 
 
-func _on_lift_area_body_entered(body: CharacterBody2D) -> void:
+func _on_lift_area_body_entered(body: Player) -> void:
 	player_inside = body
 
 
-func _on_lift_area_body_exited(_body: CharacterBody2D) -> void:
+func _on_lift_area_body_exited(_body: Player) -> void:
 	player_inside = null
 
 

@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if is_instance_of(body, CharacterBody2D):
+	if is_instance_of(body, Player):
 		super._on_body_entered(body)
 	else:
 		sprite.set_deferred(&"visible", false)

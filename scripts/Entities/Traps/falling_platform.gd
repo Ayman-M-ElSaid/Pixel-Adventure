@@ -13,7 +13,7 @@ func _ready() -> void:
 	animated_sprite.play(&"on")
 
 
-func _on_trigger_zone_body_entered(body: CharacterBody2D) -> void:
+func _on_trigger_zone_body_entered(body: Player) -> void:
 	if _triggered:
 		return
 	for i in 10:

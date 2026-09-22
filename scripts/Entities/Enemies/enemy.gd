@@ -24,7 +24,7 @@ func _physics_process(delta) -> void:
 	move_and_slide()
 
 
-func _on_stomp_area_body_entered(body: CharacterBody2D) -> void:
+func _on_stomp_area_body_entered(body: Player) -> void:
 	if body.velocity.y < 0 or body.global_position.y > global_position.y:
 		return
 	hazard.set_deferred(&"monitoring", false)
@@ -35,7 +35,7 @@ func _on_stomp_area_body_entered(body: CharacterBody2D) -> void:
 		die()
 
 
-func _on_stomp_area_body_exited(_body: CharacterBody2D) -> void:
+func _on_stomp_area_body_exited(_body: Player) -> void:
 	hazard.set_deferred(&"monitoring", true)
 
 

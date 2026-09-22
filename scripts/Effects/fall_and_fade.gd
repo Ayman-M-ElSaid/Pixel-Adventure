@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Debris
 
 @export var sprite: Texture2D
 @export var sprite_region := Rect2(0, 0, 16, 16)
