@@ -18,6 +18,9 @@ func get_level_dimensions() -> Dictionary[String, Vector2]:
 
 
 func _ready() -> void:
+	if not PlayerManager.is_respawning:
+		Transition.play_wipe_out()
+
 	_remaining_collectables = collectables.get_child_count()
 	for item in collectables.get_children():
 		item.collected.connect(_on_item_collected)
@@ -35,7 +38,12 @@ func _complete_level() -> void:
 	await player.disappear()
 	Transition.wipe_in_finished.connect(
 		func():
-			get_tree().change_scene_to_file("res://scenes/Levels/level_%02d.tscn" % (level_id + 1))
+			if level_id == 0:
+				get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
+			else:
+				get_tree().change_scene_to_file(
+					"res://scenes/Levels/level_%02d.tscn" % (level_id + 1)
+				)
 			PlayerManager.is_respawning = false,
 		CONNECT_ONE_SHOT,
 	)

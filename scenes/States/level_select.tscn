@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://by8qlebq8yquf" path="res://assets/Background/Blue.png" id="2_ivjmv"]
 [ext_resource type="Texture2D" uid="uid://c4r2l3qpp54g4" path="res://assets/Menu/Buttons/character.png" id="4_o65u6"]
 [ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/UI/button.gd" id="4_tr348"]
-[ext_resource type="PackedScene" uid="uid://bvxqc1xg8drjp" path="res://scenes/States/tutorial_overlay.tscn" id="5_0eap8"]
+[ext_resource type="PackedScene" uid="uid://bvxqc1xg8drjp" path="res://scenes/UI/tutorial_overlay.tscn" id="5_0eap8"]
 
 [node name="LevelSelect" type="Node2D" unique_id=2004734571]
 script = ExtResource("1_ivjmv")

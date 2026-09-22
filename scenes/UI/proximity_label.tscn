@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://db24klwc3gjve"]
+
+[ext_resource type="Script" uid="uid://b7df18vfae3en" path="res://scripts/UI/proximity_label.gd" id="1_op26e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ck0rp"]
+resource_local_to_scene = true
+radius = 80.0
+
+[node name="ProximityLabel" type="Area2D" unique_id=1875874368]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_op26e")
+
+[node name="TriggerArea" type="CollisionShape2D" parent="." unique_id=1551755405]
+shape = SubResource("CircleShape2D_ck0rp")
+
+[node name="Label" type="Label" parent="." unique_id=1500478296]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

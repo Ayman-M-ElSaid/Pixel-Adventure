@@ -12,6 +12,8 @@ var level_buttons: Array[TextureButton] = []
 
 
 func _ready() -> void:
+	Transition.play_wipe_out()
+
 	# build buttons grid
 	for i in range(COLS):
 		for j in range(ROWS):
