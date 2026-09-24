@@ -10,6 +10,8 @@ var selection := 0
 
 
 func _ready() -> void:
+	Transition.play_wipe_out()
+
 	var chosen_character = SaveManager.data["character"]
 	animated_sprite.sprite_frames = Characters.CHARACTERS[chosen_character]
 	animated_sprite.play(&"idle")
@@ -25,6 +27,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		var active_character = OPTIONS[selection]
 		if active_character in SaveManager.data["unlocked_characters"]:
 			SaveManager.data["character"] = active_character
+			SaveManager.save_game()
 			get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
 		else:
 			$ErrorSound.play()

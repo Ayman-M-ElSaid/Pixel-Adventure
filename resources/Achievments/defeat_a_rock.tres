@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://6qh7slqby835"]
+
+[ext_resource type="Texture2D" uid="uid://bjgx107ork1ln" path="res://assets/Enemies/Rocks/Rock1_Idle (38x34).png" id="1_kubxm"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_o7ewp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4i3h"]
+atlas = ExtResource("1_kubxm")
+region = Rect2(0, 0, 40, 34)
+margin = Rect2(2, 0, 0, 0)
+
+[resource]
+script = ExtResource("2_o7ewp")
+id = "defeat_a_rock"
+title = "Reduced to Rubble"
+description = "Defeat a rock, all the way down to its smallest piece. Zero pebbles left standing."
+icon = SubResource("AtlasTexture_n4i3h")

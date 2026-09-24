@@ -245,6 +245,7 @@ radius = 16.03122
 shoot_frame = 4
 speed = 0.0
 flying = true
+type = "plant"
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]
 position = Vector2(3, 1.5)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://b2dp1o5l23pnc"]
+
+[ext_resource type="Texture2D" uid="uid://b17u08kga1qph" path="res://assets/Menu/Achievements/Death Red.png" id="1_e4td5"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_bc7np"]
+
+[resource]
+script = ExtResource("2_bc7np")
+id = "died_500"
+title = "Certified Masochist"
+description = "Die 500 times. At this point it is basically your playstyle."
+icon = ExtResource("1_e4td5")

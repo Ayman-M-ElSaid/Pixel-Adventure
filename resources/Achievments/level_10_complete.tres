@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://b1eithkeyjjmg"]
+
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+[ext_resource type="Texture2D" uid="uid://cuh32f8nmc70h" path="res://assets/Menu/Levels/10.png" id="1_nyg4p"]
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "level_10_complete"
+title = "Double Digits"
+description = "Complete 10 levels. Growing up so fast."
+icon = ExtResource("1_nyg4p")

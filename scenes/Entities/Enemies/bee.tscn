@@ -195,6 +195,7 @@ detection_range = Vector2(0, 100)
 requires_line_of_sight = false
 shoot_frame = 5
 flying = true
+type = "bee"
 gravity = 0.0
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]

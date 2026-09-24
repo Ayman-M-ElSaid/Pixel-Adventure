@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://dg0n4kw7sui1s"]
+
+[ext_resource type="Texture2D" uid="uid://bluq4pbifcyp" path="res://assets/Menu/Achievements/Hard Level.png" id="1_bys7w"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "level_18_complete"
+title = "Through the Looking Glass"
+description = "Complete Level 18. Alice never had
+it this hard."
+icon = ExtResource("1_bys7w")

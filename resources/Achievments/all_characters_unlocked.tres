@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://cawf1sfxvcmj2"]
+
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+[ext_resource type="Texture2D" uid="uid://duvx4n0bsgn74" path="res://assets/Menu/Achievements/Characters.png" id="1_n4i3h"]
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "all_characters_unlocked"
+title = "Cast Complete"
+description = "Unlock all characters. The whole gang is finally here."
+icon = ExtResource("1_n4i3h")

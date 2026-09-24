@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://pke6telom6p5"]
+
+[ext_resource type="Texture2D" uid="uid://bxr5i08888xpu" path="res://assets/Items/Fruits/Melon.png" id="1_et4qu"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_6s0ku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thr3v"]
+atlas = ExtResource("1_et4qu")
+region = Rect2(0, 0, 32, 0)
+
+[resource]
+script = ExtResource("2_6s0ku")
+id = "melon_50"
+title = "Melon Drama"
+description = "Collect 50 melons. Every one of them a whole personality."
+icon = SubResource("AtlasTexture_thr3v")

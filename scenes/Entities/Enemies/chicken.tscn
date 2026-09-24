@@ -262,6 +262,7 @@ radius = 12.0
 [node name="Chicken" unique_id=732408310 instance=ExtResource("1_8feaj")]
 speed = 150.0
 trigger_area = SubResource("RectangleShape2D_8feaj")
+type = "chicken"
 direction = -1
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://cngxy16vcdv67"]
+
+[ext_resource type="Texture2D" uid="uid://bluq4pbifcyp" path="res://assets/Menu/Achievements/Hard Level.png" id="1_30yvo"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "level_24_complete"
+title = "Deja Vu"
+description = "Complete Level 24. Didn't you just
+do this? Twice?"
+icon = ExtResource("1_30yvo")

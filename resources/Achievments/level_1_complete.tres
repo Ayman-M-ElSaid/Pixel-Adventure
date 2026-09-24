@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://cvbdp6kwer6l7"]
+
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+[ext_resource type="Texture2D" uid="uid://bditns70cy34m" path="res://assets/Menu/Levels/01.png" id="1_kd8ao"]
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "level_1_complete"
+title = "Baby Steps"
+description = "Complete Level 1. Every legend starts somewhere."
+icon = ExtResource("1_kd8ao")

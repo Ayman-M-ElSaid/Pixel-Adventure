@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://4aosiifw7xy"]
+
+[ext_resource type="Texture2D" uid="uid://besmwexnnfxw3" path="res://assets/Enemies/Radish/Idle 1 (30x38).png" id="1_13h24"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rumi1"]
+atlas = ExtResource("1_13h24")
+region = Rect2(0, 0, 30, 38)
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "grounded"
+title = "Grounded"
+description = "Defeat a radish. Took away its flight and its dignity in one stomp."
+icon = SubResource("AtlasTexture_rumi1")

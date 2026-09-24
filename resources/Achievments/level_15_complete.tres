@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://xi8i05563xtr"]
+
+[ext_resource type="Texture2D" uid="uid://dtunvt1fnga6b" path="res://assets/Menu/Levels/15.png" id="1_afys3"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "level_15_complete"
+title = "Halfway to Hero"
+description = "Complete 15 levels. The fruit doesn't stand a chance."
+icon = ExtResource("1_afys3")

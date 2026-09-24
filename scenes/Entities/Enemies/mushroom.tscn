@@ -272,12 +272,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxydy"]
-size = Vector2(30, 8)
+size = Vector2(32, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvqi4"]
 size = Vector2(22, 14)
 
 [node name="Mushroom" unique_id=732408310 instance=ExtResource("1_kjpej")]
+type = "mushroom"
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]
 position = Vector2(0, 5.5)

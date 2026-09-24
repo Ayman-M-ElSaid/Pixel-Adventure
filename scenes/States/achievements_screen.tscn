@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://d1mk5pj01l2db"]
+
+[ext_resource type="Script" uid="uid://cy1jtdhdenvgr" path="res://scripts/States/achievement_screen.gd" id="1_e028b"]
+[ext_resource type="Texture2D" uid="uid://by8qlebq8yquf" path="res://assets/Background/Blue.png" id="1_r08q0"]
+[ext_resource type="PackedScene" uid="uid://bj4p10b1wvhiu" path="res://scenes/UI/achievement_badge.tscn" id="2_rohuf"]
+[ext_resource type="Texture2D" uid="uid://drlt0bsfsfp0" path="res://assets/Menu/Buttons/Play.png" id="4_r08q0"]
+[ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/UI/button.gd" id="5_pqvb0"]
+
+[node name="AchievementsScreen" type="MarginContainer" unique_id=1655084475]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+script = ExtResource("1_e028b")
+badge_scene = ExtResource("2_rohuf")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1927044504]
+texture_repeat = 2
+scale = Vector2(2, 2)
+texture = ExtResource("1_r08q0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 320)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1234608820]
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="VBoxContainer" unique_id=2019827703]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource("4_r08q0")
+stretch_mode = 5
+flip_h = true
+script = ExtResource("5_pqvb0")
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=541544751]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Achievements"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=1148552730]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+offset_transform_enabled = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="List" type="GridContainer" parent="VBoxContainer/ScrollContainer" unique_id=1480504634]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

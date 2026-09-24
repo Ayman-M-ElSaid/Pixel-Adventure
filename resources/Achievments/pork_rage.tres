@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://hdaohx54mjmd"]
+
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+[ext_resource type="Texture2D" uid="uid://cxdidskne7658" path="res://assets/Enemies/AngryPig/Run (36x30).png" id="1_y180i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtp81"]
+atlas = ExtResource("1_y180i")
+region = Rect2(0, 0, 36, 30)
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "pork_rage"
+title = "Pork Rage"
+description = "Defeat an enraged pig. It saw red, then it saw nothing."
+icon = SubResource("AtlasTexture_wtp81")

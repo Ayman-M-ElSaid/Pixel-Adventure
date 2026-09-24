@@ -1,12 +1,14 @@
 extends CharacterBody2D
 class_name Enemy
 
-signal died
+signal died(type: StringName)
+
 enum Direction {
 	LEFT = -1,
 	RIGHT = 1,
 }
 
+@export var type: String
 @export var hit_points := 1
 @export var gravity := 980.0
 @export var direction := Direction.LEFT
@@ -51,4 +53,4 @@ func die() -> void:
 	hazard.set_deferred(&"monitoring", false)
 	animated_sprite.play(&"hit")
 	collision.queue_free()
-	died.emit()
+	died.emit(type)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://b12kgwl5jml2o"]
+
+[ext_resource type="Texture2D" uid="uid://b5k3ep3b6bffr" path="res://assets/Menu/Achievements/Death.png" id="1_v4r22"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_vt7mq"]
+
+[resource]
+script = ExtResource("2_vt7mq")
+id = "died_100"
+title = "Rage Quit... Almost"
+description = "Die 100 times. But you kept going. That is the real achievement."
+icon = ExtResource("1_v4r22")

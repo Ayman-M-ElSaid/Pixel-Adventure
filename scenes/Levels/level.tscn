@@ -330,6 +330,7 @@ unique_name_in_owner = true
 tile_set = SubResource("TileSet_rka8t")
 
 [node name="Enemies" type="Node2D" parent="." unique_id=1981534313]
+unique_name_in_owner = true
 
 [node name="Player" parent="." unique_id=829502222 instance=ExtResource("3_f2txt")]
 unique_name_in_owner = true

@@ -68,10 +68,6 @@ func _on_level_pressed(level_id: int) -> void:
 	_go_to_level(level_id)
 
 
-func _on_character_select_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/States/character_select.tscn")
-
-
 func _go_to_level(level_id) -> void:
 	Transition.wipe_in_finished.connect(
 		func():
@@ -84,3 +80,21 @@ func _go_to_level(level_id) -> void:
 func _on_tutorial_finished() -> void:
 	SaveManager.data["tutorial_seen"] = true
 	SaveManager.save_game()
+
+
+func _on_character_select_button_pressed() -> void:
+	Transition.wipe_in_finished.connect(
+		func():
+			get_tree().change_scene_to_file("res://scenes/States/character_select.tscn"),
+		CONNECT_ONE_SHOT,
+	)
+	Transition.play_wipe_in()
+
+
+func _on_achievements_button_pressed() -> void:
+	Transition.wipe_in_finished.connect(
+		func():
+			get_tree().change_scene_to_file("res://scenes/States/achievements_screen.tscn"),
+		CONNECT_ONE_SHOT,
+	)
+	Transition.play_wipe_in()

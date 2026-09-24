@@ -7,7 +7,10 @@ var data: Dictionary = {
 	"tutorial_seen": false,
 	"character": "virtual_guy",
 	"unlocked_characters": ["virtual_guy"],
+	"fruits_collected": { },
+	"enemies_defeated": { },
 	"death_count": 0,
+	"achievements": { },
 }
 
 
@@ -36,4 +39,12 @@ func load_game() -> void:
 
 func complete_level(level_id: int) -> void:
 	data["highest_unlocked_level"] = maxi(data["highest_unlocked_level"], level_id + 1)
+	save_game()
+
+
+func update_counts(items: Dictionary) -> void:
+	var counts: Dictionary = data["fruits_collected"]
+	for item in items:
+		counts[item] = counts.get(item, 0) + items[item]
+	data["fruits_collected"] = counts
 	save_game()

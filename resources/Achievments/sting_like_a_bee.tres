@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://cihpmi5lesluy"]
+
+[ext_resource type="Texture2D" uid="uid://b1m4ir6jrnx0p" path="res://assets/Enemies/Bee/Idle (36x34).png" id="1_5tqs2"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybv2q"]
+atlas = ExtResource("1_5tqs2")
+region = Rect2(0, 0, 36, 34)
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "sting_like_a_bee"
+title = "Sting Like a Bee"
+description = "Defeat a bee. Show it what a real sting 
+feels like."
+icon = SubResource("AtlasTexture_ybv2q")

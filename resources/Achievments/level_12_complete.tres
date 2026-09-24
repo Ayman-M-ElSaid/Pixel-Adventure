@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://dojphjfvnoxlw"]
+
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+[ext_resource type="Texture2D" uid="uid://bluq4pbifcyp" path="res://assets/Menu/Achievements/Hard Level.png" id="1_u5e0o"]
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "level_18_complete"
+title = "Mirror Match"
+description = "Complete Level 12. Beat yourself at your own obstacle course."
+icon = ExtResource("1_u5e0o")

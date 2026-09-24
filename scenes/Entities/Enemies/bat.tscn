@@ -261,6 +261,7 @@ size = Vector2(30, 25)
 [node name="Bat" unique_id=732408310 instance=ExtResource("1_5nebr")]
 trigger_area = SubResource("CircleShape2D_q4iqy")
 flying = true
+type = "bat"
 gravity = 0.0
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]

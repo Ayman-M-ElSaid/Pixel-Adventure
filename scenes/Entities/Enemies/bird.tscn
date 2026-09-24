@@ -233,6 +233,7 @@ _data = {
 [node name="Bird" unique_id=732408310 instance=ExtResource("1_cwvrp")]
 speed = 60.0
 flying = true
+type = "bird"
 gravity = 0.0
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]

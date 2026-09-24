@@ -378,6 +378,7 @@ radius = 13.038404
 
 [node name="Trunk" unique_id=732408310 instance=ExtResource("1_tjo3l")]
 shoot_frame = 7
+type = "trunk"
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]
 position = Vector2(2, 2)

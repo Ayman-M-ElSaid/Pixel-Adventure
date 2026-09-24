@@ -377,6 +377,7 @@ size = Vector2(30, 20)
 [node name="Pig" unique_id=732408310 instance=ExtResource("1_buqqa")]
 script = ExtResource("2_5e8if")
 enraged_speed = 250.0
+type = "pig"
 hit_points = 2
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]

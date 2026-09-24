@@ -4,6 +4,7 @@ extends Node
 
 @onready var tilemap: TileMapLayer = %TileMap
 @onready var collectables: Node2D = %Collectables
+@onready var enemies: Node2D = %Enemies
 @onready var player: Player = %Player
 
 var _remaining_collectables
@@ -25,13 +26,22 @@ func _ready() -> void:
 	for item in collectables.get_children():
 		item.collected.connect(_on_item_collected)
 
+	for enemy in enemies.get_children():
+		enemy.died.connect(_on_enemy_death)
+
 
 func _on_item_collected(item_name) -> void:
 	_remaining_collectables -= 1
 	player.inventory.append(Collectable.Fruit.keys()[item_name])
-
 	if _remaining_collectables == 0:
 		_complete_level()
+
+
+func _on_enemy_death(enemy_type) -> void:
+	var enemies_defeated: Dictionary = SaveManager.data["enemies_defeated"]
+	enemies_defeated[enemy_type] = enemies_defeated.get(enemy_type, 0) + 1
+	SaveManager.data["enemies_defeated"] = enemies_defeated
+	SaveManager.save_game()
 
 
 func _complete_level() -> void:
@@ -48,11 +58,12 @@ func _complete_level() -> void:
 		CONNECT_ONE_SHOT,
 	)
 	Transition.play_wipe_in()
-	SaveManager.data["highest_unlocked_level"] = max(
-		(level_id + 1),
-		SaveManager.data["highest_unlocked_level"],
-	)
-	SaveManager.save_game()
+
+	SaveManager.complete_level(level_id)
+	var total_collectables: Dictionary
+	for item in player.inventory:
+		total_collectables[item] = player.inventory.count(item)
+	SaveManager.update_counts(total_collectables)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -73,8 +84,7 @@ func _on_levels_button_pressed() -> void:
 	Transition.wipe_in_finished.connect(
 		func():
 			get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
-			PlayerManager.is_respawning = false
-			Transition.play_wipe_out(),
+			PlayerManager.is_respawning = false,
 		CONNECT_ONE_SHOT,
 	)
 	Transition.play_wipe_in()

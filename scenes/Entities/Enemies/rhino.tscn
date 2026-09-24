@@ -224,9 +224,13 @@ size = Vector2(56, 20)
 [node name="Rhino" unique_id=732408310 instance=ExtResource("1_w5tes")]
 script = ExtResource("2_6tef5")
 charge_distance = 100.0
+max_speed = 250.0
+acceleration = 500.0
 recoil_speed = 100.0
 windup_time = 0.5
 stun_time = 1.0
+recoil_hop = 150.0
+type = "rhino"
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]
 shape = SubResource("RectangleShape2D_yr2er")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://bl8cp1wb7corf"]
+
+[ext_resource type="Texture2D" uid="uid://cibuv12ecucj2" path="res://assets/Menu/Achievements/Medal.png" id="1_5a0t7"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "under_100_deaths_full_clear"
+title = "Built Different"
+description = "Finish all levels with under 100 deaths. Statistically, unlikely."
+icon = ExtResource("1_5a0t7")

@@ -301,6 +301,7 @@ size = Vector2(44, 12)
 [node name="Chameleon" unique_id=732408310 instance=ExtResource("1_1ekva")]
 script = ExtResource("1_kv8of")
 trigger_area = SubResource("RectangleShape2D_6eapo")
+type = "chameleon"
 direction = -1
 
 [node name="CollisionShape2D" parent="." index="0" unique_id=2096565463]

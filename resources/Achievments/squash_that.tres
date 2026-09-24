@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://cqkhesnv081h3"]
+
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_edv2q"]
+[ext_resource type="Texture2D" uid="uid://c2q4wk7017tlw" path="res://assets/Menu/Achievements/Enemies.png" id="1_iatsn"]
+
+[resource]
+script = ExtResource("1_edv2q")
+id = "squash_that"
+title = "Squash That!"
+description = "Defeat one of every enemy. They never stood a chance."
+icon = ExtResource("1_iatsn")

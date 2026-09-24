@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://7ka76dm3606e"]
+
+[ext_resource type="Texture2D" uid="uid://dbmrhscxm03qe" path="res://assets/Enemies/Trunk/Idle (64x32).png" id="1_156em"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4uv3u"]
+atlas = ExtResource("1_156em")
+region = Rect2(10, 0, 48, 32)
+
+[resource]
+script = ExtResource("1_egmpu")
+id = "stomp_a_stump"
+title = "Stomp a Stump"
+description = "Defeat a trunk. Sometimes the forest
+fights back."
+icon = SubResource("AtlasTexture_4uv3u")
