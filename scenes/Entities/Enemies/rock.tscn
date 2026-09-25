@@ -694,7 +694,7 @@ shape = SubResource("RectangleShape2D_mfmxw")
 shape = SubResource("RectangleShape2D_3tko8")
 
 [node name="WallCheck" parent="." index="4" unique_id=1592137927]
-position = Vector2(0, 15)
+position = Vector2(0, 9)
 
 [node name="LedgeCheck" parent="." index="5" unique_id=149577384]
 position = Vector2(-17, 0)

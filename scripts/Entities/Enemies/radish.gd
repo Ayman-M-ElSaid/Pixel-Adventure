@@ -12,7 +12,7 @@ var _theta := PI
 var _is_falling := false
 
 
-func _ready():
+func _ready() -> void:
 	_idle_animation = &"flying"
 	_move_animation = &"flying"
 	if not clockwise:

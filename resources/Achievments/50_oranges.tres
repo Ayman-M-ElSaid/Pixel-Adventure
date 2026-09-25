@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://ditd3xv436try"]
 
-[ext_resource type="Texture2D" uid="uid://dr6u8yi8sx2p8" path="res://assets/Items/Fruits/Orange.png" id="1_l56te"]
+[ext_resource type="Texture2D" uid="uid://dr6u8yi8sx2p8" path="res://assets/Fruits/Orange.png" id="1_l56te"]
 [ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_rgk18"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a6b22"]

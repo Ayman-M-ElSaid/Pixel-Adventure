@@ -3,7 +3,7 @@ extends Node2D
 @onready var achievements_button: TextureButton = $AchievementsButton
 
 
-func _ready():
+func _ready() -> void:
 	achievements_button.visible = SaveManager.data["tutorial_seen"]
 
 

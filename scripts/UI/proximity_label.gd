@@ -27,7 +27,7 @@ const fade_duration: float = 0.5
 var _tween: Tween
 
 
-func _ready():
+func _ready() -> void:
 	trigger_area.shape.radius = trigger_radius
 	label.text = text
 	label.size = label_size
@@ -36,15 +36,15 @@ func _ready():
 		label.modulate.a = 0.0
 
 
-func _on_body_entered(_body: Player):
+func _on_body_entered(_body: Player) -> void:
 	_set_alpha(1.0)
 
 
-func _on_body_exited(_body: Player):
+func _on_body_exited(_body: Player) -> void:
 	_set_alpha(0.0)
 
 
-func _set_alpha(alpha: float):
+func _set_alpha(alpha: float) -> void:
 	if _tween:
 		_tween.kill()
 	_tween = create_tween()

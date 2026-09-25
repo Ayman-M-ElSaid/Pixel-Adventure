@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bp50dyhdn1ec0"]
 
 [ext_resource type="Script" uid="uid://df1wkyowdyxoq" path="res://scripts/Entities/Traps/rock_head.gd" id="1_hnb35"]
-[ext_resource type="Texture2D" uid="uid://dealdlf7regt8" path="res://assets/Traps/Rock Head/Left Hit (42x42).png" id="2_7hbtu"]
+[ext_resource type="Texture2D" uid="uid://dealdlf7regt8" path="res://assets/Traps/Rock Head/Horizontal Hit (42x42).png" id="2_7hbtu"]
 [ext_resource type="Texture2D" uid="uid://dbsrnkbq4f3nj" path="res://assets/Traps/Rock Head/Blink (42x42).png" id="3_uvkbm"]
 [ext_resource type="Texture2D" uid="uid://ctwp5ldyafekl" path="res://assets/Traps/Rock Head/Idle.png" id="4_6m18g"]
-[ext_resource type="Texture2D" uid="uid://bpi32wpde4oci" path="res://assets/Traps/Rock Head/Bottom Hit (42x42).png" id="5_rsnjx"]
+[ext_resource type="Texture2D" uid="uid://bpi32wpde4oci" path="res://assets/Traps/Rock Head/Vertical Hit (42x42).png" id="5_rsnjx"]
 [ext_resource type="Script" uid="uid://2xvgdeigxbtv" path="res://scripts/Entities/Hazards/hazard.gd" id="6_7hbtu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmdeg"]

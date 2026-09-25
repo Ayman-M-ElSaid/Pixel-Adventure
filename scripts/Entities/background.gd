@@ -5,7 +5,6 @@ enum Background {
 	Brown,
 	Gray,
 	Green,
-	Pink,
 	Purple,
 	Yellow,
 }
@@ -15,7 +14,6 @@ const BACKGROUND_TEXTURES = [
 	preload(PATH + "Brown.png"),
 	preload(PATH + "Gray.png"),
 	preload(PATH + "Green.png"),
-	preload(PATH + "Pink.png"),
 	preload(PATH + "Purple.png"),
 	preload(PATH + "Yellow.png"),
 ]

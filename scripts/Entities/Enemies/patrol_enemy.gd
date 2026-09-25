@@ -15,7 +15,7 @@ var _idle_animation := &"idle"
 var _move_animation = &"run"
 
 
-func _ready():
+func _ready() -> void:
 	_base_position = position
 	if flying:
 		ledge_check.set_deferred(&"enabled", false)

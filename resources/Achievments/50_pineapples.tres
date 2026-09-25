@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://bfwgevpghsxu0"]
 
 [ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_egmpu"]
-[ext_resource type="Texture2D" uid="uid://d04ki1h8aymkp" path="res://assets/Items/Fruits/Pineapple.png" id="1_ggcxa"]
+[ext_resource type="Texture2D" uid="uid://d04ki1h8aymkp" path="res://assets/Fruits/Pineapple.png" id="1_ggcxa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ggcxa"]
 atlas = ExtResource("1_ggcxa")

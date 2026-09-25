@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Text (White) (8x10).png-e2854dfd7ec8b77cf8cf7
 
 [params]
 
-character_ranges=PackedStringArray("65-90", "1-4", "48-57", "46", "44", "58", "63", "33", "40", "41", "43", "45")
+character_ranges=PackedStringArray("65-90", "20-23", "48-57", "46", "44", "58", "63", "33", "40", "41", "43", "45", "32")
 kerning_pairs=PackedStringArray()
 columns=10
 rows=5

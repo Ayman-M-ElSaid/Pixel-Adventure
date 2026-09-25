@@ -14,14 +14,14 @@ enum Fruit {
 	RANDOM,
 }
 const FRAMES: Dictionary = {
-	Fruit.APPLE: preload("res://assets/Items/Fruits/Apple.tres"),
-	Fruit.BANANAS: preload("res://assets/Items/Fruits/Bananas.tres"),
-	Fruit.CHERRIES: preload("res://assets/Items/Fruits/Cherries.tres"),
-	Fruit.KIWI: preload("res://assets/Items/Fruits/Kiwi.tres"),
-	Fruit.MELON: preload("res://assets/Items/Fruits/Melon.tres"),
-	Fruit.ORANGE: preload("res://assets/Items/Fruits/Orange.tres"),
-	Fruit.PINEAPPLE: preload("res://assets/Items/Fruits/Pineapple.tres"),
-	Fruit.STRAWBERRY: preload("res://assets/Items/Fruits/Strawberry.tres"),
+	Fruit.APPLE: preload("res://resources/Fruits/Apple.tres"),
+	Fruit.BANANAS: preload("res://resources/Fruits/Bananas.tres"),
+	Fruit.CHERRIES: preload("res://resources/Fruits/Cherries.tres"),
+	Fruit.KIWI: preload("res://resources/Fruits/Kiwi.tres"),
+	Fruit.MELON: preload("res://resources/Fruits/Melon.tres"),
+	Fruit.ORANGE: preload("res://resources/Fruits/Orange.tres"),
+	Fruit.PINEAPPLE: preload("res://resources/Fruits/Pineapple.tres"),
+	Fruit.STRAWBERRY: preload("res://resources/Fruits/Strawberry.tres"),
 }
 @export var fruit_name: Fruit = Fruit.RANDOM
 
@@ -33,7 +33,7 @@ const FRAMES: Dictionary = {
 
 func _ready() -> void:
 	if fruit_name == Fruit.RANDOM:
-		var weights = PackedFloat32Array([2.5, 2.5, 2.5, 1, 2.5, 2.5, 2.5, 2.5, 0])
+		var weights = PackedFloat32Array([2, 2, 2, 1, 2, 2, 2, 2, 0])
 		fruit_name = Fruit.values()[RandomNumberGenerator.new().rand_weighted(weights)]
 
 	animated_sprite.sprite_frames = FRAMES[fruit_name]

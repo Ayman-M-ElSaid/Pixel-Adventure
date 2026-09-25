@@ -16,7 +16,7 @@
 level_id = 15
 
 [node name="Background" parent="." index="1" unique_id=1374281801]
-background_color = 5
+background_color = 4
 
 [node name="Collectable" parent="Collectables" parent_id_path=PackedInt32Array(941163762) index="0" unique_id=310779860 instance=ExtResource("9_i6vho")]
 position = Vector2(-192, 112)

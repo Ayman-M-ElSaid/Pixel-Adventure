@@ -1,0 +1,130 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://t4fwjmwg1k6o"]
+
+[ext_resource type="Texture2D" uid="uid://dh0h8211fk5l7" path="res://assets/Fruits/Cherries.png" id="1_imcro"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbplu"]
+atlas = ExtResource("1_imcro")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3ep6"]
+atlas = ExtResource("1_imcro")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfccb"]
+atlas = ExtResource("1_imcro")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cjkh"]
+atlas = ExtResource("1_imcro")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2ls4"]
+atlas = ExtResource("1_imcro")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qesb"]
+atlas = ExtResource("1_imcro")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2pm0"]
+atlas = ExtResource("1_imcro")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyyk4"]
+atlas = ExtResource("1_imcro")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3be8v"]
+atlas = ExtResource("1_imcro")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fabr6"]
+atlas = ExtResource("1_imcro")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88t4m"]
+atlas = ExtResource("1_imcro")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0q8t"]
+atlas = ExtResource("1_imcro")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61omu"]
+atlas = ExtResource("1_imcro")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgkqs"]
+atlas = ExtResource("1_imcro")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7u1j2"]
+atlas = ExtResource("1_imcro")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftncq"]
+atlas = ExtResource("1_imcro")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0s02y"]
+atlas = ExtResource("1_imcro")
+region = Rect2(512, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbplu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3ep6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfccb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cjkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2ls4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qesb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2pm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uyyk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3be8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fabr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88t4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0q8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61omu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgkqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7u1j2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftncq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0s02y")
+}],
+"loop": 1,
+"name": &"fruit",
+"speed": 20.0
+}]

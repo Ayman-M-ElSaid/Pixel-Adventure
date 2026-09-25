@@ -12,7 +12,7 @@
 level_id = 7
 
 [node name="Background" parent="." index="1" unique_id=1374281801]
-background_color = 5
+background_color = 4
 
 [node name="FallingPlatform" parent="Hazards" parent_id_path=PackedInt32Array(1328419987) index="0" unique_id=171401591 instance=ExtResource("4_245nh")]
 position = Vector2(256, 75)
