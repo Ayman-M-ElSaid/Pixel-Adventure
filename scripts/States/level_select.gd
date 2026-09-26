@@ -1,37 +1,39 @@
-extends Node2D
+extends MarginContainer
 
 @onready var background: Sprite2D = $Background
 @onready var tutorial_overlay: CanvasLayer = $TutorialOverlay
+@onready var buttons_grid: GridContainer = %ButtonsGrid
 
-const LEVEL_COUNT := 30.0
-const COLS := 6.0
+const LEVEL_COUNT := 30
+const COLS := 6
 const ROWS := LEVEL_COUNT / COLS
 const SCROLL_SPEED = -30
-
-var level_buttons: Array[TextureButton] = []
 
 
 func _ready() -> void:
 	Transition.play_wipe_out()
 
-	# build buttons grid
-	for i in range(COLS):
-		for j in range(ROWS):
+	# build buttons buttons_grid
+	buttons_grid.columns = COLS
+	for i in range(ROWS):
+		for j in range(COLS):
 			var button := TextureButton.new()
-			var level_id = (i + 1) + (j * COLS)
+			var level_id = (j + 1) + (i * COLS)
 			button.texture_normal = load("res://assets/Menu/Levels/%02d.png" % level_id)
-			button.position = Vector2(-288 + ((i + 1) * 48) + (i * 40), -95 + (j * 50))
-			button.ignore_texture_size = true
 			button.stretch_mode = TextureButton.STRETCH_KEEP_ASPECT_CENTERED
-			button.size = Vector2(40, 40)
+			button.custom_minimum_size = Vector2(80, 80)
 			if level_id > SaveManager.data.get("highest_unlocked_level", 1):
 				button.disabled = true
 				button.modulate = Color(0.3, 0.3, 0.3, 0.5)
 			else:
 				button.set_script(preload("res://scripts/UI/button.gd"))
 			button.pressed.connect(_on_level_pressed.bind(level_id))
-			add_child(button)
-			level_buttons.append(button)
+			buttons_grid.add_child(button)
+
+	await get_tree().process_frame
+	for button in buttons_grid.get_children():
+		if button.get_script():
+			button.original_position = button.position
 
 	# show tutorial if it's the player's first time
 	if not SaveManager.data.get("tutorial_seen", false):
@@ -41,16 +43,9 @@ func _ready() -> void:
 			[
 				{ "target": %CharacterSelectButton, "text": "change your character" },
 				{ "target": %AchievementsButton, "text": "view your achievements" },
-				{ "rect": get_level_grid_rect(), "text": "pick a level to play" },
+				{ "target": %ButtonsGrid, "text": "pick a level to play" },
 			]
 		)
-
-
-func get_level_grid_rect() -> Rect2:
-	var rect := level_buttons[0].get_global_rect()
-	for button in level_buttons:
-		rect = rect.merge(button.get_global_rect())
-	return rect
 
 
 func _unhandled_input(event: InputEvent) -> void:

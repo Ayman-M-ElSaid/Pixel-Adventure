@@ -6,7 +6,7 @@ var data: Dictionary = {
 	"highest_unlocked_level": 1,
 	"tutorial_seen": false,
 	"character": "virtual_guy",
-	"unlocked_characters": ["virtual_guy"],
+	"unlocked_characters": ["virtual guy"],
 	"fruits_collected": { },
 	"enemies_defeated": { },
 	"death_count": 0,

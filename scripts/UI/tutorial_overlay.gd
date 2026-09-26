@@ -39,7 +39,7 @@ func _advance() -> void:
 		return
 
 	var step: Dictionary = steps[current_step]
-	var world_rect: Rect2 = step.target.get_global_rect() if step.has("target") else step.rect
+	var world_rect: Rect2 = step.target.get_global_rect()
 	var canvas: Transform2D = get_viewport().canvas_transform
 	var rect := Rect2(canvas * world_rect.position, canvas.basis_xform(world_rect.size)).grow(6)
 	highlight.global_position = rect.position

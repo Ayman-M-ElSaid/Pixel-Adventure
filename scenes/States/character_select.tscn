@@ -5,75 +5,113 @@
 [ext_resource type="SpriteFrames" uid="uid://nonqoy8jchrb" path="res://resources/Characters/virtual_guy.tres" id="3_3tmdh"]
 [ext_resource type="AudioStream" uid="uid://bt35pp2bugmvm" path="res://assets/Sounds/error.wav" id="4_3tmdh"]
 [ext_resource type="Texture2D" uid="uid://drlt0bsfsfp0" path="res://assets/Menu/Buttons/Play.png" id="4_bsq7u"]
+[ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/UI/button.gd" id="4_e0qpc"]
 
-[node name="CharacterSelect" type="Node2D" unique_id=2004734571]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhgbs"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+
+[node name="CharacterSelect" type="MarginContainer" unique_id=237207924]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 64
 script = ExtResource("1_0mdr8")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1570047648]
+[node name="Background" type="Sprite2D" parent="." unique_id=2086779773]
 texture_repeat = 2
+scale = Vector2(2, 2)
 texture = ExtResource("2_bsq7u")
+centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 576, 320)
 
-[node name="Camera" type="Camera2D" parent="." unique_id=635782614]
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2135246300]
+layout_mode = 2
 
-[node name="Label" type="Label" parent="." unique_id=1864193879]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -180.0
-offset_top = -145.0
-offset_right = 180.0
-offset_bottom = -115.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_font_sizes/font_size = 30
-text = "PIXEL ADVENTURE"
-
-[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=1924652122]
-position = Vector2(0, -16)
-scale = Vector2(3, 3)
-sprite_frames = ExtResource("3_3tmdh")
-animation = &"appear"
-autoplay = "idle"
-
-[node name="NextButton" type="TextureButton" parent="." unique_id=320966070]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 80.0
-offset_top = -20.0
-offset_right = 120.0
-offset_bottom = 20.0
-grow_vertical = 2
+[node name="BackButton" type="TextureButton" parent="VBoxContainer" unique_id=211221063]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 0
 texture_normal = ExtResource("4_bsq7u")
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="BackButton" type="TextureButton" parent="." unique_id=1890492733]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -20.0
-offset_right = -80.0
-offset_bottom = 20.0
-grow_horizontal = 0
-grow_vertical = 2
-texture_normal = ExtResource("4_bsq7u")
-ignore_texture_size = true
 stretch_mode = 5
 flip_h = true
+script = ExtResource("4_e0qpc")
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1864193879]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "PIXEL ADVENTURE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1894363852]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="PreviousButton" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=1890492733]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("4_bsq7u")
+stretch_mode = 5
+flip_h = true
+script = ExtResource("4_e0qpc")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/HBoxContainer" unique_id=1857818195]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/HBoxContainer/SubViewportContainer" unique_id=806476421]
+transparent_bg = true
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+size = Vector2i(480, 320)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=1924652122]
+unique_name_in_owner = true
+position = Vector2(240, 160)
+scale = Vector2(6, 6)
+sprite_frames = ExtResource("3_3tmdh")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="NextButton" type="TextureButton" parent="VBoxContainer/HBoxContainer" unique_id=320966070]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("4_bsq7u")
+stretch_mode = 5
+script = ExtResource("4_e0qpc")
+
+[node name="LabelBackground" type="PanelContainer" parent="VBoxContainer" unique_id=120906919]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+custom_maximum_size = Vector2(-1, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qhgbs")
+
+[node name="Label" type="Label" parent="VBoxContainer/LabelBackground" unique_id=2099983414]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+offset_transform_position_ratio = Vector2(0, -1)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
 
 [node name="ErrorSound" type="AudioStreamPlayer2D" parent="." unique_id=1078188871]
 stream = ExtResource("4_3tmdh")
 volume_db = -20.0
 
-[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/PreviousButton" to="." method="_on_previous_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
