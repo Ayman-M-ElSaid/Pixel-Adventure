@@ -59,16 +59,22 @@ func _complete_level() -> void:
 	)
 	Transition.play_wipe_in()
 
-	SaveManager.complete_level(level_id)
-	var total_collectables: Dictionary
+	var unique_collectables := { }
+	var total_collectables := { }
 	for item in player.inventory:
+		unique_collectables[item] = true
 		total_collectables[item] = player.inventory.count(item)
+	if unique_collectables.size() == 8:
+		AchievementManager.try_unlock("fruit_salad")
 	SaveManager.update_counts(total_collectables)
+	SaveManager.complete_level(level_id)
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"retry"):
 		_restart_leve()
+	elif event.is_action_pressed(&"ui_cancel"):
+		_on_levels_button_pressed()
 
 
 func _on_restart_button_pressed() -> void:

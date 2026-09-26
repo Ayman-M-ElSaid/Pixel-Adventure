@@ -10,7 +10,7 @@ var data: Dictionary = {
 	"fruits_collected": { },
 	"enemies_defeated": { },
 	"death_count": 0,
-	"achievements": { },
+	"achievements": [],
 }
 
 
@@ -19,6 +19,7 @@ func _ready() -> void:
 
 
 func save_game() -> void:
+	AchievementManager.check_achievements(data)
 	var file := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if file == null:
 		push_error("Save failed: %s" % FileAccess.get_open_error())

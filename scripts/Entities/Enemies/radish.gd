@@ -32,6 +32,7 @@ func _on_stomp(remaining: int) -> void:
 		_is_falling = true
 		left_leaf.activate(Vector2(randi_range(-30, -50), -100), randi_range(-3, -6))
 		right_leaf.activate(Vector2(randi_range(30, 50), -100), randi_range(3, 6))
+		AchievementManager.try_unlock("grounded")
 
 
 func _physics_process(delta: float) -> void:

@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://dn1h8gmlcxbbt"]
 
-[ext_resource type="Texture2D" uid="uid://co8dc4cst1mvb" path="res://assets/Fruits/Bananas.png" id="1_2f3lt"]
-[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_ormjv"]
+[ext_resource type="Texture2D" uid="uid://co8dc4cst1mvb" path="res://assets/Fruits/Bananas.png" id="1_pngad"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_a6qos"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ov81c"]
-atlas = ExtResource("1_2f3lt")
+atlas = ExtResource("1_pngad")
 region = Rect2(32, 0, 32, 32)
 
 [resource]
-script = ExtResource("2_ormjv")
+script = ExtResource("2_a6qos")
 id = "bananas_50"
 title = "Going Bananas"
 description = "Collect 50 bananas. You have officially lost the plot."

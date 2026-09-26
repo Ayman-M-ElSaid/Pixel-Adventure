@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_egmpu")
 id = "level_18_complete"
-title = "Through the Looking Glass"
+title = "Looking Glass"
 description = "Complete Level 18. Alice never had
 it this hard."
 icon = ExtResource("1_bys7w")

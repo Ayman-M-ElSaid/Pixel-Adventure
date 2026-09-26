@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://dmx0nprfkqp8f"]
 
-[ext_resource type="Texture2D" uid="uid://biaw55jtewxtd" path="res://assets/Fruits/Kiwi.png" id="1_iv2ai"]
-[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_egnug"]
+[ext_resource type="Texture2D" uid="uid://biaw55jtewxtd" path="res://assets/Fruits/Kiwi.png" id="1_60ahx"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_3avdr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5j00e"]
-atlas = ExtResource("1_iv2ai")
+atlas = ExtResource("1_60ahx")
 region = Rect2(0, 0, 32, 0)
 
 [resource]
-script = ExtResource("2_egnug")
+script = ExtResource("2_3avdr")
 id = "kiwi_25"
 title = "Kiwi Konnoisseur"
 description = "Collect 25 kiwis. They are rare. You have exquisite taste."

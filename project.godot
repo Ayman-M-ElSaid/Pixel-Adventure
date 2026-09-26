@@ -26,6 +26,7 @@ SaveManager="*uid://01iq5oqglysw"
 Transition="*uid://dydfr2x5w454"
 PlayerManager="*uid://ocof5ajdbvph"
 AchievementManager="*uid://da3tnkpilcpyj"
+AchievementPopUp="*uid://cj7vyuiskb34u"
 
 [display]
 

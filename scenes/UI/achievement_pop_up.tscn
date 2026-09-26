@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cj7vyuiskb34u"]
+
+[ext_resource type="Script" uid="uid://b6iy76arnietl" path="res://scripts/Autoload/achievement_pop_up.gd" id="1_23q38"]
+[ext_resource type="PackedScene" uid="uid://bj4p10b1wvhiu" path="res://scenes/UI/achievement_badge.tscn" id="2_qmftj"]
+[ext_resource type="Texture2D" uid="uid://djo6tgw1rtfum" path="res://assets/Menu/Achievements/Badge.png" id="3_qmftj"]
+[ext_resource type="AudioStream" uid="uid://by6o7m7nqjkno" path="res://assets/Sounds/achievement.mp3" id="4_ypuq6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ypuq6"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource("3_qmftj")
+
+[node name="AchievementPopUP" type="CanvasLayer" unique_id=1787184551]
+layer = 10
+script = ExtResource("1_23q38")
+
+[node name="AchievementBadge" parent="." unique_id=1343290841 instance=ExtResource("2_qmftj")]
+custom_minimum_size = Vector2(410, 100)
+custom_maximum_size = Vector2(410, 100)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -410.0
+offset_right = 410.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+theme_override_styles/panel = SubResource("StyleBoxTexture_ypuq6")
+
+[node name="HBoxContainer" parent="AchievementBadge" index="0" unique_id=2132085679]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="Icon" parent="AchievementBadge/HBoxContainer" index="0" unique_id=1621948603]
+custom_minimum_size = Vector2(60, 60)
+custom_maximum_size = Vector2(60, 60)
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" parent="AchievementBadge/HBoxContainer" index="1" unique_id=461282320]
+unique_name_in_owner = true
+size_flags_vertical = 4
+
+[node name="Title" parent="AchievementBadge/HBoxContainer/VBoxContainer" index="0" unique_id=156872437]
+theme_override_font_sizes/font_size = 20
+
+[node name="Description" parent="AchievementBadge/HBoxContainer/VBoxContainer" index="1" unique_id=1190595106]
+visible = false
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=244150020]
+stream = ExtResource("4_ypuq6")
+volume_db = -18.0
+
+[editable path="AchievementBadge"]

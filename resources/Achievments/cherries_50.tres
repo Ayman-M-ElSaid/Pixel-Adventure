@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://c6qs475ab6u2b"]
 
-[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_kyd8n"]
-[ext_resource type="Texture2D" uid="uid://dh0h8211fk5l7" path="res://assets/Fruits/Cherries.png" id="1_mg5h7"]
+[ext_resource type="Texture2D" uid="uid://dh0h8211fk5l7" path="res://assets/Fruits/Cherries.png" id="1_t42yb"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_nxgc5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2uql7"]
-atlas = ExtResource("1_mg5h7")
+atlas = ExtResource("1_t42yb")
 region = Rect2(0, 0, 32, 32)
 
 [resource]
-script = ExtResource("1_kyd8n")
+script = ExtResource("2_nxgc5")
 id = "cherries_50"
 title = "Cherry on Top"
 description = "Collect 50 cherries. Sweet, small, and suspiciously easy to hoard."

@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="AchievementDef" format=3 uid="uid://bsklyxl4pxv0y"]
 
-[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="1_3v0kv"]
-[ext_resource type="Texture2D" uid="uid://g8fs3c3jtn08" path="res://assets/Fruits/Apple.png" id="1_7bdh6"]
+[ext_resource type="Texture2D" uid="uid://g8fs3c3jtn08" path="res://assets/Fruits/Apple.png" id="1_p41bs"]
+[ext_resource type="Script" uid="uid://556k6om075l8" path="res://scripts/UI/achievement_def.gd" id="2_hgixj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ukqp"]
-atlas = ExtResource("1_7bdh6")
+atlas = ExtResource("1_p41bs")
 region = Rect2(0, 0, 32, 32)
 
 [resource]
-script = ExtResource("1_3v0kv")
+script = ExtResource("2_hgixj")
 id = "apple_50"
 title = "an Apple a Day"
 description = "Collect 50 apples. Keeps the doctor away, not the addiction"

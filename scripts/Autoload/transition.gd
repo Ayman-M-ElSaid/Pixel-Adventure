@@ -14,7 +14,6 @@ var _delays: Array[float] = []
 
 
 func _ready() -> void:
-	layer = 100
 	_build_grid()
 
 
