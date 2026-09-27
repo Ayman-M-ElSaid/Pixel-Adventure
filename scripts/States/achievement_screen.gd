@@ -31,3 +31,12 @@ func _on_back_button_pressed() -> void:
 		CONNECT_ONE_SHOT,
 	)
 	Transition.play_wipe_in()
+
+
+func _on_stats_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/States/statistics_screen.tscn")
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"ui_cancel"):
+		_on_back_button_pressed()

@@ -5,7 +5,7 @@ const SAVE_PATH := "user://savegame.json"
 var data: Dictionary = {
 	"highest_unlocked_level": 1,
 	"tutorial_seen": false,
-	"character": "virtual_guy",
+	"character": "virtual guy",
 	"unlocked_characters": ["virtual guy"],
 	"fruits_collected": { },
 	"enemies_defeated": { },

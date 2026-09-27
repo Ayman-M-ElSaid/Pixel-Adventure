@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://7ewu6li6bx1d"]
+
+[ext_resource type="Script" uid="uid://bi60n8si8qtby" path="res://scripts/States/statistics_screen.gd" id="1_8mib7"]
+[ext_resource type="Texture2D" uid="uid://by8qlebq8yquf" path="res://assets/Background/Blue.png" id="1_o2nm6"]
+[ext_resource type="Texture2D" uid="uid://drlt0bsfsfp0" path="res://assets/Menu/Buttons/Play.png" id="2_8mib7"]
+[ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/UI/button.gd" id="3_64d0d"]
+
+[node name="StatisticsScreen" type="MarginContainer" unique_id=1655084475]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+script = ExtResource("1_8mib7")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1927044504]
+texture_repeat = 2
+scale = Vector2(2, 2)
+texture = ExtResource("1_o2nm6")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 320)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1234608820]
+layout_mode = 2
+
+[node name="BackButton" type="TextureButton" parent="VBoxContainer" unique_id=2019827703]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource("2_8mib7")
+stretch_mode = 5
+flip_h = true
+script = ExtResource("3_64d0d")
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=541544751]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(0, -0.25)
+theme_override_font_sizes/font_size = 60
+text = "Statistics"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="List" type="VBoxContainer" parent="VBoxContainer" unique_id=908951427]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

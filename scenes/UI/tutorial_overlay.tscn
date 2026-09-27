@@ -14,7 +14,6 @@ border_color = Color(1, 1, 1, 1)
 bg_color = Color(1, 1, 1, 1)
 
 [node name="TutorialOverlay" type="CanvasLayer" unique_id=1412632318]
-layer = 10
 script = ExtResource("1_u4lmm")
 
 [node name="DimRect" type="ColorRect" parent="." unique_id=1940999056]
