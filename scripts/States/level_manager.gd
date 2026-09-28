@@ -50,6 +50,8 @@ func _complete_level() -> void:
 		func():
 			if level_id == 0:
 				get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
+			elif level_id == 30:
+				get_tree().change_scene_to_file("res://scenes/States/end_screen.tscn")
 			else:
 				get_tree().change_scene_to_file(
 					"res://scenes/Levels/level_%02d.tscn" % (level_id + 1)

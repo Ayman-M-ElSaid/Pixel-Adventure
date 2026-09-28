@@ -6,6 +6,21 @@
 [ext_resource type="Texture2D" uid="uid://c4r2l3qpp54g4" path="res://assets/Menu/Buttons/Character.png" id="4_o65u6"]
 [ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/UI/button.gd" id="4_tr348"]
 [ext_resource type="PackedScene" uid="uid://bvxqc1xg8drjp" path="res://scenes/UI/tutorial_overlay.tscn" id="5_0eap8"]
+[ext_resource type="Texture2D" uid="uid://ddt41p7e3tm4h" path="res://assets/Other/Confetti (16x16).png" id="7_iupu1"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yr2er"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_qpyf8"]
+_data = [Vector2(0.1, 1), 0.0, 0.0, 0, 0, Vector2(0.9, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_dxydy"]
+offsets = PackedFloat32Array(0, 0.9705882)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="LevelSelect" type="MarginContainer" unique_id=1542450714]
 anchors_preset = 15
@@ -76,6 +91,33 @@ columns = 6
 
 [node name="TutorialOverlay" parent="." unique_id=1412632318 instance=ExtResource("5_0eap8")]
 visible = false
+
+[node name="Confitte" type="CPUParticles2D" parent="." unique_id=1832871592]
+material = SubResource("CanvasItemMaterial_yr2er")
+position = Vector2(0, 640)
+emitting = false
+amount = 120
+texture = ExtResource("7_iupu1")
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.9
+randomness = 0.5
+emission_shape = 5
+emission_points = PackedVector2Array(0, 0, 1152, 0)
+emission_normals = PackedVector2Array(0.5, -1, -0.5, -1)
+emission_colors = PackedColorArray()
+spread = 25.0
+initial_velocity_min = 800.0
+initial_velocity_max = 1000.0
+angular_velocity_min = 200.0
+angular_velocity_max = 500.0
+damping_min = 30.0
+damping_max = 60.0
+angle_max = 360.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_qpyf8")
+color_ramp = SubResource("Gradient_dxydy")
+anim_offset_max = 0.99
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/CharacterSelectButton" to="." method="_on_character_select_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/AchievementsButton" to="." method="_on_achievements_button_pressed"]

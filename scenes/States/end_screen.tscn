@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dyq0krtdcgvj3"]
+
+[ext_resource type="Script" uid="uid://cjb234yqet4fm" path="res://scripts/States/end_screen.gd" id="1_sd48n"]
+[ext_resource type="FontFile" uid="uid://dw3y6fdy0idve" path="res://assets/Menu/Text/Text (White) (8x10).png" id="2_s2i5g"]
+
+[node name="EndScreen" type="MarginContainer" unique_id=718015484]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_right = 48
+script = ExtResource("1_sd48n")
+
+[node name="Label" type="Label" parent="." unique_id=308184507]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_s2i5g")
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
+uppercase = true
+visible_characters_behavior = 1

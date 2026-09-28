@@ -11,6 +11,7 @@ var data: Dictionary = {
 	"enemies_defeated": { },
 	"death_count": 0,
 	"achievements": [],
+	"end_screen_seen": false,
 }
 
 

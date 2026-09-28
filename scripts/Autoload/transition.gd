@@ -11,6 +11,7 @@ signal wipe_out_finished
 
 var _tiles: Array[Sprite2D] = []
 var _delays: Array[float] = []
+var _blocking_input := false
 
 
 func _ready() -> void:
@@ -37,6 +38,8 @@ func _build_grid() -> void:
 
 
 func play_wipe_in() -> void:
+	_blocking_input = true
+
 	var tween := create_tween().set_parallel(true)
 	for i in _tiles.size():
 		tween \
@@ -60,5 +63,12 @@ func play_wipe_out() -> void:
 				.set_ease(Tween.EASE_IN)
 	tween.finished.connect(
 		func():
-			wipe_out_finished.emit(),
+			wipe_out_finished.emit()
+			_blocking_input = false,
 	)
+
+
+func _input(_event: InputEvent) -> void:
+	if not _blocking_input:
+		return
+	get_viewport().set_input_as_handled()

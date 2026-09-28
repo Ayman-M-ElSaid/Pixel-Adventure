@@ -3,8 +3,9 @@ extends MarginContainer
 @onready var background: Sprite2D = $Background
 @onready var tutorial_overlay: CanvasLayer = $TutorialOverlay
 @onready var buttons_grid: GridContainer = %ButtonsGrid
+@onready var confitte: CPUParticles2D = $Confitte
 
-const LEVEL_COUNT := 30
+const LEVEL_COUNT := 30.0
 const COLS := 6
 const ROWS := LEVEL_COUNT / COLS
 const SCROLL_SPEED = -30
@@ -46,6 +47,15 @@ func _ready() -> void:
 				{ "target": %ButtonsGrid, "text": "pick a level to play" },
 			]
 		)
+	# emit confitte particles if its the first time finishing the last level
+	if SaveManager.data.get("highest_unlocked_level", 1) >= 30 and not SaveManager.data.get(
+			"end_screen_seen",
+			false,
+		):
+		await Transition.wipe_out_finished
+		confitte.emitting = true
+		SaveManager.data["end_screen_seen"] = true
+		SaveManager.save_game()
 
 
 func _unhandled_input(event: InputEvent) -> void:
