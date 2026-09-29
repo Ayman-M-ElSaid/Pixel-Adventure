@@ -1,33 +1,33 @@
 extends Node
 
 const PATHS := [
-	"res://resources/Achievments/apple_50.tres",
-	"res://resources/Achievments/bananas_50.tres",
-	"res://resources/Achievments/melon_50.tres",
-	"res://resources/Achievments/orange_50.tres",
-	"res://resources/Achievments/pineapple_50.tres",
-	"res://resources/Achievments/strawberry_50.tres",
-	"res://resources/Achievments/cherries_50.tres",
-	"res://resources/Achievments/kiwi_25.tres",
-	"res://resources/Achievments/fruit_salad.tres",
-	"res://resources/Achievments/all_characters_unlocked.tres",
-	"res://resources/Achievments/pork_rage.tres",
-	"res://resources/Achievments/grounded.tres",
-	"res://resources/Achievments/sting_like_a_bee.tres",
-	"res://resources/Achievments/stomp_a_stump.tres",
-	"res://resources/Achievments/defeat_a_rock.tres",
-	"res://resources/Achievments/squash_that.tres",
-	"res://resources/Achievments/died_100.tres",
-	"res://resources/Achievments/died_500.tres",
-	"res://resources/Achievments/level_1_complete.tres",
-	"res://resources/Achievments/level_6_complete.tres",
-	"res://resources/Achievments/level_10_complete.tres",
-	"res://resources/Achievments/level_12_complete.tres",
-	"res://resources/Achievments/level_15_complete.tres",
-	"res://resources/Achievments/level_18_complete.tres",
-	"res://resources/Achievments/level_24_complete.tres",
-	"res://resources/Achievments/all_levels_complete.tres",
-	"res://resources/Achievments/under_100_deaths_full_clear.tres",
+	"res://resources/Achievements/apple_50.tres",
+	"res://resources/Achievements/bananas_50.tres",
+	"res://resources/Achievements/melon_50.tres",
+	"res://resources/Achievements/orange_50.tres",
+	"res://resources/Achievements/pineapple_50.tres",
+	"res://resources/Achievements/strawberry_50.tres",
+	"res://resources/Achievements/cherries_50.tres",
+	"res://resources/Achievements/kiwi_25.tres",
+	"res://resources/Achievements/fruit_salad.tres",
+	"res://resources/Achievements/all_characters_unlocked.tres",
+	"res://resources/Achievements/pork_rage.tres",
+	"res://resources/Achievements/grounded.tres",
+	"res://resources/Achievements/sting_like_a_bee.tres",
+	"res://resources/Achievements/stomp_a_stump.tres",
+	"res://resources/Achievements/defeat_a_rock.tres",
+	"res://resources/Achievements/squash_that.tres",
+	"res://resources/Achievements/died_100.tres",
+	"res://resources/Achievements/died_500.tres",
+	"res://resources/Achievements/level_1_complete.tres",
+	"res://resources/Achievements/level_6_complete.tres",
+	"res://resources/Achievements/level_10_complete.tres",
+	"res://resources/Achievements/level_12_complete.tres",
+	"res://resources/Achievements/level_15_complete.tres",
+	"res://resources/Achievements/level_18_complete.tres",
+	"res://resources/Achievements/level_24_complete.tres",
+	"res://resources/Achievements/all_levels_complete.tres",
+	"res://resources/Achievements/under_100_deaths_full_clear.tres",
 ]
 var achievement_defs: Array[AchievementDef] = []
 
@@ -100,7 +100,7 @@ func _try_unlock(unlocked: Array, id: String, condition: bool) -> void:
 
 
 func try_unlock(id: String) -> void:
-	var unlocked: Array = SaveManager.data.get("achievements_unlocked", [])
+	var unlocked: Array = SaveManager.data.get("achievements", [])
 	if not unlocked.has(id):
 		unlocked.append(id)
 		SaveManager.data["achievements"] = unlocked

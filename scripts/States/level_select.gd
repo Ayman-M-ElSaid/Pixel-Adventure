@@ -3,7 +3,7 @@ extends MarginContainer
 @onready var background: Sprite2D = $Background
 @onready var tutorial_overlay: CanvasLayer = $TutorialOverlay
 @onready var buttons_grid: GridContainer = %ButtonsGrid
-@onready var confitte: CPUParticles2D = $Confitte
+@onready var confetti: CPUParticles2D = $Confetti
 
 const LEVEL_COUNT := 30.0
 const COLS := 6
@@ -48,21 +48,26 @@ func _ready() -> void:
 			]
 		)
 	# emit confitte particles if its the first time finishing the last level
-	if SaveManager.data.get("highest_unlocked_level", 1) >= 30 and not SaveManager.data.get(
+	if SaveManager.data.get("highest_unlocked_level", 1) > 30 and not SaveManager.data.get(
 			"end_screen_seen",
 			false,
 		):
 		await Transition.wipe_out_finished
-		confitte.emitting = true
+		confetti.emitting = true
 		SaveManager.data["end_screen_seen"] = true
 		SaveManager.save_game()
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"ui_accept"):
-		_go_to_level(SaveManager.data["highest_unlocked_level"])
+		_go_to_level(mini(SaveManager.data["highest_unlocked_level"], 30))
 	elif event.is_action_pressed(&"ui_cancel"):
-		get_tree().change_scene_to_file("res://scenes/States/start_screen.tscn")
+		Transition.wipe_in_finished.connect(
+			func():
+				get_tree().change_scene_to_file("res://scenes/States/start_screen.tscn"),
+			CONNECT_ONE_SHOT,
+		)
+		Transition.play_wipe_in()
 
 
 func _process(delta: float) -> void:

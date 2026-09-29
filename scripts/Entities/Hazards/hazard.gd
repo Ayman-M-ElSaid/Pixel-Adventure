@@ -11,4 +11,6 @@ func _on_body_entered(body: CharacterBody2D) -> void:
 
 
 func _on_timer_timeout() -> void:
+	if Transition.is_busy():
+		return
 	get_tree().reload_current_scene()

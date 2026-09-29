@@ -11,7 +11,7 @@ content_margin_top = 8.0
 content_margin_bottom = 8.0
 texture = ExtResource("3_qmftj")
 
-[node name="AchievementPopUP" type="CanvasLayer" unique_id=1787184551]
+[node name="AchievementPopUp" type="CanvasLayer" unique_id=1787184551]
 layer = 10
 script = ExtResource("1_23q38")
 

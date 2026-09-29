@@ -25,7 +25,7 @@ func _on_achievement_unlocked(id: String) -> void:
 func _advance_queue() -> void:
 	if _busy or _queue.is_empty():
 		return
-	var def := AchievementManager.get_def(_queue.pop_front())
+	var def = AchievementManager.get_def(_queue.pop_front())
 	if def == null:
 		_advance_queue()
 		return

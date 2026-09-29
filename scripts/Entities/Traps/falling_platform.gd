@@ -1,7 +1,6 @@
 extends AnimatableBody2D
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var trigger_zone: Area2D = $TriggerZone
 @onready var timer: Timer = $Timer
 
@@ -22,7 +21,7 @@ func _on_trigger_zone_body_entered(body: Player) -> void:
 			return
 		if body.is_on_floor():
 			_triggered = true
-			set_deferred(&"trigger_zone:monitoring", false)
+			trigger_zone.set_deferred(&"monitoring", false)
 			_shake()
 			timer.start()
 			return

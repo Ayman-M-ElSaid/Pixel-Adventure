@@ -235,7 +235,6 @@ acceleration = 800.0
 recoil_speed = 40.0
 windup_time = 0.25
 stun_time = 0.5
-recoil_hop = 150.0
 
 [node name="Bat" parent="Enemies" parent_id_path=PackedInt32Array(1981534313) index="2" unique_id=1837980111 instance=ExtResource("11_t4akm")]
 position = Vector2(471, 76)
@@ -285,7 +284,6 @@ acceleration = 800.0
 recoil_speed = 40.0
 windup_time = 0.25
 stun_time = 0.5
-recoil_hop = 150.0
 direction = 1
 
 [node name="Bat2" parent="Enemies" parent_id_path=PackedInt32Array(1981534313) index="13" unique_id=1107388648 instance=ExtResource("11_t4akm")]
@@ -327,6 +325,3 @@ position = Vector2(-1416, 97)
 
 [node name="Player" parent="." index="6" unique_id=829502222]
 position = Vector2(8, 51)
-
-[node name="CanvasLayer" parent="." index="7" unique_id=339730598]
-visible = false

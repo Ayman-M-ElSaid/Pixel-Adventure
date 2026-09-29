@@ -30,11 +30,13 @@ const FRAMES: Dictionary = {
 @onready var collect_effect: AnimatedSprite2D = $CollectEffect
 @onready var collect_sound: AudioStreamPlayer2D = $CollectSound
 
+static var _rng := RandomNumberGenerator.new()
+
 
 func _ready() -> void:
 	if fruit_name == Fruit.RANDOM:
 		var weights = PackedFloat32Array([2, 2, 2, 1, 2, 2, 2, 2, 0])
-		fruit_name = Fruit.values()[RandomNumberGenerator.new().rand_weighted(weights)]
+		fruit_name = Fruit.values()[_rng.rand_weighted(weights)]
 
 	animated_sprite.sprite_frames = FRAMES[fruit_name]
 	animated_sprite.play(&"fruit")

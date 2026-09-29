@@ -11,5 +11,5 @@ region = Rect2(0, 0, 32, 0)
 script = ExtResource("2_qx3jj")
 id = "pineapple_50"
 title = "Prickly Customer"
-description = "Collect 50 pineapples. You Knew they were prickly. You did it anyway."
+description = "Collect 50 pineapples. You knew they were prickly. You did it anyway."
 icon = SubResource("AtlasTexture_ggcxa")

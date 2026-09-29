@@ -51,6 +51,8 @@ func _shoot() -> void:
 	_shoot_cooldown = true
 	_has_stopped = true
 	animated_sprite.play(&"attack")
+	if is_dead:
+		return
 	shoot_timer.start(fire_rate)
 	await animated_sprite.animation_finished
 	animated_sprite.play(_idle_animation)

@@ -92,7 +92,7 @@ columns = 6
 [node name="TutorialOverlay" parent="." unique_id=1412632318 instance=ExtResource("5_0eap8")]
 visible = false
 
-[node name="Confitte" type="CPUParticles2D" parent="." unique_id=1832871592]
+[node name="Confetti" type="CPUParticles2D" parent="." unique_id=1832871592]
 material = SubResource("CanvasItemMaterial_yr2er")
 position = Vector2(0, 640)
 emitting = false

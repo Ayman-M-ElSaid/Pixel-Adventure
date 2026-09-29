@@ -19,8 +19,7 @@ func get_level_dimensions() -> Dictionary[String, Vector2]:
 
 
 func _ready() -> void:
-	if not PlayerManager.is_respawning:
-		Transition.play_wipe_out()
+	Transition.play_wipe_out()
 
 	_remaining_collectables = collectables.get_child_count()
 	for item in collectables.get_children():
@@ -45,22 +44,6 @@ func _on_enemy_death(enemy_type) -> void:
 
 
 func _complete_level() -> void:
-	await player.disappear()
-	Transition.wipe_in_finished.connect(
-		func():
-			if level_id == 0:
-				get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
-			elif level_id == 30:
-				get_tree().change_scene_to_file("res://scenes/States/end_screen.tscn")
-			else:
-				get_tree().change_scene_to_file(
-					"res://scenes/Levels/level_%02d.tscn" % (level_id + 1)
-				)
-			PlayerManager.is_respawning = false,
-		CONNECT_ONE_SHOT,
-	)
-	Transition.play_wipe_in()
-
 	var unique_collectables := { }
 	var total_collectables := { }
 	for item in player.inventory:
@@ -71,28 +54,42 @@ func _complete_level() -> void:
 	SaveManager.update_counts(total_collectables)
 	SaveManager.complete_level(level_id)
 
+	await player.disappear()
+	Transition.wipe_in_finished.connect(
+		func():
+			if level_id == 0:
+				get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
+			elif level_id == 30:
+				get_tree().change_scene_to_file("res://scenes/States/end_screen.tscn")
+			else:
+				get_tree().change_scene_to_file(
+					"res://scenes/Levels/level_%02d.tscn" % (level_id + 1)
+				),
+		CONNECT_ONE_SHOT,
+	)
+	Transition.play_wipe_in()
+
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"retry"):
-		_restart_leve()
+		_restart_level()
 	elif event.is_action_pressed(&"ui_cancel"):
 		_on_levels_button_pressed()
 
 
 func _on_restart_button_pressed() -> void:
-	_restart_leve()
+	_restart_level()
 
 
-func _restart_leve() -> void:
-	player.die()
+func _restart_level() -> void:
+	PlayerManager.is_respawning = true
 	get_tree().reload_current_scene()
 
 
 func _on_levels_button_pressed() -> void:
 	Transition.wipe_in_finished.connect(
 		func():
-			get_tree().change_scene_to_file("res://scenes/States/level_select.tscn")
-			PlayerManager.is_respawning = false,
+			get_tree().change_scene_to_file("res://scenes/States/level_select.tscn"),
 		CONNECT_ONE_SHOT,
 	)
 	Transition.play_wipe_in()

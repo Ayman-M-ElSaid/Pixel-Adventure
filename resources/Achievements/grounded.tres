@@ -11,5 +11,5 @@ region = Rect2(0, 0, 30, 38)
 script = ExtResource("1_egmpu")
 id = "grounded"
 title = "Grounded"
-description = "Defeat a radish. Took away its flight and its dignity in one stomp."
+description = "Stomp a radish. Took away its flight and its dignity in one stomp."
 icon = SubResource("AtlasTexture_rumi1")

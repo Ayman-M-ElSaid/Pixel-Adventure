@@ -72,3 +72,7 @@ func _input(_event: InputEvent) -> void:
 	if not _blocking_input:
 		return
 	get_viewport().set_input_as_handled()
+
+
+func is_busy() -> bool:
+	return _blocking_input

@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_egmpu")
-id = "level_18_complete"
+id = "level_12_complete"
 title = "Mirror Match"
 description = "Complete Level 12. Beat yourself at your own obstacle course."
 icon = ExtResource("1_u5e0o")

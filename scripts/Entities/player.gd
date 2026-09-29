@@ -17,7 +17,6 @@ const WALL_JUMP_SPEED = 1000
 var direction = 0
 var jumps_available := MAX_JUMPS
 var is_wall_gliding := false
-var last_wall_jump = 0
 var is_dead := false
 var inventory := []
 
@@ -26,7 +25,9 @@ func _ready() -> void:
 	sprite.sprite_frames = Characters.CHARACTERS[SaveManager.data["character"]]
 	set_physics_process(false)
 	visible = false
-	if not PlayerManager.is_respawning:
+	var respawning = PlayerManager.is_respawning
+	PlayerManager.is_respawning = false
+	if not respawning:
 		await Transition.wipe_out_finished
 	visible = true
 	sprite.play(&"appear")

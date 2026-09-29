@@ -36,7 +36,9 @@ func load_game() -> void:
 	var parsed = JSON.parse_string(file.get_as_text())
 	file.close()
 	if parsed is Dictionary:
-		data = parsed
+		data.merge(parsed, true)
+	if not Characters.CHARACTERS.has(data["character"]):
+		data["character"] = "virtual guy"
 
 
 func complete_level(level_id: int) -> void:

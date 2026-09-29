@@ -54,7 +54,6 @@ func _change_direction() -> void:
 	wall_check.target_position.x *= -1
 	ledge_check.position.x *= -1
 	animated_sprite.play(_idle_animation)
-	randomize()
 	pause_timer.start(randf_range(0.8, 1.2))
 
 

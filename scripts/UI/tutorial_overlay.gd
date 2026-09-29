@@ -2,7 +2,6 @@ extends CanvasLayer
 
 signal tutorial_finished
 
-@onready var dim_rect: ColorRect = %DimRect
 @onready var highlight: Panel = %Highlight
 @onready var dialog_label: Label = %DialogLabel
 

@@ -30,7 +30,7 @@ label_size = Vector2(100, 60)
 [node name="ProximityText4" parent="Instructions" index="3" unique_id=708778681 instance=ExtResource("2_qv0rt")]
 position = Vector2(256, -55)
 trigger_radius = 70.0
-text = "WATCH OUT FOR hAZARDS AND TRAPS"
+text = "WATCH OUT FOR HAZARDS AND TRAPS"
 label_size = Vector2(140, 80)
 
 [node name="ProximityText5" parent="Instructions" index="4" unique_id=1154933082 instance=ExtResource("2_qv0rt")]
