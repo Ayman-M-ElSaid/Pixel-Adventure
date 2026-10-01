@@ -70,7 +70,10 @@ func _type_text() -> void:
 
 
 func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed("ui_accept") and _is_finished:
+	if (
+		(event.is_action_pressed("ui_accept") or (event is InputEventMouseButton and event.pressed))
+		and _is_finished
+	):
 		Transition.wipe_in_finished.connect(
 			func():
 				get_tree().change_scene_to_file("res://scenes/States/level_select.tscn"),

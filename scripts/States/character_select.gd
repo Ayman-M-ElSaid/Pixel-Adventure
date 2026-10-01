@@ -40,14 +40,24 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed(&"ui_left"):
 		_update_selection(-1)
 	elif event.is_action_pressed(&"ui_accept"):
-		if active_character in SaveManager.data["unlocked_characters"]:
-			SaveManager.data["character"] = active_character
-			SaveManager.save_game()
-			_exit()
-		else:
-			$ErrorSound.play()
+		_try_select()
+
 	elif event.is_action_pressed(&"ui_cancel"):
 		_exit()
+
+
+func _on_sub_viewport_container_gui_input(event):
+	if event is InputEventMouseButton and event.pressed:
+		_try_select()
+
+
+func _try_select() -> void:
+	if active_character in SaveManager.data["unlocked_characters"]:
+		SaveManager.data["character"] = active_character
+		SaveManager.save_game()
+		_exit()
+	else:
+		$ErrorSound.play()
 
 
 func _process(delta: float) -> void:
@@ -100,8 +110,9 @@ func _update_buttons() -> void:
 
 
 func _update_label() -> void:
+	var input_method := "tap the character " if DisplayServer.is_touchscreen_available() else "press space "
 	if active_character in SaveManager.data["unlocked_characters"]:
-		label.text = "press space to select " + active_character
+		label.text = input_method + "to select " + active_character
 		label.remove_theme_font_override(&"font")
 		var style_box = StyleBoxFlat.new()
 		style_box.bg_color = Color.TRANSPARENT

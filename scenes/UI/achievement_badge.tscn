@@ -15,6 +15,7 @@ custom_minimum_size = Vector2(820, 200)
 custom_maximum_size = Vector2(820, 200)
 offset_right = 800.0
 offset_bottom = 200.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_aopby")
 script = ExtResource("2_mhjfl")
 

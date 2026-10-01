@@ -84,5 +84,8 @@ position = Vector2(834, 33)
 [node name="Player" parent="." index="7" unique_id=829502222]
 position = Vector2(-159, 41)
 
-[node name="CanvasLayer" parent="." index="8" unique_id=339730598]
+[node name="RestartButton" parent="CanvasLayer" parent_id_path=PackedInt32Array(339730598) index="0" unique_id=756441034]
+visible = false
+
+[node name="LevelsButton" parent="CanvasLayer" parent_id_path=PackedInt32Array(339730598) index="1" unique_id=1708537852]
 visible = false

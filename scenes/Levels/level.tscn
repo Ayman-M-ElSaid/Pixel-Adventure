@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://c1s4sj7wrsrcn" path="res://assets/Menu/Buttons/Restart.png" id="6_a4mo8"]
 [ext_resource type="Script" uid="uid://87m606lxm7n0" path="res://scripts/UI/button.gd" id="7_87hxj"]
 [ext_resource type="Texture2D" uid="uid://wfkirb0oxniy" path="res://assets/Menu/Buttons/Levels.png" id="7_fi66n"]
+[ext_resource type="Texture2D" uid="uid://drlt0bsfsfp0" path="res://assets/Menu/Buttons/Play.png" id="9_he7fi"]
+[ext_resource type="Script" uid="uid://brb80iq7jma5t" path="res://scripts/UI/touch_button.gd" id="10_42npc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2txt"]
 texture = ExtResource("3_0b4ue")
@@ -367,6 +369,37 @@ grow_horizontal = 0
 texture_normal = ExtResource("7_fi66n")
 stretch_mode = 5
 script = ExtResource("7_87hxj")
+
+[node name="MoveRightButton" type="TouchScreenButton" parent="CanvasLayer" unique_id=248389008]
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(170, 497)
+scale = Vector2(4, 4)
+texture_normal = ExtResource("9_he7fi")
+passby_press = true
+action = "move_right"
+visibility_mode = 1
+script = ExtResource("10_42npc")
+
+[node name="MoveLeftButton" type="TouchScreenButton" parent="CanvasLayer" unique_id=1824429563]
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(115, 497)
+scale = Vector2(-4, 4)
+texture_normal = ExtResource("9_he7fi")
+passby_press = true
+action = "move_left"
+visibility_mode = 1
+script = ExtResource("10_42npc")
+
+[node name="JumpButton" type="TouchScreenButton" parent="CanvasLayer" unique_id=1417614410]
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(1098, 585)
+rotation = 1.5707964
+scale = Vector2(-4, 4)
+texture_normal = ExtResource("9_he7fi")
+passby_press = true
+action = "jump"
+visibility_mode = 1
+script = ExtResource("10_42npc")
 
 [connection signal="pressed" from="CanvasLayer/RestartButton" to="LevelManager" method="_on_restart_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/LevelsButton" to="LevelManager" method="_on_levels_button_pressed"]
